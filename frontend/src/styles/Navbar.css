@@ -1,0 +1,48 @@
+.navbar {
+    background-color: #0b2441;
+    --bs-navbar-active-color: #ffc701 !important;
+}
+
+.navbar-brand {
+    color: #fff;
+}
+/* frontend\src\assets\icons\bars-solid.svg */
+.navbar-toggler-icon {
+    background-image: url("/src/assets/icons/menu-bar.svg") !important;
+    color: #fff;
+}
+
+.navbar-toggler {
+    color: #fff;
+}
+
+.offcanvas {
+    background-color: #0b2441 !important;
+}
+
+.offcanvas-title{
+    color: #fff;
+}
+
+.btn-close{
+    background-image: url("/src/assets/icons/close.svg") !important;
+    border-color: #fff;
+    font-size: 2rem;
+}
+
+.nav-item a{
+    color: #fff;
+}
+
+.active {
+    color: #ffc701 !important;
+}
+
+.nav-item a:hover{
+    color: #ffc701 !important;
+}
+
+.dropdown-menu{
+    --bs-dropdown-bg: #0b2441 !important;
+    --bs-dropdown-link-hover-bg: none;
+}
