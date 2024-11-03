@@ -1,0 +1,14 @@
+/* Hide hover content by default */
+.hover-content {
+    display: none;
+  }
+  
+  /* Show hover content and hide original content on hover */
+  .card-container:hover .hover-content {
+    display: block;
+  }
+  
+  .card-container:hover .original-content {
+    display: none;
+  }
+  

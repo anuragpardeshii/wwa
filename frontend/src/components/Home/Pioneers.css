@@ -1,0 +1,52 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-section{
+    padding: 3rem;
+}
+
+.cards-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem;
+}
+
+.pioneers-section{
+    padding: 5rem;
+}
+
+.iframe-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+iframe {
+    width: 100%;
+    height: 80vh;
+    border-radius: 1rem;
+}
+
+.center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hover-content {
+    display: none;
+}
+
+  /* Display the hover content and hide the original content on hover */
+.card:hover .hover-content {
+    display: block;
+}
+
+.card:hover .original-content {
+    display: none;
+}

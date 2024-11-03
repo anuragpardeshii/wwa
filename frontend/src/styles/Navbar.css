@@ -1,19 +1,22 @@
 .navbar {
     background-color: #0b2441;
-    --bs-navbar-active-color: #ffc701 !important;
+    --bs-navbar-active-color: #0b2441 !important;
+    height: 10vh;
 }
 
 .navbar-brand {
     color: #fff;
+    font-weight: 700;
 }
 /* frontend\src\assets\icons\bars-solid.svg */
-.navbar-toggler-icon {
-    background-image: url("/src/assets/icons/menu-bar.svg") !important;
-    color: #fff;
-}
 
 .navbar-toggler {
     color: #fff;
+}
+
+.navbar-toggler-icon {
+background-image: url("/src/assets/icons/menu-bar.svg") !important;
+font-size: 1.5rem;
 }
 
 .offcanvas {
@@ -45,4 +48,8 @@
 .dropdown-menu{
     --bs-dropdown-bg: #0b2441 !important;
     --bs-dropdown-link-hover-bg: none;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+    color: none;
 }
