@@ -1,14 +1,45 @@
-/* Hide hover content by default */
-.hover-content {
-    display: none;
-  }
+.ourProgrammes {
+    background-image: url("/src/assets/images/yellowBg.png");
+    padding: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
   
-  /* Show hover content and hide original content on hover */
-  .card-container:hover .hover-content {
-    display: block;
-  }
-  
-  .card-container:hover .original-content {
-    display: none;
-  }
-  
+.main-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-bottom: 1rem;
+
+}
+
+.cards-sec {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5rem;
+}
+
+.card {
+  background: white;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 20rem;
+    min-width: 17rem;
+    position: relative;
+    display: flex;
+    height: 17rem;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: .6s linear;
+    margin: 1rem;
+}
+
+.original-card img{
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}

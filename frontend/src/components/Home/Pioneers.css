@@ -8,6 +8,17 @@
     padding: 3rem;
 }
 
+.content-section h1 {
+    color: #0b2441 ;
+}
+
+.content-section h2 {
+    color: #0b2441 ;
+    /* color: #ffc701; */
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
 .cards-section{
     display: flex;
     justify-content: space-around;
@@ -23,13 +34,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3rem;
+    padding: 1rem;
 }
 
 iframe {
     width: 100%;
     height: 80vh;
     border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .center-div {

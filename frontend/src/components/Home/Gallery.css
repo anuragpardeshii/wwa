@@ -1,0 +1,28 @@
+.gallery-section {
+    padding: 4rem;
+    padding-top: 0;
+    margin: 0;
+}
+
+.bg-image img {
+    margin: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gallery-section button {
+    background-color: #0b2441;
+    color: white;
+    padding: .7rem;
+    width: 10rem;
+}
+
+.btn-section {
+    width: 100%;
+    padding-top: 2rem;
+}
+
+.gallery-section button:hover {
+    color: #fff;
+    background-color: #163a5b;
+}

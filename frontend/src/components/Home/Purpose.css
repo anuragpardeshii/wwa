@@ -1,0 +1,27 @@
+.logo-section{
+    padding: 4rem;
+    width: 100%;
+}
+
+.second-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+.image-conatiner img {
+    height: 30rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.second-heading h2 span {
+    color: #ffc701;
+}
+
+.second-heading h2 {
+    color: #0b2441;
+    font-size: 3rem;
+}

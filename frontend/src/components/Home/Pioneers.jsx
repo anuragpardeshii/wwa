@@ -26,23 +26,21 @@ const cards = [
 export default function Pioneers() {
   return (
     <>
-      <div className="row container-fluid pioneers-section">
+      <div className="container-fluid pioneers-section">
+        <div className="row">
         <div className="col content-section">
           <h1>Pioneers in Preschool Education</h1>
-          <h2>India's most desired preschool brand</h2>
+          <h2>Empowering minds from pre-school to 8th grade.</h2>
           <p>
-            In 1993, Kangaroo Kids International Preschool pioneered a whole new
-            concept in learning as we knew that the conventional rote system of
-            learning would not equip children with skills and abilities for the
-            dawn of a new age of information.
+          Wisdom World Academy has a remarkable journey, beginning with its establishment in 2014 in Silicon City and later relocating to Shiv City in 2019, where it proudly became the first private school in the area.
           </p>
           <p>
-            We believe that children learn best when they are given a choice and
-            voice within an emotionally safe environment. They blossom when they
-            are nurtured by those who have their best interests at heart and use
-            evidence-based teaching-learning strategies that are supported by
-            years of research and up-to-date methods.
+          At Wisdom World Academy, we believe in the transformative power of education, innovation, and character development. These pillars come together to mold the leaders of tomorrow, instilling in them not only knowledge but also the values and skills they need to navigate the challenges of the future.
           </p>
+          <p>Mission: </p>
+          <p>Our mission is to empower all students to embrace learning, build their analytical abilities, self-confidence, will power, goal setting competencies and achieve their personal best.</p>
+          <p>Vission: </p>
+          <p>Our vision is to prepare and motivate our students to pursue their aspirations and contribute to the world. Our goal is to develop student’s ability to think and act by utilising their knowledge, experience, understanding, common sense, and insight.</p>
         </div>
         
         <div className="col row cards-section">
@@ -58,10 +56,10 @@ export default function Pioneers() {
             </div>
           ))}
         </div>
-
+        </div>
         <div className="iframe-section">
           <iframe
-            width="853"
+            width="100%"
             src="https://www.youtube.com/embed/-X7okpS9Ufc"
             title="poorna classroom demonstration English"
             frameBorder="0"
