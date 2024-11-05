@@ -40,12 +40,14 @@ export default function OurProgrammes() {
   };
 
   return (
+    <div>
+      <img src="/src/assets/images/patternUp.jpg" style={{width: "100%"}} alt="" />
     <div className="ourProgrammes">
       <h1 className="main-heading">Our Programmes</h1>
       <div className="row cards-sec">
         {cards.map((card, index) => (
           <div
-            className="col" // Each card in a column, adjust width as needed
+            className="col d-flex justify-content-center" // Each card in a column, adjust width as needed
             key={index}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
@@ -78,6 +80,8 @@ export default function OurProgrammes() {
           </div>
         ))}
       </div>
+      </div>
+      <img src="/src/assets/images/patternDown.jpg" style={{width: "100%"}} alt="" />
     </div>
   );
 }

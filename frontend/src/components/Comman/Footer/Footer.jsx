@@ -1,0 +1,60 @@
+import React from 'react';
+import './Footer.css'; // Assuming you have a CSS file for styling
+
+const Footer = () => {
+  return (
+    <div>
+        <img src="/src/assets/images/wave.png" alt="" style={{width: "100%", marginBottom: "-1rem"}} />
+    <footer className="footer">
+      <div className="footer-container bottom-border">
+        <div className="footer-column col">
+          <h3 >About Us</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Curriculum</a></li>
+            <li><a href="#">Difference</a></li>
+          </ul>
+        </div>
+        <div className="footer-column col">
+          <h3>More</h3>
+          <ul>
+            <li><a href="#">Preschool Programme</a></li>
+            <li><a href="#">Kangaroo Kids Club</a></li>
+            <li><a href="#">Day Care Programme</a></li>
+            <li><a href="#">Parents Speak</a></li>
+            <li><a href="#">Calculators</a></li>
+            <li><a href="#">Converters</a></li>
+          </ul>
+        </div>
+        <div className="footer-column col">
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Locate Us</a></li>
+          </ul>
+        </div>
+        <div className="footer-column col">
+          <h3>Franchise</h3>
+          <ul>
+            <li><a href="#">Start Your Own Preschool</a></li>
+            <li><a href="#">Franchise Locations</a></li>
+          </ul>
+        </div>
+      </div>
+      <div className="footer-bottom border-top">
+        <p>Copyright © 2024 Lighthouse Learning Private Limited | <a href="#">Privacy Policy</a></p>
+        <div className="social-media">
+          <a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
+          <a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
+          <a href="#"><img src="youtube-icon.png" alt="YouTube" /></a>
+        </div>
+      </div>
+    </footer>
+    </div>
+  );
+};
+
+export default Footer;

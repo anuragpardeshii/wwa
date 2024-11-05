@@ -4,6 +4,9 @@ import Pioneers from "./Pioneers";
 import OurProgrammes from "../Comman/OurPrograms/OurProgrammes"
 import Purpose from "./Purpose";
 import Gallery from "./Gallery";
+import Testimonial from "./Testimonial";
+import Awards from "./Awards";
+import WhyUs from "./WhyUs";
 
 const images = [
   '/src/assets/images/hero.png',
@@ -20,6 +23,9 @@ export default function Home() {
             <OurProgrammes />
             <Purpose />
             <Gallery />
+            <Awards />
+            <Testimonial />
+            <WhyUs />
         </>
     )
 }

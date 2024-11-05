@@ -1,0 +1,137 @@
+.awards-section {
+    background-image: url("/src/assets/images/yellowBg.png");
+    padding: 3rem 0;
+    margin: 0;
+    width: 100%;
+}
+
+.awards {
+  margin: 0;
+}
+
+.super-peek {
+  padding: 0;
+  margin: 0;
+}
+
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.prev {
+  left: 2%;
+}
+
+.next {
+  right: 2%;
+}
+
+/*                         Super Peek Section Styles */
+
+.super-peek h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.super-peek-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0.5rem;
+  overflow: hidden;
+}
+
+.super-peek-cards {
+  display: flex;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.super-peek-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.super-peek-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.super-peek-card {
+  width: 50%;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  scroll-snap-align: start;
+}
+
+.super-peek-image-container img {
+  border-radius: 10px;
+  width: 20rem;
+}
+
+/*                            Media Queries for responsiveness ( 1024px )*/
+@media (max-width: 1024px) {
+  .super-peek-card {
+    width: 40%;
+  }
+}
+
+/*                            Media Queries for responsiveness ( 768px )*/
+@media (max-width: 768px) {
+  .super-peek-card {
+    width: 60%;
+  }
+
+  .super-peek h1 {
+    font-size: 2.25rem;
+  }
+}
+
+/*                            Media Queries for responsiveness ( 480px )*/
+@media (max-width: 480px) {
+  .prev {
+    left: 0%;
+  }
+  .next {
+    right: 0%;
+  }
+
+  .super-peek {
+    padding: 45px 0 60px;
+  }
+
+  .super-peek h1 {
+    font-size: 1.25rem;
+  }
+
+  .super-peek-cards {
+    width: 90%;
+  }
+
+  .super-peek-card {
+    width: 100%;
+  }
+}
+
+.logo-container {
+    padding: 3rem;
+    display: grid;
+  place-items: center; /* Centers both horizontally and vertically */
+}
