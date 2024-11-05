@@ -10,6 +10,8 @@
 
 .content-section h1 {
     color: #0b2441 ;
+    padding: 2rem 0;
+    font-weight: bold;
 }
 
 .content-section h2 {
@@ -17,6 +19,10 @@
     /* color: #ffc701; */
     padding-top: .5rem;
     padding-bottom: .5rem;
+}
+
+.content-section p {
+    color: #0b2441;
 }
 
 .cards-section{
@@ -27,7 +33,7 @@
 }
 
 .pioneers-section{
-    padding: 5rem;
+    padding: 1rem 5rem;
 }
 
 .iframe-section{
@@ -62,3 +68,23 @@ iframe {
 .card:hover .original-content {
     display: none;
 }
+
+  .content-section h1 {
+    font-size: 2rem;
+    color: #0b2441;
+  }
+  
+  .section-title {
+    color: #0b2441;
+    font-weight: bold;
+  }
+  
+  .cards-section .card-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .iframe-section {
+    margin-top: 2rem;
+  }
+  

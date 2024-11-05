@@ -1,29 +1,31 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChild, faCalendarAlt, faClock } from "@fortawesome/free-solid-svg-icons";
 import "./OurProgrammes.css";
 
 const cards = [
   {
     src: "/src/assets/images/prog1.jpeg",
     text: "Play Group",
-    hoverSrc: "/src/assets/images/hoverProg1.jpeg",
+    hoverSrc: "/src/assets/images/h1.png",
     hoverText: "Additional info about Play Group"
   },
   {
     src: "/src/assets/images/prog2.jpg",
     text: "Nursery",
-    hoverSrc: "/src/assets/images/hoverProg2.jpg",
+    hoverSrc: "/src/assets/images/h2.png",
     hoverText: "Additional info about Nursery"
   },
   {
     src: "/src/assets/images/prog3.webp",
     text: "Junior KG",
-    hoverSrc: "/src/assets/images/hoverProg3.webp",
+    hoverSrc: "/src/assets/images/h3.png",
     hoverText: "Additional info about Junior KG"
   },
   {
     src: "/src/assets/images/prog4.jpeg",
     text: "Senior KG",
-    hoverSrc: "/src/assets/images/hoverProg4.jpeg",
+    hoverSrc: "/src/assets/images/h4.png",
     hoverText: "Additional info about Senior KG"
   },
 ];
@@ -54,15 +56,9 @@ export default function OurProgrammes() {
           >
             <div className="card text-center" style={{ width: "100%" }}>
               {hoverIndex === index ? (
-                <div className=" hover-card">
-                  <img
-                    src={card.hoverSrc}
-                    className="card-img-top"
-                    alt="Hover Card"
-                  />
-                  <div className="card-body">
-                    <p className="card-text">{card.hoverText}</p>
-                  </div>
+                <div className="hover-card">
+                  <h4>Preschool Year 1</h4>
+                  <img src={card.hoverSrc} alt="" style={{height: "16rem", borderRadius: "2rem"}} />
                 </div>
               ) : (
                 <div className="original-card">

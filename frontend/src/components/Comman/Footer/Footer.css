@@ -6,6 +6,10 @@
     color: #fff;
     padding: 1rem 4rem;
   }
+
+.footer-column ul li:hover {
+  text-decoration: underline;
+}
   
   .footer-container {
     display: flex;
@@ -30,6 +34,8 @@
   
   .footer-column ul li {
     margin-bottom: 5px;
+    font-size: 18px;
+    margin: 0 0 10px;
   }
   
   .footer-column ul li a {
@@ -62,3 +68,14 @@
     height: 24px;
   }
   
+.fb:hover {
+  color: #007bff;
+}
+
+.insta:hover {
+  color:  #E4405F;
+}
+
+.yt:hover {
+  color: #FF0000;;
+}

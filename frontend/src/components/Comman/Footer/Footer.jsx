@@ -1,5 +1,7 @@
 import React from 'react';
 import './Footer.css'; // Assuming you have a CSS file for styling
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
@@ -47,9 +49,17 @@ const Footer = () => {
       <div className="footer-bottom border-top">
         <p>Copyright © 2024 Lighthouse Learning Private Limited | <a href="#">Privacy Policy</a></p>
         <div className="social-media">
-          <a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
-          <a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
-          <a href="#"><img src="youtube-icon.png" alt="YouTube" /></a>
+        <div className="social-icons">
+            <a className='fb' href="https://www.facebook.com/WisdomWorldAcademyIndore" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faFacebook} size="2x" />
+            </a>
+            <a className='insta' href="https://www.instagram.com/wisdom_world_academy/" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faInstagram} size="2x" />
+            </a>
+            <a className='yt' href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faYoutube} size="2x" />
+            </a>
+        </div>
         </div>
       </div>
     </footer>
