@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Navbar() {
   return (
-    <>
+    <div>
       <nav className="navbar fixed-top">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
@@ -106,6 +106,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 }

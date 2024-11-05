@@ -73,7 +73,7 @@ export default function Awards() {
     <div>
       <img src="/src/assets/images/patternUp.jpg" style={{width: "100%"}} alt="" />
     <div className="awards-section">
-      <h1 className="text-center p-4" style={{color: "white"}}>Awards & Recognition</h1>
+      <h1 className="main-heading">Awards & Recognition</h1>
       <div className="awards row">
             <div className="super-peek">
               <div className="super-peek-wrapper">

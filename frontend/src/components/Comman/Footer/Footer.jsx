@@ -3,8 +3,8 @@ import './Footer.css'; // Assuming you have a CSS file for styling
 
 const Footer = () => {
   return (
-    <div>
-        <img src="/src/assets/images/wave.png" alt="" style={{width: "100%", marginBottom: "-1rem"}} />
+    <div className='bg-clr'>
+        <img src="/src/assets/images/footer-wave.png" alt="" style={{width: "100%", marginBottom: "-1rem"}} />
     <footer className="footer">
       <div className="footer-container bottom-border">
         <div className="footer-column col">
