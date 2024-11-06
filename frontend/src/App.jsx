@@ -1,19 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Navbar from './components/Comman/Navbar/Navbar'
-import Home from './components/Home/Home'
-import Footer from './components/Comman/Footer/Footer'
+import "./App.css";
+import Navbar from "./components/Comman/Navbar/Navbar";
+import Home from "./components/Home/Home";
+import Footer from "./components/Comman/Footer/Footer";
+import About from "./components/About/About";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Difference from "./components/Difference/Difference";
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/difference" element={<Difference />} />
+      </Routes>
       <Footer />
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
