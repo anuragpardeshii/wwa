@@ -21,13 +21,10 @@ const Footer = () => {
         <div className="footer-column col">
           <h3>More</h3>
           <ul>
-            <li><a href="#">Preschool Programme</a></li>
-            <li><a href="#">Kangaroo Kids Club</a></li>
-            <li><a href="#">Day Care Programme</a></li>
-            <li><a href="#">Parents Speak</a></li>
-            <li><a href="#">Calculators</a></li>
-            <li><a href="#">Converters</a></li>
-          </ul>
+            <li><a href="/preschool-programme">Preschool Programme</a></li>
+            <li><a href="/kids-club">Kangaroo Kids Club</a></li>
+            <li><a href="/bagless-school">Day Care Programme</a></li>
+            <li><a href="/parents-speak">Parents Speak</a></li></ul>
         </div>
         <div className="footer-column col">
           <h3>Connect</h3>
