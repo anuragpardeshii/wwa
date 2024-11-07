@@ -1,5 +1,7 @@
 import React from "react";
 import "./About.css";
+import OurStory from "./OurStory";
+import Slogan from "./Slogan";
 import InfoSection from "./InfoSection";
 import OurPhilosophy from "./OurPhilosophy";
 
@@ -7,10 +9,10 @@ export default function About() {
   return (
     <>
       <div className="" style={{ marginTop: "10vh" }}>
+        <Slogan/>
         <div className="row about-section">
-          <h1 className="text-center pb-2 ">About Us</h1>
 
-          <div className="col-7">
+          <div className="col-8">
             <h1>Wisdom World Academy</h1>
             <h4>Since 2014</h4>
             <p>
@@ -41,13 +43,10 @@ export default function About() {
           <div className="col-3">
             <img src="/src/assets/images/logo.png" alt="" />
           </div>
-          <div className="text-center join-btn">
-            <button className="btn m-3 p-2">Join us today!</button>
-            </div>
         </div>
-        <OurPhilosophy />
-        <h1 className="text-center">Mission, Vision and Values</h1>
         <InfoSection />
+        <OurPhilosophy />
+        <OurStory />
       </div>
     </>
   );
