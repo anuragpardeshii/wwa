@@ -22,8 +22,7 @@ const Footer = () => {
           <h3>More</h3>
           <ul>
             <li><a href="/preschool-programme">Preschool Programme</a></li>
-            <li><a href="/kids-club">Kangaroo Kids Club</a></li>
-            <li><a href="/bagless-school">Day Care Programme</a></li>
+            <li><a href="/bagless-school">Bagless School Programme</a></li>
             <li><a href="/parents-speak">Parents Speak</a></li></ul>
         </div>
         <div className="footer-column col">

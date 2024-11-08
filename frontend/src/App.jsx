@@ -9,7 +9,7 @@ import {
   Route,
 } from "react-router-dom";
 import Difference from "./components/Difference/Difference";
-import PreschoolProgram from "./components/More/PreschoolProgram";
+import PreschoolProgram from "./components/More/PreschoolProgram/PreschoolProgram";
 import KidsClub from "./components/More/KidsClub/KidsClub";
 import BaglessSchool from "./components/More/BaglessSchool/BaglessSchool";
 import ParentsSpeak from "./components/More/ParentsSpeak/ParentsSpeak";
@@ -23,7 +23,6 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/difference" element={<Difference />} />
         <Route path="/preschool-programme" element={<PreschoolProgram />} />
-        <Route path="/kids-club" element={<KidsClub />} />
         <Route path="/bagless-school" element={<BaglessSchool />} />
         <Route path="/parents-speak" element={<ParentsSpeak />} />
       </Routes>

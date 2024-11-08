@@ -1,0 +1,21 @@
+.preschool-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+    padding-top: 4rem;
+}
+
+.preschool-section img {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.preschool-section .best-preschool {
+    padding: 1rem;
+}
+
+.preschool-section .preschool-img {
+    padding: 1rem;
+}
