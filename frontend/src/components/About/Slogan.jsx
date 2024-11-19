@@ -4,12 +4,13 @@ export default function Slogan() {
   return (
     <>
     <div className="slogan">
-      <h3 className="text-center text-background">
-        "Empowering Young Minds, Building Bright Futures – At Wisdom World
+      
+<blockquote class="text-2xl text-center italic font-semibold text-gray-900 text-white">
+    <p>"Empowering Young Minds, Building Bright Futures – At Wisdom World
         Academy, we nurture curiosity, inspire growth, and instill values,
         creating compassionate leaders ready to shape tomorrow. Where learning
-        meets heart, and every child’s journey begins with purpose."
-      </h3>
+        meets heart, and every child’s journey begins with purpose."</p>
+</blockquote>
       </div>
       <img
         src="/src/assets/images/patternDown.jpg"

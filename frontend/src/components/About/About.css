@@ -15,15 +15,14 @@
 
 .cards-info {
     display: flex;
-    justify-content: space-evenly;
-    padding: 5rem;
-    padding-bottom: 1rem;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .info-cards {
     background-image: url("/src/assets/images/whitebg.jpg");
-    max-width: 20rem;
-    border-radius: 2rem;
+    max-width: 22rem;
+    border-radius: .5rem;
     height: 16rem;
 }
 
@@ -49,9 +48,8 @@
 }
 
 .info-cards img {
-    height: 8rem;
     border-radius: 15rem;
-    padding: .8rem;
+    padding: .4rem;
 }
 
 .center-peek-heading h2 {
@@ -64,7 +62,6 @@
 /* Slogan */
 
 .slogan {
-    color: #ffffff;
     padding: 4rem;
     /* background: linear-gradient(90deg, #0b2441 0%, #0f335a 50%, #14224e 100%); */
     background-image: url("/src/assets/images/yellowBg.png");

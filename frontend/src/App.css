@@ -1,0 +1,27 @@
+/* Hide scrollbar but keep scroll functionality */
+.invisible-scrollbar {
+    width: 300px;
+    height: 200px;
+    overflow: scroll; /* Allows scrolling */
+  }
+  
+  /* For Webkit-based browsers (Chrome, Safari, Edge) */
+  .invisible-scrollbar::-webkit-scrollbar {
+    width: 0px;  /* Hides scrollbar */
+    height: 0px; /* For horizontal scrollbar */
+  }
+  
+  .invisible-scrollbar::-webkit-scrollbar-track {
+    background: transparent; /* Makes track invisible */
+  }
+  
+  .invisible-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent; /* Makes thumb invisible */
+  }
+  
+  /* For Firefox */
+  .invisible-scrollbar {
+    scrollbar-width: none; /* Hides scrollbar */
+    scrollbar-color: transparent transparent; /* Thumb and track invisible */
+  }
+  

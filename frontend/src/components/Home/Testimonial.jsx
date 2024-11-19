@@ -1,172 +1,91 @@
-import "./Testimonial.css";
 import React, { useState } from "react";
-import { Card, Carousel, Col, Container, Row } from "react-bootstrap";
-import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
-const testimonialList = [
-    [
+export default function Testimonial() {
+    const testimonials = [
         {
-            img: "https://cdn.easyfrontend.com/pictures/testimonial/testimonial_square_1.jpeg",
-            name: "Aksay Kumar",
-            designation: "Founder / CEO",
-            comment:
-                "An activity that requires a person's mental or physical effort is work.If a person is trained for a certain type of job, they may have a job.",
+            quote: "Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application.",
+            name: "Michael Gough",
+            role: "CEO at Google",
+            image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png",
         },
         {
-            img: "https://cdn.easyfrontend.com/pictures/testimonial/testimonial_square_2.jpeg",
-            name: "Raima Ray",
-            designation: "Founder / CEO",
-            comment:
-                "An activity that requires a person's mental or physical effort is work.If a person is trained for a certain type of job, they may have a job.",
+            quote: "This is another great testimonial example. The components are easy to use, and the interface is intuitive and modern.",
+            name: "John Doe",
+            role: "CTO at Facebook",
+            image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/john-doe.png",
         },
         {
-            img: "https://cdn.easyfrontend.com/pictures/testimonial/testimonial_square_3.jpeg",
-            name: "Arjun Kapur",
-            designation: "Founder / CEO",
-            comment:
-                "An activity that requires a person's mental or physical effort is work.If a person is trained for a certain type of job, they may have a job.",
-        },
-    ],
-    [
-        {
-            img: "https://cdn.easyfrontend.com/pictures/testimonial/testimonial_square_4.jpeg",
-            name: "Aksay Kumar",
-            designation: "Founder / CEO",
-            comment:
-                "An activity that requires a person's mental or physical effort is work.If a person is trained for a certain type of job, they may have a job.",
+            quote: "We love using this tool! It's incredibly useful and saves us so much time building SaaS applications.",
+            name: "Jane Smith",
+            role: "Product Manager at Amazon",
+            image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jane-smith.png",
         },
         {
-            img: "https://cdn.easyfrontend.com/pictures/testimonial/testimonial_square_2.jpeg",
-            name: "Raima Ray",
-            designation: "Founder / CEO",
-            comment:
-                "An activity that requires a person's mental or physical effort is work.If a person is trained for a certain type of job, they may have a job.",
+            quote: "Fantastic! The best decision we made for our application was integrating Flowbite's components.",
+            name: "Sarah Johnson",
+            role: "CEO at Microsoft",
+            image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sarah-johnson.png",
         },
-        {
-            img: "https://cdn.easyfrontend.com/pictures/testimonial/testimonial_square_1.jpeg",
-            name: "Arjun Kapur",
-            designation: "Founder / CEO",
-            comment:
-                "An activity that requires a person's mental or physical effort is work.If a person is trained for a certain type of job, they may have a job.",
-        },
-    ],
-];
+    ];
 
-const TestimonialItem = ({ testimonial }) => {
-    return (
-        <Row>
-            {testimonial.map((item, i) => {
-                const { img, name, designation, comment } = item;
-                return (
-                    <Col xs={12} lg={4} key={i}>
-                        <Card className="ezy__testimonial23-item border-0 p-4 mt-4">
-                            <Card.Body>
-                                <div className="d-flex align-items-center mb-4">
-                                    <div className="me-3">
-                                        <img
-                                            src={img}
-                                            alt=""
-                                            className="img-fluid rounded-circle border"
-                                            width="65"
-                                        />
-                                    </div>
-                                    <div>
-                                        <h4 className="mb-0 fs-5">{name}</h4>
-                                        <p className="mb-0 small">{designation}</p>
-                                    </div>
-                                </div>
-                                <p className="opacity-75">{comment}</p>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                );
-            })}
-        </Row>
-    );
-};
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-TestimonialItem.propTypes = {
-    testimonial: PropTypes.array.isRequired,
-};
+    const handlePrev = () => {
+        setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
+    };
 
-const Shapes = () => (
-    <>
-        <svg
-            className="ezy__testimonial23-shape-one"
-            width="404"
-            height="572"
-            viewBox="0 0 404 572"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <circle
-                cx="118"
-                cy="286"
-                r="265.5"
-                stroke="#4175DF"
-                strokeOpacity="0.2"
-                strokeWidth="41"
-            />
-        </svg>
-        <svg
-            className="ezy__testimonial23-shape-two"
-            width="269"
-            height="479"
-            viewBox="0 0 269 479"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <circle
-                cx="239.5"
-                cy="239.5"
-                r="239.5"
-                fill="#FC4755"
-                fillOpacity="0.25"
-            />
-        </svg>
-    </>
-);
-
-const Testimonial = () => {
-    const [index, setIndex] = useState(0);
-
-    const handleSelect = (selectedIndex) => setIndex(selectedIndex);
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
+    };
 
     return (
-        <section className="ezy__testimonial23 light">
-            <Shapes />
-
-            <Container>
-                <Row className="align-items-center justify-content-between mb-4 mb-md-5">
-                    <Col xs={12} md={6} lg={4}>
-                        <h2 className="ezy__testimonial23-heading mb-0">
-                            Everyone should believe in What Our Client Say.
-                        </h2>
-                    </Col>
-                    <Col xs={12} md={6} lg={5}>
-                        <p className="ezy__testimonial23-sub-heading mb-0">
-                            Jobs can be categorized as paid or unpaid. Examples of unpaid jobs
-                            include volunteer, homemaker, mentor, student, and sometimes
-                            intern.
-                        </p>
-                    </Col>
-                </Row>
-
-                <Carousel
-                    activeIndex={index}
-                    onSelect={handleSelect}
-                    controls={false}
-                    indicators={true}
+        <div className="flex items-center" style={{ margin: "5rem 8vw", height: "30vh" }}>
+            <div>
+            <button
+                    onClick={handlePrev}
+                    className="px-5 py-3 circle-radius next-prev text-white rounded-md hover:bg-gray-700"
                 >
-                    {testimonialList.map((testimonial, i) => (
-                        <Carousel.Item key={i}>
-                            <TestimonialItem testimonial={testimonial} />
-                        </Carousel.Item>
-                    ))}
-                </Carousel>
-            </Container>
-        </section>
-    );
-};
+                    <FontAwesomeIcon icon={faChevronLeft} />
+                </button>
+                </div>
+            <figure className="max-w-screen-md mx-auto text-center">
+                <svg
+                    className="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 18 14"
+                >
+                    <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
+                </svg>
+                <blockquote>
+                    <p className="text-2xl italic font-medium text-gray-900 dark:text-white">
+                        "{testimonials[currentIndex].quote}"
+                    </p>
+                </blockquote>
+                <figcaption className="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
+                    <img
+                        className="w-6 h-6 rounded-full"
+                        src={testimonials[currentIndex].image}
+                        alt="profile picture"
+                    />
+                    <div className="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
+                        <cite className="pe-3 font-medium text-gray-900 dark:text-white">{testimonials[currentIndex].name}</cite>
+                        <cite className="ps-3 text-sm text-gray-500 dark:text-gray-400">{testimonials[currentIndex].role}</cite>
+                    </div>
+                </figcaption>
+            </figure>
+            <div>
+            <button
+                    onClick={handleNext}
+                    className="px-5 py-3 next-prev text-white circle-radius hover:bg-gray-700"
+                >
+                    <FontAwesomeIcon icon={faChevronRight} />
+                </button>
+                </div>
 
-export default Testimonial;
+        </div>
+    );
+}

@@ -16,11 +16,11 @@ export default function WhyUs() {
     ];
 
     return (
-        <div className="whyus-section">
+        <div style={{margin: "4rem 8vw"}}>
             {content.map((data, index) => (
                 <div className="data" key={index}>
                     <h3>{data.heading}</h3>
-                    <p>{data.content}</p>
+                    <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">{data.content}</p>
                 </div>
             ))}
         </div>

@@ -20,12 +20,12 @@ export default function Home() {
         <>
             <ImageSlider />
             <Pioneers />
+            <WhyUs />
             <OurProgrammes />
             <Purpose />
             <Gallery />
             <Awards />
             <Testimonial />
-            <WhyUs />
         </>
     )
 }

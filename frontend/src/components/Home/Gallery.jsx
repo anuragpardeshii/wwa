@@ -14,33 +14,38 @@ import {
 
 export default function Gallery() {
 
-  const image = [
-    { id: 1, imgSrc: 'https://mdbcdn.b-cdn.net/img/screens/yt/screen-video-1.webp' },
-    { id: 2, imgSrc: 'https://mdbcdn.b-cdn.net/img/screens/yt/screen-video-2.webp' },
-    { id: 3, imgSrc: 'https://mdbcdn.b-cdn.net/img/screens/yt/screen-video-3.webp' },
-    { id: 3, imgSrc: 'https://mdbcdn.b-cdn.net/img/screens/yt/screen-video-3.webp' },
-    { id: 3, imgSrc: 'https://mdbcdn.b-cdn.net/img/screens/yt/screen-video-3.webp' },
-    { id: 3, imgSrc: 'https://mdbcdn.b-cdn.net/img/screens/yt/screen-video-3.webp' },
-  ];
-
   return (
-    <div className='gallery-section'>
-      <MDBRow style={{ margin: "0" }}>
-        {image.map((image, index) => (
-          <MDBCol lg={4} md={12} className='mb-4 mb-lg-0' key={image.id}>
-            <div className='bg-image'>
-              <img src={image.imgSrc} alt={`Image thumbnail ${index + 1}`} className='w-100' />
-              <a style={{ cursor: 'pointer' }} onClick={() => openModal(index)}>
-                <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}></div>
-              </a>
-            </div>
-          </MDBCol>
-        ))}
-      </MDBRow>
-      <div className="btn-section text-center">
-      <button class="btn" type="submit">Show more</button>
-      </div>
+    
+<div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4" style={{margin: "2rem 8vw"}}>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="/src/assets/images/ourPurpose.png" alt="" />
     </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="" />
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="" />
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="" />
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="" />
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="" />
+    </div>
+</div>
+<div className="text-center">
+<a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+    See More
+    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+  </svg>
+</a>
+</div>
+</div>
     
   );
 }
