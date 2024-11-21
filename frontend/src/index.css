@@ -1,21 +1,36 @@
 body {
-    font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 
 .row {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 .next-prev {
-    background-color: #14224e;
+  background-color: #14224e;
 }
 
 .circle-radius {
-    border-radius: 25rem;
+  border-radius: 25rem;
+}
+
+h1 {
+  font-size: 2.75rem;
+  text-align: center;
+  color: #0b2441;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #0b2441;
+  font-style: normal;
+  font-weight: 300;
+  margin: 2rem 0;
 }

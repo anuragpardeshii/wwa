@@ -5,7 +5,7 @@ import Preschool from "./Preschool";
 export default function Difference() {
   return (
     <div>
-      <div className="difference-section" style={{ marginTop: "10vh" }}>
+      <div className="difference-section" style={{ marginTop: "5vh" }}>
         <div className="difference">
           <h1 className="text-center">
             What Sets Wisdom World Academy Apart from Other Preschools?
@@ -14,12 +14,12 @@ export default function Difference() {
             <div className="text-center">
               <img
                 src="/src/assets/images/difference.jpg"
-                style={{ borderRadius: ".5rem", width: "75%" }}
+                style={{ borderRadius: ".5rem", width: "75%", margin: "auto" }}
                 alt=""
               />
             </div>
             <div style={{ padding: "3rem 2rem 0 2rem" }}>
-              <p>
+            <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
                 At Wisdom World Academy, we prioritize the holistic development
                 of each child. Our approach goes beyond academics, fostering
                 intellectual, emotional, social, and creative growth in a
