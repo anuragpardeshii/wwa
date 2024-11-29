@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChild, faCalendarAlt, faClock } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faChild, faCalendarAlt, faClock } from "@fortawesome/free-solid-svg-icons";
 import "./OurProgrammes.css";
 
 const cards = [

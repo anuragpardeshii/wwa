@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function Testimonial() {
@@ -47,7 +47,7 @@ export default function Testimonial() {
                     onClick={handlePrev}
                     className="px-5 py-3 circle-radius next-prev text-white rounded-md hover:bg-gray-700"
                 >
-                    <FontAwesomeIcon icon={faChevronLeft} />
+                    {/* <FontAwesomeIcon icon={faChevronLeft} /> */}
                 </button>
                 </div>
             <figure className="max-w-screen-md mx-auto text-center">
@@ -82,7 +82,7 @@ export default function Testimonial() {
                     onClick={handleNext}
                     className="px-5 py-3 next-prev text-white circle-radius hover:bg-gray-700"
                 >
-                    <FontAwesomeIcon icon={faChevronRight} />
+                    {/* <FontAwesomeIcon icon={faChevronRight} /> */}
                 </button>
                 </div>
 

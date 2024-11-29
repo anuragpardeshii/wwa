@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./PreschoolProgram.css";
 import Faq from "../../Comman/Faq/Faq.jsx";
 import "/src/components/Difference/Difference.css"; // Make sure to create this CSS file to style your components
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
   faChevronRight,
@@ -91,12 +91,12 @@ const PreschoolProgram = () => {
         <h1>What We Offer</h1>
         <div className="cards">
           <button className="prev-btn">
-            <FontAwesomeIcon
+            {/* <FontAwesomeIcon
               icon={faChevronLeft}
               style={{ width: "1.3rem" }}
               size="2x"
               onClick={handlePrevious}
-            />
+            /> */}
           </button>
           {currentCards.map((card, index) => (
             <div
@@ -109,12 +109,12 @@ const PreschoolProgram = () => {
             </div>
           ))}
           <button className="prev-btn">
-            <FontAwesomeIcon
+            {/* <FontAwesomeIcon
               icon={faChevronRight}
               style={{ width: "1.3rem" }}
               size="2x"
               onClick={handleNext}
-            />
+            /> */}
           </button>
         </div>
         <div className="pagination">

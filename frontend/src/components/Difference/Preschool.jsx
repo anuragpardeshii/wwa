@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Difference.css'; // Make sure to create this CSS file to style your components
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const Preschool = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -40,7 +40,7 @@ const Preschool = () => {
       <h1>Preschool Curriculum</h1>
       <div className="cards">
       <button className="prev-btn">
-      <FontAwesomeIcon icon={faChevronLeft} style={{width: "1.3rem"}} size="2x" onClick={handlePrevious} />
+      {/* <FontAwesomeIcon icon={faChevronLeft} style={{width: "1.3rem"}} size="2x" onClick={handlePrevious} /> */}
       </button>
         {currentCards.map((card, index) => (
           <div key={index} className="card" style={{height: "20rem", maxWidth: "25rem"}}>
@@ -49,7 +49,7 @@ const Preschool = () => {
           </div>
         ))}
         <button className="prev-btn">
-        <FontAwesomeIcon icon={faChevronRight} style={{width: "1.3rem"}} size="2x" onClick={handleNext} />
+        {/* <FontAwesomeIcon icon={faChevronRight} style={{width: "1.3rem"}} size="2x" onClick={handleNext} /> */}
       </button>
       </div>
       <div className="pagination">
