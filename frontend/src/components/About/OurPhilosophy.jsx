@@ -1,4 +1,4 @@
-import "/src/components/home/Awards.css";
+import "../Home/Awards.css";
 import React, { useRef } from "react";
 
 export default function OurPhilosophy() {
