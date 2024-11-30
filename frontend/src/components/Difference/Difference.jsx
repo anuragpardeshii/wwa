@@ -4,7 +4,7 @@ import Preschool from "./Preschool";
 
 export default function Difference() {
   return (
-    <div>
+    <div style={{marginTop: "10vh"}}>
       <div className="difference-section" style={{ marginTop: "5vh" }}>
         <div className="difference">
           <h1 className="text-center">

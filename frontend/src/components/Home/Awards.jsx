@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
+import patternUp from "/src/assets/images/patternUp.jpg";
+import patternDown from "/src/assets/images/patternDown.jpg";
 
 const AwardCard = ({ title, description, imgSrc, link }) => (
   <div
@@ -132,11 +134,7 @@ export default function Awards() {
 
   return (
     <div>
-      <img
-        src="/src/assets/images/patternUp.jpg"
-        style={{ width: "100%" }}
-        alt="Pattern up"
-      />
+      <img src={patternUp} style={{ width: "100%" }} alt="Pattern Up" />
       <div className="awards-section">
         <h1 className="mb-4 text-center text-4xl font-extrabold tracking-tight leading-none text-white md:text-3xl lg:text-3xl">
           Awards & Recognition
@@ -188,11 +186,7 @@ export default function Awards() {
           </div>
         </div>
       </div>
-      <img
-        src="/src/assets/images/patternDown.jpg"
-        style={{ width: "100%" }}
-        alt="Pattern down"
-      />
+      <img src={patternDown} style={{ width: "100%" }} alt="Pattern Down" />
     </div>
   );
 }

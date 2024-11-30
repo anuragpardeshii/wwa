@@ -8,7 +8,7 @@ import OurPhilosophy from "./OurPhilosophy";
 export default function About() {
   return (
     <>
-      <div className="">
+      <div style={{marginTop: "10vh"}}>
         <Slogan/>
         <div className="flex justify-center items-center" style={{margin: "3rem 8vw"}}>
 

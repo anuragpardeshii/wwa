@@ -1,4 +1,5 @@
 import "./About.css";
+import patternDown from "/src/assets/images/patternDown.jpg";
 
 export default function Slogan() {
   return (
@@ -12,11 +13,7 @@ export default function Slogan() {
         meets heart, and every child’s journey begins with purpose."</p>
 </blockquote>
       </div>
-      <img
-        src="/src/assets/images/patternDown.jpg"
-        style={{ width: "100%" }}
-        alt=""
-      />
+      <img src={patternDown} style={{ width: "100%" }} alt="Pattern Down" />
     </>
   );
 }

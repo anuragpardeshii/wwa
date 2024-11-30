@@ -2,6 +2,8 @@ import React, { useState } from "react";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faChild, faCalendarAlt, faClock } from "@fortawesome/free-solid-svg-icons";
 import "./OurProgrammes.css";
+import patternUp from "/src/assets/images/patternUp.jpg";
+import patternDown from "/src/assets/images/patternDown.jpg";
 
 const cards = [
   {
@@ -43,7 +45,7 @@ export default function OurProgrammes() {
 
   return (
     <div>
-      <img src="/src/assets/images/patternUp.jpg" style={{width: "100%"}} alt="" />
+      <img src={patternUp} style={{ width: "100%" }} alt="Pattern Up" />
     <div className="ourProgrammes" style={{padding: "3rem 10vh"}}>
     <h1 className="mb-4 text-center text-4xl font-extrabold tracking-tight leading-none text-white md:text-3xl lg:text-3xl">
           Empowering Minds, Shaping Futures
@@ -124,7 +126,7 @@ export default function OurProgrammes() {
 </div>
 
       </div>
-      <img src="/src/assets/images/patternDown.jpg" style={{width: "100%"}} alt="" />
+      <img src={patternDown} style={{ width: "100%" }} alt="Pattern Down" />
     </div>
   );
 }

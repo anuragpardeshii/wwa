@@ -1,13 +1,18 @@
 import React from "react";
 import "./About.css"; // Import the CSS file
 
+// Import images
+import missionImage from "/src/assets/images/mission.jpeg";
+import visionImage from "/src/assets/images/vission.jpeg";
+import valuesImage from "/src/assets/images/values.jpeg";
+
 const InfoSection = () => {
   return (
-    <div className="cards-info" style={{ margin: "5rem 8vh"}}>
+    <div className="cards-info" style={{ margin: "5rem 8vh" }}>
       <div className="info-cards text-center">
         <div className="info-card-border">
           <div className="info-bg text-center">
-            <img src="/src/assets/images/mission.jpeg" alt="" />
+            <img src={missionImage} alt="Mission" />
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
@@ -19,7 +24,7 @@ const InfoSection = () => {
       <div className="info-cards text-center">
         <div className="info-card-border">
           <div className="info-bg text-center">
-            <img src="/src/assets/images/vission.jpeg" alt="" />
+            <img src={visionImage} alt="Vision" />
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
@@ -31,7 +36,7 @@ const InfoSection = () => {
       <div className="info-cards text-center">
         <div className="info-card-border">
           <div className="info-bg text-center">
-            <img src="/src/assets/images/values.jpeg" alt="" />
+            <img src={valuesImage} alt="Values" />
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores

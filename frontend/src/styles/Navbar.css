@@ -12,13 +12,3 @@ nav a {
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
-/* Active link styling */
-nav a.active {
-    font-weight: 700;
-}
-
-/* Hover effects */
-nav a:hover {
-    font-weight: 600;
-}
