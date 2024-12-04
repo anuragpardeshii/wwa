@@ -13,6 +13,7 @@ import PreschoolProgram from "./components/More/PreschoolProgram/PreschoolProgra
 import KidsClub from "./components/More/KidsClub/KidsClub";
 import BaglessSchool from "./components/More/BaglessSchool/BaglessSchool";
 import ParentsSpeak from "./components/More/ParentsSpeak/ParentsSpeak";
+import Enquiry from "./components/Enquiry/Enquiry.jsx";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/preschool-programme" element={<PreschoolProgram />} />
         <Route path="/bagless-school" element={<BaglessSchool />} />
         <Route path="/parents-speak" element={<ParentsSpeak />} />
+        <Route path="/enquiry" element={<Enquiry />} />
       </Routes>
       <Footer />
     </Router>
