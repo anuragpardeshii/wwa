@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import './Difference.css'; // Make sure to create this CSS file to style your components
+import './Difference.css'; // Ensure this file styles your components
+import patternUp from "/src/assets/images/patternUp.jpg"; // Adjust the path based on the file structure
+import patternDown from "/src/assets/images/patternDown.jpg"; // Adjust the path based on the file structure
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,7 +17,7 @@ const Preschool = () => {
     { title: 'Preschool Year 6', content: 'Activities and curriculum for Preschool Year 6' },
     { title: 'Preschool Year 7', content: 'Activities and curriculum for Preschool Year 7' },
     { title: 'Preschool Year 8', content: 'Activities and curriculum for Preschool Year 8' },
-    { title: 'Preschool Year 9', content: 'Activities and curriculum for Preschool Year 8' },
+    { title: 'Preschool Year 9', content: 'Activities and curriculum for Preschool Year 9' },
   ];
 
   const cardsPerPage = 3;
@@ -35,31 +37,33 @@ const Preschool = () => {
 
   return (
     <div className="preschool-container">
-      <img src="/src/assets/images/patternUp.jpg" style={{width: "100%"}} alt="" />
+      <img src={patternUp} style={{ width: "100%" }} alt="Pattern Up" />
 
       <h1>Preschool Curriculum</h1>
       <div className="cards">
-      <button className="prev-btn">
-      {/* <FontAwesomeIcon icon={faChevronLeft} style={{width: "1.3rem"}} size="2x" onClick={handlePrevious} /> */}
-      </button>
+        <button className="prev-btn" onClick={handlePrevious}>
+          {/* <FontAwesomeIcon icon={faChevronLeft} style={{ width: "1.3rem" }} size="2x" /> */}
+        </button>
         {currentCards.map((card, index) => (
-          <div key={index} className="card" style={{height: "20rem", maxWidth: "25rem"}}>
+          <div key={index} className="card" style={{ height: "20rem", maxWidth: "25rem" }}>
             <h2>{card.title}</h2>
             <p>{card.content}</p>
           </div>
         ))}
-        <button className="prev-btn">
-        {/* <FontAwesomeIcon icon={faChevronRight} style={{width: "1.3rem"}} size="2x" onClick={handleNext} /> */}
-      </button>
+        <button className="next-btn" onClick={handleNext}>
+          {/* <FontAwesomeIcon icon={faChevronRight} style={{ width: "1.3rem" }} size="2x" /> */}
+        </button>
       </div>
       <div className="pagination">
         <span className="dots">
           {Array.from({ length: totalPages }).map((_, index) => (
-            <span key={index} className={index === currentPage ? 'dot active' : 'dot'}>•</span>
+            <span key={index} className={index === currentPage ? 'dot active' : 'dot'}>
+              •
+            </span>
           ))}
         </span>
       </div>
-      <img src="/src/assets/images/patternDown.jpg" style={{width: "100%"}} alt="" />
+      <img src={patternDown} style={{ width: "100%" }} alt="Pattern Down" />
     </div>
   );
 };

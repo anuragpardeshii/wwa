@@ -1,10 +1,11 @@
 import "./Difference.css";
 import Mentors from "./Mentors";
 import Preschool from "./Preschool";
+import differenceImage from "/src/assets/images/difference.jpg";
 
 export default function Difference() {
   return (
-    <div style={{marginTop: "10vh"}}>
+    <div style={{ marginTop: "10vh" }}>
       <div className="difference-section" style={{ marginTop: "5vh" }}>
         <div className="difference">
           <h1 className="text-center">
@@ -13,13 +14,13 @@ export default function Difference() {
           <div className="aligning" style={{ padding: "0" }}>
             <div className="text-center">
               <img
-                src="/src/assets/images/difference.jpg"
+                src={differenceImage}
                 style={{ borderRadius: ".5rem", width: "75%", margin: "auto" }}
-                alt=""
+                alt="Difference"
               />
             </div>
             <div style={{ padding: "3rem 2rem 0 2rem" }}>
-            <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+              <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
                 At Wisdom World Academy, we prioritize the holistic development
                 of each child. Our approach goes beyond academics, fostering
                 intellectual, emotional, social, and creative growth in a

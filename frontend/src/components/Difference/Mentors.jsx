@@ -22,16 +22,14 @@ function Mentors() {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div
-            className={`mentor-cards ${isHovered ? "paused" : ""}`}
-          >
+          <div className={`mentor-cards ${isHovered ? "paused" : ""}`}>
             {doctorReviews.map((data) => (
               <div key={data.id} className="mentor-card">
                 <div className="mentor-image-part">
                   <img src={data.img} loading="lazy" alt="doctor-review" />
                   <div>
                     <h3>{data.name}</h3>
-                    <h6>{data.position} </h6>
+                    <h6>{data.position}</h6>
                   </div>
                 </div>
                 <div className="mentor-quote">
