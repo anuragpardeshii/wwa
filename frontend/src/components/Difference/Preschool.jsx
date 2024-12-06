@@ -41,8 +41,11 @@ const Preschool = () => {
 
       <h1>Preschool Curriculum</h1>
       <div className="cards">
-        <button className="prev-btn" onClick={handlePrevious}>
-          {/* <FontAwesomeIcon icon={faChevronLeft} style={{ width: "1.3rem" }} size="2x" /> */}
+        <button className="" onClick={handlePrevious}>
+        <img
+                  src="https://www.uptodd.com/images/newWebsite/slider-prev.svg"
+                  alt="Previous"
+                />
         </button>
         {currentCards.map((card, index) => (
           <div key={index} className="card" style={{ height: "20rem", maxWidth: "25rem" }}>
@@ -51,7 +54,10 @@ const Preschool = () => {
           </div>
         ))}
         <button className="next-btn" onClick={handleNext}>
-          {/* <FontAwesomeIcon icon={faChevronRight} style={{ width: "1.3rem" }} size="2x" /> */}
+        <img
+                  src="https://www.uptodd.com/images/newWebsite/slider-next.svg"
+                  alt="Previous"
+                />
         </button>
       </div>
       <div className="pagination">

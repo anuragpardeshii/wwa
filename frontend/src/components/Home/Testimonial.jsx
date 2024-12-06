@@ -45,9 +45,12 @@ export default function Testimonial() {
             <div>
             <button
                     onClick={handlePrev}
-                    className="px-5 py-3 circle-radius next-prev text-white rounded-md hover:bg-gray-700"
+                    className="px-5 py-3 circle-radius text-white rounded-md hover:bg-gray-700"
                 >
-                    {/* <FontAwesomeIcon icon={faChevronLeft} /> */}
+                    <img
+                  src="https://www.uptodd.com/images/newWebsite/slider-prev.svg"
+                  alt="Previous"
+                />
                 </button>
                 </div>
             <figure className="max-w-screen-md mx-auto text-center">
@@ -80,9 +83,12 @@ export default function Testimonial() {
             <div>
             <button
                     onClick={handleNext}
-                    className="px-5 py-3 next-prev text-white circle-radius hover:bg-gray-700"
+                    className="px-5 py-3 text-white circle-radius hover:bg-gray-700"
                 >
-                    {/* <FontAwesomeIcon icon={faChevronRight} /> */}
+                    <img
+                  src="https://www.uptodd.com/images/newWebsite/slider-next.svg"
+                  alt="Next"
+                />
                 </button>
                 </div>
 
