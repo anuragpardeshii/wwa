@@ -9,14 +9,6 @@
   --bs-gutter-x: "0"
 }
 
-.main-heading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding-bottom: 1rem;
-    font-weight: bold;
-}
 
 .cards-sec {
   display: flex;
@@ -70,4 +62,10 @@
 .hover-card img {
   margin-top: -2rem;
   z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .cards-width {
+    min-width: 40rem;
+  }
 }

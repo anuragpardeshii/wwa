@@ -1,50 +1,48 @@
 export default function Enquiry() {
   return (
-    <div>
+    <div style={{marginTop: "15vh"}}>
       <div className="flex" style={{ justifyContent: "space-evenly" }}>
-        <div style={{ maxWidth: "60%", padding: "5rem" }}>
-          <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-            Admission Enquiry
-          </h1>
-          <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+        <div style={{ maxWidth: "60%"}}>
+        <h1 className="mb-10 text-4xl font-normal  lg:text-3xl"> Admission Enquiry</h1>
+          <p class="mb-2 text-lg font-normal text-gray-500 lg:text-lg dark:text-gray-400">
             Welcome to Wisdom World Academy, where we are committed to shaping
             young minds with excellence and care. If you're considering
             admission for your child or need more details about our programs,
             our dedicated admissions team is here to assist you every step of
             the way.
           </p>
-          <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+          <p class="mb-2 text-lg font-normal text-gray-500 lg:text-lg dark:text-gray-400">
             We understand that choosing the right educational institution is a
             significant decision, and we aim to make this process as smooth as
             possible for you. Whether you have questions about our curriculum,
             extracurricular activities, fee structure, or facilities, feel free
             to reach out to us.
           </p>
-          <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+          <p class="mb-2 text-lg font-normal text-gray-500 lg:text-lg dark:text-gray-400">
             You can contact us through the following options:
           </p>
-          <ul class="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+          <ul class="mb-2 text-lg font-normal text-gray-500 lg:text-lg dark:text-gray-400">
             <li>Phone Number: +91-9589304050</li>
             <li>Email: wisdomworldacademy@gmail.com</li>
             <li>Office Hours: Monday to Friday, 9:00 AM to 5:00 PM</li>
           </ul>
-          <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+          <p class="mb-2 text-lg font-normal text-gray-500 lg:text-lg dark:text-gray-400">
             Alternatively, you can fill out the enquiry form below, providing
             your contact information and specific questions. Our admissions team
             will respond promptly to guide you.
           </p>
-          <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+          <p class="mb-2 text-lg font-normal text-gray-500 lg:text-lg dark:text-gray-400">
             At Wisdom World Academy, we believe in nurturing a lifelong love for
             learning and empowering students to achieve their potential. Join
             our vibrant community and give your child the gift of exceptional
             education.
           </p>
-          <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+          <p class="mb-2 text-lg font-normal text-gray-500 lg:text-lg dark:text-gray-400">
             Let’s embark on this journey together!
           </p>
         </div>
-        <div style={{ maxWidth: "40%", padding: "5rem" }}>
-          <h1 className="mb-6 text-4xl font-normal  lg:text-3xl">Admission Enquiry AY 2025-26</h1>
+        <div style={{ maxWidth: "40%" }}>
+          <h1 className="mb-6 text-4xl font-normal  lg:text-3xl"> Enquiry Form</h1>
           <form className="max-w-sm mx-auto">
             <div className="mb-5">
               <label

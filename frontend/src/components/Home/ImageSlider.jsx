@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ImageSlider() {
   return (
-    <section className="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply" style={{height: "90vh", padding: "0 6rem", marginTop: "10vh"}}>
+    <section className="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply" style={{height: "90%", padding: "0 6%", marginTop: "10vh"}}>
       <div className="px-4 mx-auto max-w-screen-3xl text-center py-24 lg:py-56">
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
           Empowering Minds, Shaping Futures

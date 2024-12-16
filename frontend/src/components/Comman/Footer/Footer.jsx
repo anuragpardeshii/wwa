@@ -8,9 +8,9 @@ const Footer = () => {
     <div className='bg-clr'>
         <img src="/src/assets/images/footer-wave.png" alt="" style={{width: "100%", marginBottom: "-1rem"}} />
     <footer className="footer">
-      <div className="footer-container bottom-border">
+      <div className="footer-container bottom-border text-center">
         <div className="footer-column col">
-          <h3 >About Us</h3>
+          <h3>About Us</h3>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about-us">About Us</a></li>
@@ -42,8 +42,8 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="footer-bottom border-top">
-        <p>Copyright © 2024 Lighthouse Learning Private Limited | <a href="#">Privacy Policy</a></p>
+      <div className="border-top">
+        <p className='flex justify-center p-4 gap-1 items-center'>Copyright © 2024 Lighthouse Learning Private Limited | <a href="#">Privacy Policy</a></p>
         <div className="social-media">
         <div className="social-icons">
             <a className='fb' href="https://www.facebook.com/WisdomWorldAcademyIndore" target="_blank" rel="noopener noreferrer">

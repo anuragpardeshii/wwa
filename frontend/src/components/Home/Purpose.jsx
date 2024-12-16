@@ -3,10 +3,10 @@ export default function Purpose() {
   
   return (
     <div className="" style={{ margin: "2rem 8vw" }}>
-      <h1 class="text-center mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-      Our Purpose
-      </h1>
-      <p class="mb-6 text-lg font-normal text-gray-500 dark:text-gray-400">
+      <h1 class="mb-10 color-blue text-blue-600 text-center text-4xl font-extrabold leading-none tracking-tight  md:text-5xl lg:text-6xl dark:text-white">
+  Our Purpose
+</h1>
+      <p class="mb-6 text-lg text-center font-normal text-gray-500 dark:text-gray-400">
       Our purpose is to create a nurturing environment where every student
           can thrive intellectually, emotionally, and socially. We are dedicated
           to fostering a learning community that celebrates curiosity, promotes

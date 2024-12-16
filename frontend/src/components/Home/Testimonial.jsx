@@ -41,11 +41,11 @@ export default function Testimonial() {
     };
 
     return (
-        <div className="flex items-center" style={{ margin: "5rem 8vw", height: "30vh" }}>
+        <div className="flex items-center" style={{ margin: "2% 8%", height: "30vh" }}>
             <div>
             <button
                     onClick={handlePrev}
-                    className="px-5 py-3 circle-radius text-white rounded-md hover:bg-gray-700"
+                    className="px-5 py-3 circle-radius text-white rounded-md "
                 >
                     <img
                   src="https://www.uptodd.com/images/newWebsite/slider-prev.svg"
@@ -64,7 +64,7 @@ export default function Testimonial() {
                     <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
                 </svg>
                 <blockquote>
-                    <p className="text-2xl italic font-medium text-gray-900 dark:text-white">
+                    <p className="min-text italic font-medium text-gray-900 dark:text-white">
                         "{testimonials[currentIndex].quote}"
                     </p>
                 </blockquote>
@@ -83,7 +83,7 @@ export default function Testimonial() {
             <div>
             <button
                     onClick={handleNext}
-                    className="px-5 py-3 text-white circle-radius hover:bg-gray-700"
+                    className="px-5 py-3 text-white circle-radius"
                 >
                     <img
                   src="https://www.uptodd.com/images/newWebsite/slider-next.svg"

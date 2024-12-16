@@ -14,3 +14,20 @@
 	background-color: var(--ezy-card-bg);
 	box-shadow: var(--ezy-card-box-shadow);
 }
+
+.video-control {
+	height: 35rem;
+}
+
+.main-h {
+	font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+.main-h {
+	font-size: 2rem;
+}
+.video-control {
+	height: auto;
+}
+}

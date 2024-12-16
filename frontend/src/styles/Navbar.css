@@ -12,3 +12,15 @@ nav a {
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
+@media (max-width: 768px) {
+    .brand {
+        font-size: 1rem;
+    }
+
+    .admission-btn {
+        display: none;
+    }
+}
+
+
