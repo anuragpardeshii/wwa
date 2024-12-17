@@ -41,7 +41,7 @@ export default function Testimonial() {
     };
 
     return (
-        <div className="flex items-center" style={{ margin: "2% 8%", height: "30vh" }}>
+        <div className="flex items-center testinominal" style={{ margin: "2% 8%"}}>
             <div>
             <button
                     onClick={handlePrev}

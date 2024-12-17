@@ -1,9 +1,39 @@
+import { useState } from "react";
 export default function Enquiry() {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    // Add the API access key
+    formData.append("access_key", "cd00d7b8-70d5-4754-b37d-4d5cac555875");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully!");
+      event.target.reset();
+    } else {
+      console.error("Error:", data);
+      setResult(data.message || "An error occurred. Please try again.");
+    }
+  };
+
   return (
-    <div style={{marginTop: "15vh"}}>
+    <div style={{ marginTop: "15vh" }}>
       <div className="flex" style={{ justifyContent: "space-evenly" }}>
-        <div style={{ maxWidth: "60%"}}>
-        <h1 className="mb-10 text-4xl font-normal  lg:text-3xl"> Admission Enquiry</h1>
+        <div style={{ maxWidth: "60%" }}>
+          <h1 className="mb-10 text-4xl font-normal  lg:text-3xl">
+            {" "}
+            Admission Enquiry
+          </h1>
           <p class="mb-2 text-lg font-normal text-gray-500 lg:text-lg dark:text-gray-400">
             Welcome to Wisdom World Academy, where we are committed to shaping
             young minds with excellence and care. If you're considering
@@ -42,20 +72,23 @@ export default function Enquiry() {
           </p>
         </div>
         <div style={{ maxWidth: "40%" }}>
-          <h1 className="mb-6 text-4xl font-normal  lg:text-3xl"> Enquiry Form</h1>
-          <form className="max-w-sm mx-auto">
+          <h1 className="mb-6 text-4xl font-normal  lg:text-3xl">
+            {" "}
+            Enquiry Form
+          </h1>
+          <form onSubmit={onSubmit}>
+            {/* Full Name */}
             <div className="mb-5">
               <label
-                for="email-address-icon"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                htmlFor="fullName"
+                className="block mb-2 text-sm font-medium text-gray-900"
               >
                 Full Name
               </label>
-              <div class="flex">
-                <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+              <div className="flex">
+                <span className="inline-flex items-center px-3 bg-gray-200 border border-r-0 rounded-l-md">
                   <svg
-                    class="w-4 h-4 text-gray-500 dark:text-gray-400"
-                    aria-hidden="true"
+                    className="w-4 h-4 text-gray-600"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
                     viewBox="0 0 20 20"
@@ -65,127 +98,112 @@ export default function Enquiry() {
                 </span>
                 <input
                   type="text"
-                  id="website-admin"
-                  class="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Bonnie Green"
-                />
-              </div>
-            </div>
-            <div className="mb-5">
-              <label
-                for="email-address-icon"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Your Email
-              </label>
-              <div class="relative">
-                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                  <svg
-                    class="w-4 h-4 text-gray-500 dark:text-gray-400"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    viewBox="0 0 20 16"
-                  >
-                    <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
-                    <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
-                  </svg>
-                </div>
-                <input
-                  type="text"
-                  id="email-address-icon"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="name@flowbite.com"
-                />
-              </div>
-            </div>
-            <div className="mb-5">
-              <label
-                for="phone-input"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Phone number:
-              </label>
-              <div class="relative">
-                <div class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none">
-                  <svg
-                    class="w-4 h-4 text-gray-500 dark:text-gray-400"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    viewBox="0 0 19 18"
-                  >
-                    <path d="M18 13.446a3.02 3.02 0 0 0-.946-1.985l-1.4-1.4a3.054 3.054 0 0 0-4.218 0l-.7.7a.983.983 0 0 1-1.39 0l-2.1-2.1a.983.983 0 0 1 0-1.389l.7-.7a2.98 2.98 0 0 0 0-4.217l-1.4-1.4a2.824 2.824 0 0 0-4.218 0c-3.619 3.619-3 8.229 1.752 12.979C6.785 16.639 9.45 18 11.912 18a7.175 7.175 0 0 0 5.139-2.325A2.9 2.9 0 0 0 18 13.446Z" />
-                  </svg>
-                </div>
-                <input
-                  type="text"
-                  id="phone-input"
-                  aria-describedby="helper-text-explanation"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                  placeholder="123-456-7890"
+                  name="name"
+                  id="fullName"
+                  className="rounded-r-md border border-gray-300 w-full p-2.5 text-gray-900"
+                  placeholder="Your Name"
                   required
                 />
               </div>
-              <p
-                id="helper-text-explanation"
-                class="mt-2 text-sm text-gray-500 dark:text-gray-400"
-              >
-                Select a phone number that matches the format.
-              </p>
             </div>
+
+            {/* Email */}
             <div className="mb-5">
               <label
-                for="countries"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                htmlFor="email"
+                className="block mb-2 text-sm font-medium text-gray-900"
+              >
+                Your Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                className="w-full p-2.5 border rounded-lg text-gray-900"
+                placeholder="example@domain.com"
+                required
+              />
+            </div>
+
+            {/* Phone */}
+            <div className="mb-5">
+              <label
+                htmlFor="phone"
+                className="block mb-2 text-sm font-medium text-gray-900"
+              >
+                Phone Number
+              </label>
+              <input
+                name="phone"
+                id="phone"
+                className="w-full p-2.5 border rounded-lg text-gray-900"
+                placeholder="Enter your phone number"
+                required
+              />
+            </div>
+
+            {/* Select Class */}
+            <div className="mb-5">
+              <label
+                htmlFor="class"
+                className="block mb-2 text-sm font-medium text-gray-900"
               >
                 Select Class
               </label>
               <select
-                id="Class"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                name="class"
+                id="class"
+                className="w-full p-2.5 border rounded-lg text-gray-900"
+                required
               >
-                <option>Nursery</option>
-                <option>LKG</option>
-                <option>UKG</option>
-                <option>Class I</option>
-                <option>Class II</option>
-                <option>Class III</option>
-                <option>Class IV</option>
-                <option>Class V</option>
-                <option>Class VI</option>
-                <option>Class VII</option>
-                <option>Class VIII</option>
-                <option>Class IX</option>
-                <option>Class X</option>
+                <option value="">Choose a class</option>
+                <option value="Nursery">Nursery</option>
+                <option value="LKG">LKG</option>
+                <option value="UKG">UKG</option>
+                <option value="Class I">Class I</option>
+                <option value="Class II">Class II</option>
+                <option value="Class III">Class III</option>
+                <option value="Class IV">Class IV</option>
+                <option value="Class V">Class V</option>
+                <option value="Class VI">Class VI</option>
+                <option value="Class VII">Class VII</option>
+                <option value="Class VIII">Class VIII</option>
               </select>
             </div>
-            <div className="flex items-start mb-5">
-              <div className="flex items-center h-5">
-                <input
-                  id="terms"
-                  type="checkbox"
-                  value=""
-                  className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
-                  required
-                />
-              </div>
+
+            {/* Terms and Conditions */}
+            <div className="flex items-center mb-5">
+              <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                className="w-4 h-4 border-gray-300 rounded focus:ring-blue-500"
+                required
+              />
               <label
-                for="terms"
-                className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                htmlFor="terms"
+                className="ml-2 text-sm font-medium text-gray-900"
               >
-                By clicking on Submit, I allow all communication from Wisdom
-                World Academy
+                By clicking Submit, I allow all communication from Wisdom World
+                Academy.
               </label>
             </div>
+
+            {/* Submit Button */}
             <button
               type="submit"
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg p-2.5"
             >
               Submit
             </button>
           </form>
+
+          {/* Result */}
+          {result && (
+            <p className="mt-4 text-center text-sm font-medium text-gray-700">
+              {result}
+            </p>
+          )}
         </div>
       </div>
     </div>

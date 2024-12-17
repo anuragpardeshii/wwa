@@ -87,6 +87,10 @@
   width: 20rem;
 }
 
+.testinominal {
+  height: 40vh;
+}
+
 /*                            Media Queries for responsiveness ( 1024px )*/
 @media (max-width: 1024px) {
   .super-peek-card {
@@ -109,6 +113,10 @@
 @media (max-width: 480px) {
   .prev {
     left: 0%;
+  }
+
+  .testinominal {
+    height: 65vh;
   }
   .next {
     right: 0%;
