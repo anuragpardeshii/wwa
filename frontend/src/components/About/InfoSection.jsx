@@ -8,7 +8,7 @@ import valuesImage from "/src/assets/images/values.jpeg";
 
 const InfoSection = () => {
   return (
-    <div className="cards-info" style={{ margin: "5rem 8vh" }}>
+    <div className="cards-info flex flex-wrap" style={{ margin: "5% 8%" }}>
       <div className="info-cards text-center">
         <div className="info-card-border">
           <div className="info-bg text-center">

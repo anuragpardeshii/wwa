@@ -11,16 +11,21 @@ export default function About() {
     <>
       <div style={{ marginTop: "10vh" }}>
         <Slogan />
-        <div
-          className="flex justify-center items-center"
-          style={{ margin: "3rem 8vw" }}
-        >
-          <div>
-            <h2 className="text-4xl font-extrabold dark:text-white">
+        <h2 className="text-4xl text-center medium-text font-extrabold dark:text-white">
               Wisdom World Academy
             </h2>
-            <p className="my-4 text-lg text-gray-500">Since 2014</p>
-            <p className="mb-4 text-lg font-normal text-gray-500 dark:text-gray-400">
+            <p className="my-4 text-gray-500 text-center">Since 2014</p>
+            <img
+              src={logoImage} // Use the imported image variable here
+              alt="Wisdom World Academy Logo"
+              style={{ width: "20rem", margin: "auto" }}
+            />
+        <div
+          className="flex flex-wrapping flex-column justify-around items-center"
+          style={{ margin: "3% 12%" }}
+        >
+          <div>
+            <p className="small-text mb-4 font-normal text-gray-500 dark:text-gray-400">
               Our Journey of Growth and Innovation Since its founding in 2014 in
               the vibrant Silicon City, Wisdom World Academy has pursued a clear
               vision: to deliver world-class education grounded in strong values
@@ -30,7 +35,7 @@ export default function About() {
               ties to the community, creating a legacy of excellence and trust
               that continues to grow.
             </p>
-            <p className="mb-4 text-lg font-normal text-gray-500 dark:text-gray-400">
+            <p className="mb-4 font-normal text-gray-500 dark:text-gray-400">
               What We Stand For At Wisdom World Academy, we are deeply committed
               to the transformative power of education. We believe that true
               learning extends beyond academics; it builds character, fosters
@@ -40,7 +45,7 @@ export default function About() {
             </p>
             <a
               href="#"
-              className="inline-flex items-center text-lg text-blue-600 dark:text-blue-500 hover:underline"
+              className="inline-flex items-center text-blue-600 dark:text-blue-500 hover:underline"
             >
               Join us
               <svg
@@ -59,13 +64,6 @@ export default function About() {
                 />
               </svg>
             </a>
-          </div>
-          <div className="px-5">
-            <img
-              src={logoImage} // Use the imported image variable here
-              alt="Wisdom World Academy Logo"
-              style={{ minWidth: "20rem" }}
-            />
           </div>
         </div>
         <InfoSection />

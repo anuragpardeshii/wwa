@@ -9,6 +9,7 @@ export default function Navbar() {
     navigate('/enquiry');
   };
   return (
+    <>
     <nav className="fixed w-full z-20 top-0 start-0">
       <div className="flex items-center mx-auto p-4" style={{ height: "10vh", justifyContent: "space-around"}}>
         <a
@@ -99,5 +100,6 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
+    </>
   );
 }

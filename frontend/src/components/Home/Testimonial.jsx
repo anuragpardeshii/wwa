@@ -1,6 +1,12 @@
 import React, { useState } from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+
+// Import images
+import michaelImage from "../assets/images/michael-gouch.png";
+import johnImage from "../assets/images/john-doe.png";
+import janeImage from "../assets/images/jane-smith.png";
+import sarahImage from "../assets/images/sarah-johnson.png";
+import prevIcon from "../assets/images/slider-prev.svg";
+import nextIcon from "../assets/images/slider-next.svg";
 
 export default function Testimonial() {
     const testimonials = [
@@ -8,25 +14,25 @@ export default function Testimonial() {
             quote: "Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application.",
             name: "Michael Gough",
             role: "CEO at Google",
-            image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png",
+            image: michaelImage,
         },
         {
             quote: "This is another great testimonial example. The components are easy to use, and the interface is intuitive and modern.",
             name: "John Doe",
             role: "CTO at Facebook",
-            image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/john-doe.png",
+            image: johnImage,
         },
         {
             quote: "We love using this tool! It's incredibly useful and saves us so much time building SaaS applications.",
             name: "Jane Smith",
             role: "Product Manager at Amazon",
-            image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jane-smith.png",
+            image: janeImage,
         },
         {
             quote: "Fantastic! The best decision we made for our application was integrating Flowbite's components.",
             name: "Sarah Johnson",
             role: "CEO at Microsoft",
-            image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sarah-johnson.png",
+            image: sarahImage,
         },
     ];
 
@@ -41,18 +47,15 @@ export default function Testimonial() {
     };
 
     return (
-        <div className="flex items-center testinominal" style={{ margin: "2% 8%"}}>
+        <div className="flex items-center testinominal" style={{ margin: "2% 8%" }}>
             <div>
-            <button
+                <button
                     onClick={handlePrev}
                     className="px-5 py-3 circle-radius text-white rounded-md "
                 >
-                    <img
-                  src="https://www.uptodd.com/images/newWebsite/slider-prev.svg"
-                  alt="Previous"
-                />
+                    <img src={prevIcon} alt="Previous" />
                 </button>
-                </div>
+            </div>
             <figure className="max-w-screen-md mx-auto text-center">
                 <svg
                     className="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600"
@@ -81,17 +84,13 @@ export default function Testimonial() {
                 </figcaption>
             </figure>
             <div>
-            <button
+                <button
                     onClick={handleNext}
                     className="px-5 py-3 text-white circle-radius"
                 >
-                    <img
-                  src="https://www.uptodd.com/images/newWebsite/slider-next.svg"
-                  alt="Next"
-                />
+                    <img src={nextIcon} alt="Next" />
                 </button>
-                </div>
-
+            </div>
         </div>
     );
 }

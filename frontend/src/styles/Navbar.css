@@ -1,6 +1,5 @@
 nav {
     background: linear-gradient(90deg, #0b2441 10%, #0f335a 30%, #14224e 100%);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0; /* Stick to the top of the viewport */
     z-index: 1000; /* Ensure it appears above other elements */

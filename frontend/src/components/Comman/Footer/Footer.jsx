@@ -2,11 +2,12 @@ import React from 'react';
 import './Footer.css'; // Assuming you have a CSS file for styling
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faFacebook, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import patternUp from "/src/assets/images/footer-wave.png";
 
 const Footer = () => {
   return (
     <div className='bg-clr'>
-        <img src="/src/assets/images/footer-wave.png" alt="" style={{width: "100%", marginBottom: "-1rem"}} />
+        <img src={patternUp} alt="Pattern Up" style={{width: "100%", marginBottom: "-1rem"}} />
     <footer className="footer">
       <div className="footer-container bottom-border text-center">
         <div className="footer-column col">
