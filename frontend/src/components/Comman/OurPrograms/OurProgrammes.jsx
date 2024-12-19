@@ -45,7 +45,7 @@ export default function OurProgrammes() {
 
   return (
     <div>
-      <img src={patternUp} style={{ width: "100%" }} alt="Pattern Up" />
+      <img src={patternUp} style={{ width: "100%", marginBottom: "-1%" }} alt="Pattern Up" />
       <div className="ourProgrammes" style={{ padding: "2% 5%" }}>
         <h1 class="mb-10 text-white text-center text-4xl font-extrabold leading-none tracking-tight md:text-5xl  ">
           Empowering Minds, Shaping Futures
@@ -222,7 +222,7 @@ export default function OurProgrammes() {
 
         </div>
       </div>
-      <img src={patternDown} style={{ width: "100%" }} alt="Pattern Down" />
+      <img src={patternDown} style={{ width: "100%", marginTop: "-2%" }} alt="Pattern Down" />
     </div>
   );
 }

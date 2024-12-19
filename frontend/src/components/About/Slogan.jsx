@@ -1,12 +1,12 @@
 import "./About.css";
-import patternDown from "/src/assets/images/patternDown.jpg";
+import patternDown from "/src/assets/images/wave-down.svg";
 
 export default function Slogan() {
   return (
     <>
     <div className="slogan">
       
-<blockquote class="small-text text-2xl text-center italic font-semibold text-gray-900 text-white">
+<blockquote class="small-text text-3xl text-center italic font-semibold text-gray-900 text-white">
     <p>"Empowering Young Minds, Building Bright Futures – At Wisdom World
         Academy, we nurture curiosity, inspire growth, and instill values,
         creating compassionate leaders ready to shape tomorrow. Where learning

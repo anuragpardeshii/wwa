@@ -7,11 +7,11 @@ export default function WhyUs() {
         },
         {
             heading: "Why Kangaroo Kids is one of the top Kindergarten Schools",
-            content: "The trust and goodwill that we have built over the years is based on the passion we have invested in education and evolved learning systems. We believe that every child deserves an atmosphere of creativity, compassion and confidence. At all Kangaroo Kids play schools, nursery schools and kindergartens across India and abroad, we ensure a safe, bias-free environment for children to learn and blossom in."
+            content: "The trust and goodwill that we have built over the years is based on the passion we have invested in education and evolved learning systems. We believe that every child deserves an atmosphere of creativity, compassion and confidence. At all Kangaroo Kids play schools, nursery schools and kindergartens across India and abroad, we ensure a safe, bias-free environment for children to learn and blossom in.  We believe that every child deserves an atmosphere of creativity, compassion and confidence. At all Kangaroo Kids play schools, nursery schools and kindergartens across India and abroad, we ensure a safe, bias-free environment for children to learn and blossom in."
         },
         {
             heading: "Preschool Education / Preschool Curriculum / Kindergarten Learning",
-            content: "Our unique curriculum is designed with the objective to make children addicted to learning! The methodology ensures that learning is thought provoking and empowering since it is based on the latest theories, brain research and best practices in education."
+            content: "Our unique curriculum is designed with the objective to make children addicted to learning! The methodology ensures that learning is thought provoking and empowering since it is based on the latest theories, brain research and best practices in education. Our unique curriculum is designed with the objective to make children addicted to learning! The methodology ensures that learning is thought provoking and empowering since it is based on the latest theories, brain research and best practices in education."
         }
     ];
 

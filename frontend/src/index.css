@@ -34,3 +34,13 @@ h4 {
   font-weight: 300;
   margin: 2rem 0;
 }
+
+.cards-width {
+  max-width: 20rem;
+}
+
+@media (max-width: 1220px) {
+.hide-img {
+  display: none;
+}
+}

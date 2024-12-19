@@ -18,7 +18,7 @@ export default function About() {
             <img
               src={logoImage} // Use the imported image variable here
               alt="Wisdom World Academy Logo"
-              style={{ width: "20rem", margin: "auto" }}
+              style={{ width: "15rem", margin: "auto" }}
             />
         <div
           className="flex flex-wrapping flex-column justify-around items-center"

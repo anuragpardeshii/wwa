@@ -2,6 +2,10 @@ import "./Pioneers.css";
 
 export default function Pioneers() {
   return (
+    <>
+    <img className="hide-img" src="/src/assets/images/bg1.jpg" alt="" style={{position: "absolute", width: "100vw", zIndex: "-1000", opacity: "0.5"}} />
+    
+    
     <div style={{margin: "2% 8%"}}>
     
 
@@ -17,6 +21,7 @@ export default function Pioneers() {
 
 
     </div>
+    </>
   );
 }
 

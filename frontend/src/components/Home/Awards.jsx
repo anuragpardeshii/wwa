@@ -45,7 +45,7 @@ export default function Awards() {
 
   return (
     <div>
-      <img src={patternUp} style={{ width: "100%" }} alt="Pattern Up" />
+      <img src={patternUp} style={{ width: "100%", marginBottom: "-1%" }} alt="Pattern Up" />
       <div className="ourProgrammes" style={{ padding: "2% 5%" }}>
         <h1 class="mb-10 text-white text-center text-4xl font-extrabold leading-none tracking-tight md:text-5xl  ">
           Awards & Recognition
@@ -53,7 +53,7 @@ export default function Awards() {
 
         <div className="flex justify-center items-center gap-4 flex-wrap">
           <div
-            class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+            class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
             style={{ maxWidth: "20rem" }}
           >
             <a href="#">
@@ -135,7 +135,7 @@ export default function Awards() {
           </div>
         </div>
       </div>
-      <img src={patternDown} style={{ width: "100%" }} alt="Pattern Down" />
+      <img src={patternDown} style={{ width: "100%", marginTop: "-1%" }} alt="Pattern Down" />
     </div>
   );
 }

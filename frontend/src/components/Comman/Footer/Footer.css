@@ -1,5 +1,7 @@
 .bg-clr {
   background: linear-gradient(90deg, #0b2441 0%, #0f335a 50%, #14224e 100%);
+  position: relative;
+  z-index: 100;
 }
 .footer {
   background: linear-gradient(90deg, #0b2441 0%, #0f335a 50%, #14224e 100%);
