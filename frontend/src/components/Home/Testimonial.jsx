@@ -61,6 +61,7 @@ export default function Testimonial() {
           width: "100vw",
           opacity: "0.5",
           marginTop: "-10vh",
+          zIndex: "-100"
         }}
       />
       <div
@@ -71,10 +72,12 @@ export default function Testimonial() {
           <button
             onClick={handlePrev}
             className="px-5 py-3 circle-radius text-white rounded-md "
+            style={{zIndex: "100000"}}
           >
             <img
               src="https://www.uptodd.com/images/newWebsite/slider-prev.svg"
               alt="Previous"
+              style={{zIndex: "100000"}}
             />
           </button>
         </div>
@@ -113,10 +116,12 @@ export default function Testimonial() {
           <button
             onClick={handleNext}
             className="px-5 py-3 text-white circle-radius"
+            style={{zIndex: "100000"}}
           >
             <img
               src="https://www.uptodd.com/images/newWebsite/slider-next.svg"
               alt="Next"
+              style={{zIndex: "100000"}}
             />
           </button>
         </div>
