@@ -54,7 +54,7 @@ export default function OurPhilosophy() {
         <div
           className="flex justify-center items-center gap-4 flex-wrap px-4"
         >
-          <div class="small-text bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style={{maxWidth: "20rem"}}>
+          <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style={{maxWidth: "20rem"}}>
             <a href="#">
               <img
                 class="rounded-t-lg"

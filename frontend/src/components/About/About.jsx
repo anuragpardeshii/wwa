@@ -3,6 +3,7 @@ import "./About.css";
 import OurStory from "./OurStory";
 import Slogan from "./Slogan";
 import InfoSection from "./InfoSection";
+import aboutBg from "/src/assets/images/aboutbg.png";
 import OurPhilosophy from "./OurPhilosophy";
 import logoImage from "/src/assets/images/logo.png"; // Import the logo image
 
@@ -11,21 +12,22 @@ export default function About() {
     <>
       <div style={{ marginTop: "10vh" }}>
         <Slogan />
+        <img className="hide-img bg-contain" src={aboutBg} alt="" style={{position: "absolute", width: "100vw", zIndex: "-1000", opacity: "0.5", marginTop: "-10vh"}} />
         <h2 className="text-4xl text-center medium-text font-extrabold dark:text-white">
-              Wisdom World Academy
-            </h2>
-            <p className="my-4 text-gray-500 text-center">Since 2014</p>
-            <img
-              src={logoImage} // Use the imported image variable here
-              alt="Wisdom World Academy Logo"
-              style={{ width: "15rem", margin: "auto" }}
-            />
+          Wisdom World Academy
+        </h2>
+        <p className="my-4 text-gray-500 text-center">Since 2014</p>
         <div
           className="flex flex-wrapping flex-column justify-around items-center"
-          style={{ margin: "3% 12%" }}
+          style={{ margin: "3% 14%" }}
         >
+          <img
+              src={logoImage} // Use the imported image variable here
+              alt="Wisdom World Academy Logo"
+              style={{ width: "23rem", margin: "1rem auto " }}
+            />
           <div>
-            <p className="small-text mb-4 font-normal text-gray-500 dark:text-gray-400">
+            <p className="mb-4 mt-4 text-sm font-normal  lg:text-xl dark:text-gray-400">
               Our Journey of Growth and Innovation Since its founding in 2014 in
               the vibrant Silicon City, Wisdom World Academy has pursued a clear
               vision: to deliver world-class education grounded in strong values
@@ -35,7 +37,7 @@ export default function About() {
               ties to the community, creating a legacy of excellence and trust
               that continues to grow.
             </p>
-            <p className="mb-4 font-normal text-gray-500 dark:text-gray-400">
+            <p className="mb-4 mt-4 text-sm font-normal  lg:text-xl dark:text-gray-400">
               What We Stand For At Wisdom World Academy, we are deeply committed
               to the transformative power of education. We believe that true
               learning extends beyond academics; it builds character, fosters
@@ -45,9 +47,9 @@ export default function About() {
             </p>
             <a
               href="#"
-              className="inline-flex items-center text-blue-600 dark:text-blue-500 hover:underline"
+              className="inline-flex items-center  text-blue-600 dark:text-blue-500 hover:underline "
             >
-              Join us
+              <p className="small-text mb-4 mt-4 text-lg font-bold font-normal lg:text-lg">Join us</p>
               <svg
                 className="w-3.5 h-3.5 ms-2 rtl:rotate-180"
                 aria-hidden="true"
@@ -65,6 +67,7 @@ export default function About() {
               </svg>
             </a>
           </div>
+          
         </div>
         <InfoSection />
         <OurPhilosophy />

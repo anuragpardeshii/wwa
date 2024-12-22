@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="border-top">
-        <p className='flex justify-center p-4 gap-1 items-center'>Copyright © 2024 Lighthouse Learning Private Limited | <a href="#">Privacy Policy</a></p>
+        <p className='p-4 flex items-center justify-center'>Website Created and Managed by &nbsp; <a className='inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline' href="https://www.linkedin.com/in/pardeshianurag22/"> Anurag Pardeshi</a></p>
         <div className="social-media">
         <div className="social-icons">
             <a className='fb' href="https://www.facebook.com/WisdomWorldAcademyIndore" target="_blank" rel="noopener noreferrer">

@@ -1,9 +1,10 @@
 import "./Pioneers.css";
+import bg1 from "/src/assets/images/bg1.jpg";
 
 export default function Pioneers() {
   return (
     <>
-    <img className="hide-img" src="/src/assets/images/bg1.jpg" alt="" style={{position: "absolute", width: "100vw", zIndex: "-1000", opacity: "0.5"}} />
+    <img className="hide-img" src={bg1} alt="" style={{position: "absolute", width: "100vw", zIndex: "-1000", opacity: "0.5"}} />
     
     
     <div style={{margin: "2% 8%"}}>

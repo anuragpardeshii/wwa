@@ -1,9 +1,10 @@
+import formbg1 from '/src/assets/images/formbg1.png';
 
 export default function Purpose() {
   
   return (
     <>
-    <img className="hide-img" src="/src/assets/images/formbg1.png" alt="" style={{position: "absolute", width: "100vw", zIndex: "-1000", opacity: "0.5", marginTop: "-10vh"}} />
+    <img className="hide-img" src={formbg1} alt="" style={{position: "absolute", width: "100vw", zIndex: "-1000", opacity: "0.5", marginTop: "-10vh"}} />
     <div className="" style={{ margin: "2rem 8vw" }}>
       <h1 class="mb-10 color-blue text-blue-600 text-center text-4xl font-extrabold leading-none tracking-tight  md:text-5xl lg:text-6xl dark:text-white">
   Our Purpose

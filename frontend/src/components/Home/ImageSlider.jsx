@@ -1,11 +1,12 @@
 import React from "react";
 import "./ImageSlider.css";
+import backgroundImage from "/src/assets/images/army/DSC_0400.JPG";
 
 export default function ImageSlider() {
   return (
     <section
       className="bg-center background-imagee bg-cover bg-gray-400 bg-blend-multiply bg-no-repeat"
-      style={{ height: "90%", padding: "0 6%", marginTop: "5vh", backgroundImage: "url('src/assets/images/army/DSC_0400.JPG')" }}
+      style={{ height: "90%", padding: "0 6%", marginTop: "5vh", backgroundImage: `url(${backgroundImage})`, }}
     >
       <div className="px-4 mx-auto max-w-screen-3xl text-center py-24 lg:py-56">
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">

@@ -4,33 +4,8 @@ import React, { useState } from "react";
 import "../Comman/OurPrograms/OurProgrammes.css";
 import patternUp from "/src/assets/images/wave-up.svg";
 import patternDown from "/src/assets/images/wave-down.svg";
+import prog1 from "/src/assets/images/prog1.jpeg"
 
-const cards = [
-  {
-    src: "/src/assets/images/prog1.jpeg",
-    text: "Play Group",
-    hoverSrc: "/src/assets/images/h1.png",
-    hoverText: "Additional info about Play Group",
-  },
-  {
-    src: "/src/assets/images/prog2.jpg",
-    text: "Nursery",
-    hoverSrc: "/src/assets/images/h2.png",
-    hoverText: "Additional info about Nursery",
-  },
-  {
-    src: "/src/assets/images/prog3.webp",
-    text: "Junior KG",
-    hoverSrc: "/src/assets/images/h3.png",
-    hoverText: "Additional info about Junior KG",
-  },
-  {
-    src: "/src/assets/images/prog4.jpeg",
-    text: "Senior KG",
-    hoverSrc: "/src/assets/images/h4.png",
-    hoverText: "Additional info about Senior KG",
-  },
-];
 
 export default function Awards() {
   const [hoverIndex, setHoverIndex] = useState(null);
@@ -46,7 +21,7 @@ export default function Awards() {
   return (
     <div>
       <img src={patternUp} style={{ width: "100%", marginBottom: "-1%" }} alt="Pattern Up" />
-      <div className="ourProgrammes" style={{ padding: "2% 5%" }}>
+      <div className="ourProgrammes" style={{ padding: "2% 3%" }}>
         <h1 class="mb-10 text-white text-center text-4xl font-extrabold leading-none tracking-tight md:text-5xl  ">
           Awards & Recognition
         </h1>
@@ -54,12 +29,12 @@ export default function Awards() {
         <div className="flex justify-center items-center gap-4 flex-wrap">
           <div
             class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-            style={{ maxWidth: "20rem" }}
+            style={{ maxWidth: "18rem" }}
           >
             <a href="#">
               <img
                 class="rounded-t-lg"
-                src="/src/assets/images/prog1.jpeg"
+                src={prog1}
                 alt=""
               />
             </a>
@@ -75,12 +50,12 @@ export default function Awards() {
 
           <div
             class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-            style={{ maxWidth: "20rem" }}
+            style={{ maxWidth: "18rem" }}
           >
             <a href="#">
               <img
                 class="rounded-t-lg"
-                src="/src/assets/images/prog1.jpeg"
+                src={prog1}
                 alt=""
               />
             </a>
@@ -95,12 +70,12 @@ export default function Awards() {
           </div>
           <div
             class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-            style={{ maxWidth: "20rem" }}
+            style={{ maxWidth: "18rem" }}
           >
             <a href="#">
               <img
                 class="rounded-t-lg"
-                src="/src/assets/images/prog1.jpeg"
+                src={prog1}
                 alt=""
               />
             </a>
@@ -115,12 +90,12 @@ export default function Awards() {
           </div>
           <div
             class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-            style={{ maxWidth: "20rem" }}
+            style={{ maxWidth: "18rem" }}
           >
             <a href="#">
               <img
                 class="rounded-t-lg"
-                src="/src/assets/images/prog1.jpeg"
+                src={prog1}
                 alt=""
               />
             </a>

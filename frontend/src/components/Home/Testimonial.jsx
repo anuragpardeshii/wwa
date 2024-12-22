@@ -1,3 +1,4 @@
+import formbg1 from '/src/assets/images/formbg.png';
 import React, { useState } from "react";
 
 export default function Testimonial() {
@@ -54,13 +55,12 @@ export default function Testimonial() {
     <>
       <img
       className="hide-img"
-        src="/src/assets/images/formbg.png"
+        src={formbg1}
         alt=""
         style={{
           position: "absolute",
           width: "100vw",
           opacity: "0.5",
-          marginTop: "-10vh",
           zIndex: "-100"
         }}
       />

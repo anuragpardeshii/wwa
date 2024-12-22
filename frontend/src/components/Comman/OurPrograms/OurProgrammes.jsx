@@ -1,36 +1,11 @@
 import React, { useState } from "react";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faChild, faCalendarAlt, faClock } from "@fortawesome/free-solid-svg-icons";
+import prog1 from "/src/assets/images/prog1.jpeg";
 import "./OurProgrammes.css";
 import patternUp from "/src/assets/images/wave-up.svg";
 import patternDown from "/src/assets/images/wave-down.svg";
 
-const cards = [
-  {
-    src: "/src/assets/images/prog1.jpeg",
-    text: "Play Group",
-    hoverSrc: "/src/assets/images/h1.png",
-    hoverText: "Additional info about Play Group",
-  },
-  {
-    src: "/src/assets/images/prog2.jpg",
-    text: "Nursery",
-    hoverSrc: "/src/assets/images/h2.png",
-    hoverText: "Additional info about Nursery",
-  },
-  {
-    src: "/src/assets/images/prog3.webp",
-    text: "Junior KG",
-    hoverSrc: "/src/assets/images/h3.png",
-    hoverText: "Additional info about Junior KG",
-  },
-  {
-    src: "/src/assets/images/prog4.jpeg",
-    text: "Senior KG",
-    hoverSrc: "/src/assets/images/h4.png",
-    hoverText: "Additional info about Senior KG",
-  },
-];
 
 export default function OurProgrammes() {
   const [hoverIndex, setHoverIndex] = useState(null);
@@ -46,19 +21,19 @@ export default function OurProgrammes() {
   return (
     <div>
       <img src={patternUp} style={{ width: "100%", marginBottom: "-1%" }} alt="Pattern Up" />
-      <div className="ourProgrammes" style={{ padding: "2% 5%" }}>
+      <div className="ourProgrammes" style={{ padding: "5% 3%" }}>
         <h1 class="mb-10 text-white text-center text-4xl font-extrabold leading-none tracking-tight md:text-5xl  ">
           Empowering Minds, Shaping Futures
         </h1>
 
         <div
-          className="flex justify-center items-center gap-4 flex-wrap px-4"
+          className="flex justify-center items-center gap-4 flex-wrap"
         >
-          <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style={{maxWidth: "20rem"}}>
+          <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style={{maxWidth: "18rem"}}>
             <a href="#">
               <img
                 class="rounded-t-lg"
-                src="/src/assets/images/prog1.jpeg"
+                src={prog1}
                 alt=""
               />
             </a>
@@ -96,11 +71,11 @@ export default function OurProgrammes() {
             </div>
           </div>
 
-          <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style={{maxWidth: "20rem"}}>
+          <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style={{maxWidth: "18rem"}}>
             <a href="#">
               <img
                 class="rounded-t-lg"
-                src="/src/assets/images/prog1.jpeg"
+                src={prog1}
                 alt=""
               />
             </a>
@@ -137,11 +112,11 @@ export default function OurProgrammes() {
               </a>
             </div>
           </div>
-          <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style={{maxWidth: "20rem"}}>
+          <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style={{maxWidth: "18rem"}}>
             <a href="#">
               <img
                 class="rounded-t-lg"
-                src="/src/assets/images/prog1.jpeg"
+                src={prog1}
                 alt=""
               />
             </a>
@@ -178,11 +153,11 @@ export default function OurProgrammes() {
               </a>
             </div>
           </div>
-          <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style={{maxWidth: "20rem"}}>
+          <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style={{maxWidth: "18rem"}}>
             <a href="#">
               <img
                 class="rounded-t-lg"
-                src="/src/assets/images/prog1.jpeg"
+                src={prog1}
                 alt=""
               />
             </a>
@@ -222,7 +197,7 @@ export default function OurProgrammes() {
 
         </div>
       </div>
-      <img src={patternDown} style={{ width: "100%", marginTop: "-2%" }} alt="Pattern Down" />
+      <img src={patternDown} style={{ width: "100%", marginTop: "-1%" }} alt="Pattern Down" />
     </div>
   );
 }

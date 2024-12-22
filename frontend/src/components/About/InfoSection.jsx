@@ -8,43 +8,45 @@ import valuesImage from "/src/assets/images/values.jpeg";
 
 const InfoSection = () => {
   return (
-    <div className="cards-info flex flex-wrap" style={{ margin: "5% 8%" }}>
-      <div className="info-cards text-center">
-        <div className="info-card-border">
-          <div className="info-bg text-center">
-            <img src={missionImage} alt="Mission" />
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
-            suscipit in ab minima cupiditate error aut neque exercitationem
-            asperiores nam.
-          </p>
-        </div>
-      </div>
-      <div className="info-cards text-center">
-        <div className="info-card-border">
-          <div className="info-bg text-center">
-            <img src={visionImage} alt="Vision" />
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
-            suscipit in ab minima cupiditate error aut neque exercitationem
-            asperiores nam.
-          </p>
-        </div>
-      </div>
-      <div className="info-cards text-center">
-        <div className="info-card-border">
-          <div className="info-bg text-center">
-            <img src={valuesImage} alt="Values" />
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
-            suscipit in ab minima cupiditate error aut neque exercitationem
-            asperiores nam.
-          </p>
-        </div>
-      </div>
+    <div className="cards-info flex flex-wrap" style={{ margin: "2% 8%" }}>
+      <a
+        href="#"
+        class="block max-w-xs p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+      >
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          Mission
+        </h5>
+        <p class="font-normal text-gray-700 dark:text-gray-400">
+          Here are the biggest enterprise technology acquisitions of 2021 so
+          far, in reverse chronological order.
+        </p>
+      </a>
+
+      <a
+        href="#"
+        class="block max-w-xs p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+      >
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          Vision
+        </h5>
+        <p class="font-normal text-gray-700 dark:text-gray-400">
+          Here are the biggest enterprise technology acquisitions of 2021 so
+          far, in reverse chronological order.
+        </p>
+      </a>
+
+      <a
+        href="#"
+        class="block max-w-xs p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+      >
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          Values
+        </h5>
+        <p class="font-normal text-gray-700 dark:text-gray-400">
+          Here are the biggest enterprise technology acquisitions of 2021 so
+          far, in reverse chronological order.
+        </p>
+      </a>
     </div>
   );
 };
