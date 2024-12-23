@@ -1,25 +1,36 @@
 import "./Difference.css";
 import Mentors from "./Mentors";
 import Preschool from "./Preschool";
-import differenceImage from "/src/assets/images/difference.jpg";
+import bg4 from "/src/assets/images/bg6.jpg";
+import differenceImage from "/src/assets/images/army/DSC_0484.JPG";
 
 export default function Difference() {
   return (
     <div style={{ marginTop: "10vh" }}>
-      <div className="difference-section" style={{ marginTop: "5vh" }}>
+      <img
+              className="hide-img"
+              src={bg4}
+              alt=""
+              style={{
+                position: "absolute",
+                width: "100vw",
+                opacity: "0.5",
+                zIndex: "-100",
+              }}
+            />
+      <div className="difference-section" >
         <div className="difference">
           <h1 className="text-center">
             What Sets Wisdom World Academy Apart from Other Preschools?
           </h1>
           <div className="aligning" style={{ padding: "0" }}>
-            <div className="text-center">
               <img
+                className="text-center"
                 src={differenceImage}
-                style={{ borderRadius: ".5rem", width: "75%", margin: "auto" }}
                 alt="Difference"
+                style={{width: "70%"}}
               />
-            </div>
-            <div style={{ padding: "3rem 2rem 0 2rem" }}>
+            <div className="p-6 m-4" style={{width: "90%"}}>
               <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
                 At Wisdom World Academy, we prioritize the holistic development
                 of each child. Our approach goes beyond academics, fostering

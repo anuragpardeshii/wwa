@@ -1,5 +1,5 @@
-import formbg1 from '/src/assets/images/formbg.png';
 import React, { useState } from "react";
+import formbg1 from "/src/assets/images/formbg.png";
 
 export default function Testimonial() {
   const testimonials = [
@@ -17,7 +17,7 @@ export default function Testimonial() {
       name: "John Doe",
       role: "CTO at Facebook",
       image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/john-doe.png",
+        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png",
     },
     {
       quote:
@@ -25,7 +25,7 @@ export default function Testimonial() {
       name: "Jane Smith",
       role: "Product Manager at Amazon",
       image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jane-smith.png",
+        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png",
     },
     {
       quote:
@@ -33,98 +33,128 @@ export default function Testimonial() {
       name: "Sarah Johnson",
       role: "CEO at Microsoft",
       image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sarah-johnson.png",
+        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png",
     },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    setCurrentIndex(
+      (prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1)
     );
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+    setCurrentIndex(
+      (prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1)
     );
   };
 
   return (
     <>
       <img
-      className="hide-img"
+        className="hide-img"
         src={formbg1}
         alt=""
         style={{
           position: "absolute",
           width: "100vw",
           opacity: "0.5",
-          zIndex: "-100"
+          zIndex: "-100",
         }}
       />
-      <div
-        className="flex items-center testinominal"
-        style={{ margin: "2% 8%", minHeight: "35vh" }}
-      >
-        <div>
-          <button
-            onClick={handlePrev}
-            className="px-5 py-3 circle-radius text-white rounded-md "
-            style={{zIndex: "100000"}}
-          >
-            <img
-              src="https://www.uptodd.com/images/newWebsite/slider-prev.svg"
-              alt="Previous"
-              style={{zIndex: "100000"}}
-            />
-          </button>
-        </div>
-        <figure className="max-w-screen-md mx-auto text-center">
-          <svg
-            className="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 18 14"
-          >
-            <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
-          </svg>
-          <blockquote>
-            <p className="min-text italic font-medium text-gray-900 dark:text-white">
-              "{testimonials[currentIndex].quote}"
-            </p>
-          </blockquote>
-          <figcaption className="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
-            <img
-              className="w-6 h-6 rounded-full"
-              src={testimonials[currentIndex].image}
-              alt="profile picture"
-            />
-            <div className="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
-              <cite className="pe-3 font-medium text-gray-900 dark:text-white">
-                {testimonials[currentIndex].name}
-              </cite>
-              <cite className="ps-3 text-sm text-gray-500 dark:text-gray-400">
-                {testimonials[currentIndex].role}
-              </cite>
+      <div className="relative w-full">
+        <div className="relative overflow-hidden rounded-lg h-56 md:h-96">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-700 ease-in-out ${
+                index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+              }`}
+            >
+              <figure className="max-w-screen-md mx-auto text-center">
+                <blockquote>
+                  <p className="min-text italic font-medium text-gray-900 dark:text-white">
+                    "{testimonial.quote}"
+                  </p>
+                </blockquote>
+                <figcaption className="flex items-center justify-center mt-6 space-x-3">
+                  <img
+                    className="w-6 h-6 rounded-full"
+                    src={testimonial.image}
+                    alt="profile"
+                  />
+                  <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
+                    <cite className="pe-3 font-medium text-gray-900 dark:text-white">
+                      {testimonial.name}
+                    </cite>
+                    <cite className="ps-3 text-sm text-gray-500 dark:text-gray-400">
+                      {testimonial.role}
+                    </cite>
+                  </div>
+                </figcaption>
+              </figure>
             </div>
-          </figcaption>
-        </figure>
-        <div>
-          <button
-            onClick={handleNext}
-            className="px-5 py-3 text-white circle-radius"
-            style={{zIndex: "100000"}}
-          >
-            <img
-              src="https://www.uptodd.com/images/newWebsite/slider-next.svg"
-              alt="Next"
-              style={{zIndex: "100000"}}
-            />
-          </button>
+          ))}
         </div>
+        <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              className={`w-3 h-3 rounded-full ${
+                index === currentIndex ? "bg-blue-600" : "bg-gray-300"
+              }`}
+              onClick={() => setCurrentIndex(index)}
+              aria-label={`Slide ${index + 1}`}
+            ></button>
+          ))}
+        </div>
+        <button
+          type="button"
+          onClick={handlePrev}
+          className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        >
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full" style={{backgroundColor: "rgb(255, 199, 1)", zIndex: "1"}}>
+            <svg
+              className="w-4 h-4 text-white"
+              style={{zIndex: "1"}}
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M5 1 1 5l4 4"
+              />
+            </svg>
+          </span>
+        </button>
+        <button
+          type="button"
+          onClick={handleNext}
+          className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        >
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full" style={{backgroundColor: "rgb(255, 199, 1)"}}>
+            <svg
+              className="w-4 h-4 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="m1 9 4-4-4-4"
+              />
+            </svg>
+          </span>
+        </button>
       </div>
     </>
   );

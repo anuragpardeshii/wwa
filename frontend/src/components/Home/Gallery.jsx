@@ -35,7 +35,7 @@ export default function Gallery() {
         </div>
         <div className="grid gap-4">
           <div>
-            <img className="h-auto max-w-full rounded-lg" src={img5} alt="Image 5" />
+            <img className="min-hide h-auto max-w-full rounded-lg" src={img5} alt="Image 5" />
           </div>
           <div>
             <img className="min-hide h-auto max-w-full rounded-lg" src={img6} alt="Image 6" />

@@ -1,5 +1,6 @@
 import "./Enquiry.css";
 import { useState } from "react";
+import bg from "/src/assets/svgs/stationary-bg2.png"
 export default function Enquiry() {
   const [result, setResult] = useState("");
 
@@ -31,7 +32,7 @@ export default function Enquiry() {
     <>
       <img
       className="hide-img"
-        src="/src/assets/svgs/stationary-bg2.png"
+        src={bg}
         alt=""
         style={{
           position: "absolute",
@@ -40,26 +41,26 @@ export default function Enquiry() {
           opacity: "0.5",
         }}
       />
-      <div style={{ padding: "3% 5%" }}>
+      <div style={{ padding: "3rem 5%" }}>
         <div
           className="marginn flex gh flex-wrap gap-6 items-center"
           style={{ justifyContent: "space-between"  }}
         >
           <div
             className="hide-div"
-            style={{ maxWidth: "55%", padding: "2% 5%", top: "50%" }}
+            style={{ maxWidth: "55%", padding: "2% 3%", top: "50%" }}
           >
-            <p class="mb-2 text-lg font-normal text-gray-500 lg:text-lg dark:text-gray-400">
+            <p className="mb-2 text-lg font-normal  lg:text-lg dark:text-gray-400">
               Welcome to Wisdom World Academy, where we are committed to shaping
               young minds with excellence and care. If you're considering
               admission for your child or need more details about our programs,
               our dedicated admissions team is here to assist you every step of
               the way.
             </p>
-            <p class="mb-2 text-lg font-normal text-gray-500 lg:text-lg dark:text-gray-400">
+            <p className="mb-2 text-lg font-normal  lg:text-lg dark:text-gray-400">
               You can contact us through the following options:
             </p>
-            <ul class="mb-2 text-lg font-normal text-gray-500 lg:text-lg dark:text-gray-400">
+            <ul className="mb-2 text-lg font-normal  lg:text-lg dark:text-gray-400">
               <li style={{ marginLeft: "2rem" }}>
                 <b>Phone Number:</b> +91-9589304050
               </li>
@@ -70,18 +71,18 @@ export default function Enquiry() {
                 <b>Office Hours:</b>Monday to Friday, 9:00 AM to 5:00 PM
               </li>
             </ul>
-            <p class="mb-2 text-lg font-normal text-gray-500 lg:text-lg dark:text-gray-400">
+            <p className="mb-2 text-lg font-normal  lg:text-lg dark:text-gray-400">
               Alternatively, you can fill out the enquiry form below, providing
               your contact information and specific questions. Our admissions
               team will respond promptly to guide you.
             </p>
-            <p class="mb-2 text-lg font-normal text-gray-500 lg:text-lg dark:text-gray-400">
+            <p className="mb-2 text-lg font-normal  lg:text-lg dark:text-gray-400">
               At Wisdom World Academy, we believe in nurturing a lifelong love
               for learning and empowering students to achieve their potential.
               Join our vibrant community and give your child the gift of
               exceptional education.
             </p>
-            <p class="mb-2 text-lg font-normal text-gray-500 lg:text-lg dark:text-gray-400">
+            <p className="mb-2 text-lg font-normal  lg:text-lg dark:text-gray-400">
               Let’s embark on this journey together!
             </p>
           </div>
@@ -90,7 +91,7 @@ export default function Enquiry() {
             style={{
               margin: "auto",
               background: "rgba(255, 255, 255, 0.7)",
-              boxShadow: "rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;",
+              boxShadow: "rgba(0, 0, 0, 0.15) 0px 5px 15px 0px",
             }}
           >
             <h1 className="mb-4 text-2xl font-normal lg:text-3xl">
@@ -102,7 +103,7 @@ export default function Enquiry() {
               <div className="mb-5">
                 <label
                   htmlFor="fullName"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Full Name
                 </label>
@@ -110,7 +111,7 @@ export default function Enquiry() {
                   type="text"
                   id="name"
                   aria-describedby="helper-text-explanation"
-                  class="bg-white-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  className="bg-white-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                   placeholder="Prateek Batham"
                 />
               </div>
@@ -119,7 +120,7 @@ export default function Enquiry() {
               <div className="mb-5">
                 <label
                   htmlFor="email"
-                  class="block mb-2 text-sm font-medium text-gray-900"
+                  className="block mb-2 text-sm font-medium text-gray-900"
                 >
                   Your Email
                 </label>
@@ -128,7 +129,7 @@ export default function Enquiry() {
                   name="email"
                   id="email"
                   aria-describedby="helper-text-explanation"
-                  class="bg-white-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  className="bg-white-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                   placeholder="example@domain.com"
                   required
                 />
@@ -143,8 +144,8 @@ export default function Enquiry() {
                   Phone Number
                 </label>
                 <input
-                  type="text" id="phone" inputmode="numeric"
-                  class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  type="text" id="phone" inputMode="numeric"
+                  className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Enter your phone number"
                   required
                 />

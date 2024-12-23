@@ -29,10 +29,9 @@ const Footer = () => {
         <div className="footer-column col">
           <h3>Connect</h3>
           <ul>
-            <li><a href="#">Media</a></li>
+            <li><a href="/see-more">Media</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="/enquiry">Contact Us</a></li>
-            <li><a href="#">Locate Us</a></li>
           </ul>
         </div>
         <div className="footer-column col">

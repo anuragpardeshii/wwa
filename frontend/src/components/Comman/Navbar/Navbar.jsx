@@ -10,8 +10,8 @@ export default function Navbar() {
   };
   return (
     <>
-    <nav className="fixed w-full z-20 top-0 start-0">
-      <div className="flex items-center mx-auto p-4" style={{ height: "10vh", justifyContent: "space-around"}}>
+    <nav className="fixed w-full z-20 top-0 start-0" style={{zIndex: "1000000"}}>
+      <div className="flex items-center flex-wrap mx-auto p-2 py-4" style={{ justifyContent: "space-around"}}>
         <a
           href="/"
           className="flex items-center justify-center space-x-3 rtl:space-x-reverse"
@@ -21,7 +21,7 @@ export default function Navbar() {
             className="h-8"
             alt="Logo"
           />
-          <span className="brand self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="brand self-center text-xl text-white font-semibold whitespace-nowrap dark:text-white">
             Wisdom World Academy
           </span>
         </a>
@@ -29,7 +29,8 @@ export default function Navbar() {
           <button
             type="button"
             onClick={handleButtonClick}
-            className="admission-btn text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            style={{backgroundColor: "#ffc701", fontWeight: "900", borderRadius: "5rem"}}
+            className="admission-btn text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
           >
             Admission Enquiry
           </button>
@@ -50,9 +51,9 @@ export default function Navbar() {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M1 1h15M1 7h15M1 13h15"
               />
             </svg>
@@ -62,11 +63,11 @@ export default function Navbar() {
           className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+          <ul className="flex flex-col text-center md:p-0 mt-4 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
             <li>
               <NavLink
                 to="/"
-                className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 px-3 rounded hover:text-black text-white md:p-0"
                 aria-current="page"
               >
                 Home
@@ -75,7 +76,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 to="/about-us"
-                className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 px-3 rounded hover:text-black text-white md:p-0"
               >
                 About
               </NavLink>
@@ -83,7 +84,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 to="/difference"
-                className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 px-3 rounded hover:text-black text-white md:p-0"
               >
                 Difference
               </NavLink>
@@ -91,7 +92,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 to="/enquiry"
-                className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 px-3 rounded hover:text-black text-white md:p-0"
               >
                 Contact
               </NavLink>

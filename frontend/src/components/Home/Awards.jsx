@@ -22,25 +22,25 @@ export default function Awards() {
     <div>
       <img src={patternUp} style={{ width: "100%", marginBottom: "-1%" }} alt="Pattern Up" />
       <div className="ourProgrammes" style={{ padding: "2% 3%" }}>
-        <h1 class="mb-10 text-white text-center text-4xl font-extrabold leading-none tracking-tight md:text-5xl  ">
+        <h1 className="mb-10 text-white text-center text-4xl font-extrabold leading-none tracking-tight md:text-5xl  ">
           Awards & Recognition
         </h1>
 
         <div className="flex justify-center items-center gap-4 flex-wrap">
           <div
-            class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+            className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
             style={{ maxWidth: "18rem" }}
           >
             <a href="#">
               <img
-                class="rounded-t-lg"
+                className="rounded-t-lg"
                 src={prog1}
                 alt=""
               />
             </a>
-            <div class="p-5">
+            <div className="p-5">
               <a href="#">
-                <h5 class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h5 className="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Noteworthy technology acquisitions 2021
                 </h5>
               </a>
@@ -49,19 +49,19 @@ export default function Awards() {
           </div>
 
           <div
-            class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+            className=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
             style={{ maxWidth: "18rem" }}
           >
             <a href="#">
               <img
-                class="rounded-t-lg"
+                className="rounded-t-lg"
                 src={prog1}
                 alt=""
               />
             </a>
-            <div class="p-5">
+            <div className="p-5">
               <a href="#">
-                <h5 class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h5 className="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Noteworthy technology acquisitions 2021
                 </h5>
               </a>
@@ -69,19 +69,19 @@ export default function Awards() {
             </div>
           </div>
           <div
-            class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+            className=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
             style={{ maxWidth: "18rem" }}
           >
             <a href="#">
               <img
-                class="rounded-t-lg"
+                className="rounded-t-lg"
                 src={prog1}
                 alt=""
               />
             </a>
-            <div class="p-5">
+            <div className="p-5">
               <a href="#">
-                <h5 class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h5 className="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Noteworthy technology acquisitions 2021
                 </h5>
               </a>
@@ -89,19 +89,19 @@ export default function Awards() {
             </div>
           </div>
           <div
-            class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+            className=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
             style={{ maxWidth: "18rem" }}
           >
             <a href="#">
               <img
-                class="rounded-t-lg"
+                className="rounded-t-lg"
                 src={prog1}
                 alt=""
               />
             </a>
-            <div class="p-5">
+            <div className="p-5">
               <a href="#">
-                <h5 class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h5 className="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Noteworthy technology acquisitions 2021
                 </h5>
               </a>

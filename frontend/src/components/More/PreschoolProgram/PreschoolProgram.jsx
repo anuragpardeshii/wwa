@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import "./PreschoolProgram.css";
 import Faq from "../../Comman/Faq/Faq.jsx";
 import "/src/components/Difference/Difference.css"; // Make sure to create this CSS file to style your components
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
+import Offer from "./Offer.jsx";
 
 const PreschoolProgram = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -82,59 +78,7 @@ const PreschoolProgram = () => {
           <img src="/src/assets/images/difference2.jpg" alt="" />
         </div>
       </div>
-      <div className="preschool-container">
-        <img
-          src="/src/assets/images/patternUp.jpg"
-          style={{ width: "100%" }}
-          alt=""
-        />
-        <h1>What We Offer</h1>
-        <div className="cards">
-          <button className="prev-btn">
-            {/* <FontAwesomeIcon
-              icon={faChevronLeft}
-              style={{ width: "1.3rem" }}
-              size="2x"
-              onClick={handlePrevious}
-            /> */}
-          </button>
-          {currentCards.map((card, index) => (
-            <div
-              key={index}
-              className="card"
-              style={{ height: "30rem", maxWidth: "35rem" }}
-            >
-              <h2>{card.title}</h2>
-              <p>{card.content}</p>
-            </div>
-          ))}
-          <button className="prev-btn">
-            {/* <FontAwesomeIcon
-              icon={faChevronRight}
-              style={{ width: "1.3rem" }}
-              size="2x"
-              onClick={handleNext}
-            /> */}
-          </button>
-        </div>
-        <div className="pagination">
-          <span className="dots">
-            {Array.from({ length: totalPages }).map((_, index) => (
-              <span
-                key={index}
-                className={index === currentPage ? "dot active" : "dot"}
-              >
-                •
-              </span>
-            ))}
-          </span>
-        </div>
-        <img
-          src="/src/assets/images/patternDown.jpg"
-          style={{ width: "100%" }}
-          alt=""
-        />
-      </div>
+      <Offer/>
       <Faq />
     </>
   );

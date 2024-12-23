@@ -46,17 +46,17 @@ export default function OurStory() {
       <img className="hide-img" src={parentsbg} alt="" style={{position: "absolute", width: "100vw", zIndex: "-1000", opacity: "0.5", marginTop: "-10vh"}} />
 
       <div style={{ margin: "4% 12%" }}>
-        <h2 class="text-4xl mb-6 text-center lg:text-3xl medium-text font-extrabold dark:text-white">
+        <h2 className="text-4xl mb-6 text-center lg:text-3xl medium-text font-extrabold dark:text-white">
           Our Story
         </h2>
-        <h2 class="text-xl mb-4 lg:text-3xl font-extrabold dark:text-white">
+        <h2 className="text-xl mb-4 lg:text-3xl font-extrabold dark:text-white">
           Hello, Dear Parent!
         </h2>
-        <p class="mb-4 mt-4 text-sm font-normal  lg:text-xl dark:text-gray-400">
+        <p className="mb-4 mt-4 text-sm font-normal  lg:text-xl dark:text-gray-400">
           Welcome to the World of Growth and Possibility at Wisdom World
           Academy!
         </p>
-        <p class="mb-4 mt-4 text-sm font-normal  lg:text-xl dark:text-gray-400">
+        <p className="mb-4 mt-4 text-sm font-normal  lg:text-xl dark:text-gray-400">
           At Wisdom World Academy, we recognize the importance of the role you
           play in your child’s education. Our partnership with parents is
           integral to the success of our students. We take the time to
@@ -67,7 +67,7 @@ export default function OurStory() {
         {content.map((data, index) => (
           <div className="" key={index}>
             <h3 className="text-xl mb-4 lg:text-3xl font-extrabold dark:text-white">{data.heading}</h3>
-            <p class="mb-4 mt-4 text-sm font-normal  lg:text-xl dark:text-gray-400">
+            <p className="mb-4 mt-4 text-sm font-normal  lg:text-xl dark:text-gray-400">
               {data.content}
             </p>
           </div>

@@ -10,12 +10,12 @@ export default function Pioneers() {
     <div style={{margin: "2% 8%"}}>
     
 
-    <h1 class="mb-10 p-4 color-blue main-h text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-  Nurturing Young Minds at <span class="text-blue-600 dark:text-blue-500">the #1 Preschool</span>
+    <h1 className="mb-10 p-4 color-blue main-h text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+  Nurturing Young Minds at <span className="text-blue-600 dark:text-blue-500">the #1 Preschool</span>
 </h1>
 
 
-<video class="w-full max-w-full border border-gray-200 rounded-lg dark:border-gray-700 video-control" controls>
+<video className="w-full max-w-full border border-gray-200 rounded-lg dark:border-gray-700 video-control" controls>
   <source src="/docs/videos/flowbite.mp4" type="video/mp4"/>
   Your browser does not support the video tag.
 </video>
