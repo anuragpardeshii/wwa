@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 // Importing images
 import img1 from "/src/assets/images/army/DSC_0492.JPG";
 import img2 from "/src/assets/images/army/planting.jpg";
-import img3 from "/src/assets/images/army/OurPurpose.png";
+import img3 from "/src/assets/images/ourPurpose.png";
 import img4 from "/src/assets/images/army/DSC_0529.JPG";
 import img5 from "/src/assets/images/army/DSC_0640.JPG";
 import img6 from "/src/assets/images/army/DSC_0585.JPG";
