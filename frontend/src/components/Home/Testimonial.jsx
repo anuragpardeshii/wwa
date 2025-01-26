@@ -53,7 +53,7 @@ export default function Testimonial() {
 
   return (
     <>
-      <img
+      {/* <img
         className="hide-img"
         src={formbg1}
         alt=""
@@ -63,8 +63,8 @@ export default function Testimonial() {
           opacity: "0.5",
           zIndex: "-100",
         }}
-      />
-      <div className="relative w-full">
+      /> */}
+      <div className="relative w-full max-w-6xl mx-auto">
         <div className="relative overflow-hidden rounded-lg h-56 md:h-96">
           {testimonials.map((testimonial, index) => (
             <div
@@ -115,7 +115,7 @@ export default function Testimonial() {
           onClick={handlePrev}
           className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
         >
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full" style={{backgroundColor: "rgb(255, 199, 1)", zIndex: "1"}}>
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full" style={{backgroundColor: "blue-600", zIndex: "1"}}>
             <svg
               className="w-4 h-4 text-white"
               style={{zIndex: "1"}}
@@ -138,7 +138,7 @@ export default function Testimonial() {
           onClick={handleNext}
           className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
         >
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full" style={{backgroundColor: "rgb(255, 199, 1)"}}>
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full" style={{backgroundColor: "blue-600"}}>
             <svg
               className="w-4 h-4 text-white"
               xmlns="http://www.w3.org/2000/svg"

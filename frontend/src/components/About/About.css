@@ -20,7 +20,6 @@
 }
 
 .info-cards {
-    background-image: url("/src/assets/images/whitebg.jpg");
     max-width: 22rem;
     border-radius: .5rem;
     height: 16rem;
@@ -62,7 +61,7 @@
 /* Slogan */
 
 .slogan {
-    padding: 6%;
+    padding: 2rem;
     /* background: linear-gradient(90deg, #0b2441 0%, #0f335a 50%, #14224e 100%); */
     background-image: url("/src/assets/images/yellowBg.png");
 }
@@ -139,3 +138,20 @@ margin-bottom: 40px;
         font-size: 1.3rem;
     }
 }
+
+
+.mentor-review {
+    width: 100%;
+    margin: auto;
+    padding-bottom: 5rem;
+  }
+  
+  
+  .mentor-review h4 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #0b2441;
+    font-style: normal;
+    font-weight: 300;
+    margin: 2rem 0;
+  }

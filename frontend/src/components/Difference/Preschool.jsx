@@ -22,7 +22,7 @@ export default function Preschool() {
     <div>
       <img src={patternUp} style={{ width: "100%", marginBottom: "-1%" }} alt="Pattern Up" />
       <div className="ourProgrammes" style={{ padding: "5% 3%" }}>
-        <h1 className="mb-10 text-white text-center text-4xl font-extrabold leading-none tracking-tight md:text-5xl  ">
+        <h1 className="mb-10 text-white text-center text-4xl font-extrabold leading-none tracking-tight md:text-5xl" style={{color: "white"}}>
           Empowering Minds, Shaping Futures
         </h1>
 

@@ -43,12 +43,12 @@ export default function OurStory() {
   ];
   return (
     <>
-      <img className="hide-img" src={parentsbg} alt="" style={{position: "absolute", width: "100vw", zIndex: "-1000", opacity: "0.5", marginTop: "-10vh"}} />
+      {/* <img className="hide-img" src={parentsbg} alt="" style={{position: "absolute", width: "100vw", zIndex: "-1000", opacity: "0.5", marginTop: "-10vh"}} /> */}
 
-      <div style={{ margin: "4% 12%" }}>
-        <h2 className="text-4xl mb-6 text-center lg:text-3xl medium-text font-extrabold dark:text-white">
+      <div className="mentor-review max-w-6xl px-4">
+        <h1 className="text-6xl mb-6 text-center lg:text-4xl medium-text font-extrabold dark:text-white">
           Our Story
-        </h2>
+        </h1>
         <h2 className="text-xl mb-4 lg:text-3xl font-extrabold dark:text-white">
           Hello, Dear Parent!
         </h2>

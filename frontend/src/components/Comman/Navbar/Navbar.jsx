@@ -10,7 +10,7 @@ export default function Navbar() {
   };
   return (
     <>
-    <nav className="fixed w-full z-20 top-0 start-0" style={{zIndex: "1000000"}}>
+    <nav className="relative w-full z-20 top-0 start-0" style={{zIndex: "1000000"}}>
       <div className="flex items-center flex-wrap mx-auto p-2 py-4" style={{ justifyContent: "space-around"}}>
         <a
           href="/"

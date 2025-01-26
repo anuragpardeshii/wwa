@@ -10,24 +10,23 @@ import logoImage from "/src/assets/images/logo.png"; // Import the logo image
 export default function About() {
   return (
     <>
-      <div style={{ marginTop: "10vh" }}>
+      <div>
         <Slogan />
-        <img className="hide-img bg-contain" src={aboutBg} alt="" style={{position: "absolute", width: "100vw", zIndex: "-1000", opacity: "0.5", marginTop: "-10vh"}} />
+        {/* <img className="hide-img bg-contain" src={aboutBg} alt="" style={{position: "absolute", width: "100vw", zIndex: "-1000", opacity: "0.5", marginTop: "-10vh"}} /> */}
         <h2 className="text-4xl text-center medium-text font-extrabold dark:text-white">
           Wisdom World Academy
         </h2>
         <p className="my-4 text-gray-500 text-center">Since 2014</p>
         <div
-          className="flex flex-wrapping flex-column justify-around items-center"
-          style={{ margin: "3% 14%" }}
+          className="flex flex-wrapping flex-column justify-evenly items-center max-w-6xl p-4 mx-auto"
         >
           <img
               src={logoImage} // Use the imported image variable here
               alt="Wisdom World Academy Logo"
-              style={{ width: "23rem", margin: "1rem auto " }}
+              className="p-8"
             />
           <div>
-            <p className="mb-4 mt-4 text-sm font-normal  lg:text-xl dark:text-gray-400">
+            <p className="mb-4 mt-4 text-sm font-normal  lg:text-xl">
               Our Journey of Growth and Innovation Since its founding in 2014 in
               the vibrant Silicon City, Wisdom World Academy has pursued a clear
               vision: to deliver world-class education grounded in strong values
@@ -37,7 +36,7 @@ export default function About() {
               ties to the community, creating a legacy of excellence and trust
               that continues to grow.
             </p>
-            <p className="mb-4 mt-4 text-sm font-normal  lg:text-xl dark:text-gray-400">
+            <p className="mb-4 mt-4 text-sm font-normal  lg:text-xl">
               What We Stand For At Wisdom World Academy, we are deeply committed
               to the transformative power of education. We believe that true
               learning extends beyond academics; it builds character, fosters

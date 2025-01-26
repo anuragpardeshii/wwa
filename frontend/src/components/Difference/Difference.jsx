@@ -1,13 +1,13 @@
 import "./Difference.css";
 import Mentors from "./Mentors";
 import Preschool from "./Preschool";
-import bg4 from "/src/assets/images/bg6.jpg";
+// import bg4 from "/src/assets/images/bg6.jpg";
 import differenceImage from "/src/assets/images/army/DSC_0484.JPG";
 
 export default function Difference() {
   return (
-    <div style={{ marginTop: "10vh" }}>
-      <img
+    <div>
+      {/* <img
               className="hide-img"
               src={bg4}
               alt=""
@@ -17,38 +17,30 @@ export default function Difference() {
                 opacity: "0.5",
                 zIndex: "-100",
               }}
-            />
-      <div className="difference-section" >
-        <div className="difference">
-          <h1 className="text-center">
+            /> */}
+      <div className="difference-section">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-5xl p-4">
             What Sets Wisdom World Academy Apart from Other Preschools?
           </h1>
-          <div className="aligning" style={{ padding: "0" }}>
-              <img
-                className="text-center"
-                src={differenceImage}
-                alt="Difference"
-                style={{width: "70%"}}
-              />
-            <div className="p-6 m-4" style={{width: "90%"}}>
-              <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+          <div className="p-4 max-w-6xl mx-auto">
+            <img
+              className="text-center m-2 mx-auto rounded-lg"
+              style={{ maxHeight: "25rem" }}
+              src={differenceImage}
+              alt="Difference"
+            />
+            <div className="mx-auto m-4 p-2">
+              <h4 className="text-lg text-center lg:text-xl ">
                 At Wisdom World Academy, we prioritize the holistic development
                 of each child. Our approach goes beyond academics, fostering
                 intellectual, emotional, social, and creative growth in a
                 nurturing and dynamic environment. We blend innovative teaching
                 methods with traditional values to create engaging learning
-                experiences tailored to each child’s unique needs. Our
-                passionate educators provide personalized attention, helping
+                experiences tailored to each child’s unique needs. Our passionate educators provide personalized attention, helping
                 every child reach their full potential in a safe, supportive
-                atmosphere. In addition to fostering creativity and critical
-                thinking, we emphasize the importance of parent involvement.
-                Through open communication and active participation, we ensure
-                that parents are integral to their child’s learning journey.
-                With state-of-the-art facilities and a focus on preparing
-                children for lifelong success, Wisdom World Academy is more than
-                just a preschool—it’s an experience that sets the foundation for
-                future achievement.
-              </p>
+                atmosphere.
+              </h4>
             </div>
           </div>
         </div>

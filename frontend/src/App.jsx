@@ -3,11 +3,7 @@ import Navbar from "./components/Comman/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Footer from "./components/Comman/Footer/Footer";
 import About from "./components/About/About";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Difference from "./components/Difference/Difference";
 import PreschoolProgram from "./components/More/PreschoolProgram/PreschoolProgram";
 import KidsClub from "./components/More/KidsClub/KidsClub";
@@ -18,7 +14,7 @@ import SeeMore from "./components/Home/SeeMore.jsx";
 
 function App() {
   return (
-    <Router>
+    <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -27,12 +23,18 @@ function App() {
         <Route path="/preschool-programme" element={<PreschoolProgram />} />
         <Route path="/bagless-school" element={<BaglessSchool />} />
         <Route path="/parents-speak" element={<ParentsSpeak />} />
-        <Route path="/see-more" element={<SeeMore/>} />
+        <Route path="/see-more" element={<SeeMore />} />
         <Route path="/enquiry" element={<Enquiry />} />
       </Routes>
       <Footer />
-    </Router>
+    </>
   );
 }
 
-export default App;
+export default function AppWrapper() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}

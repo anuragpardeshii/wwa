@@ -15,8 +15,8 @@ import img8 from "/src/assets/images/army/DSC_0589.JPG";
 export default function Gallery() {
   const navigate = useNavigate();
   return (
-    <div style={{ padding: "2% 8%" }}>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div className=" mx-auto p-4 max-w-6xl"> 
+      <div className="grid grid-cols-2 mb-8 md:grid-cols-4 gap-4">
         <div className="grid gap-4">
           <div>
             <img className="h-auto max-w-full rounded-lg" src={img1} alt="Image 1" />
@@ -50,7 +50,7 @@ export default function Gallery() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center pt-10">
+      {/* <div className="flex justify-center items-center pt-10">
         <button
           type="button"
           onClick={() => navigate("/see-more")}
@@ -72,8 +72,8 @@ export default function Gallery() {
               d="M1 5h12m0 0L9 1m4 4L9 9"
             />
           </svg>
-        </button>
-      </div>
+        </button> 
+      </div>*/}
     </div>
   );
 }

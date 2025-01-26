@@ -4,28 +4,27 @@ import bg1 from "/src/assets/images/bg1.jpg";
 export default function Pioneers() {
   return (
     <>
-    <img className="hide-img" src={bg1} alt="" style={{position: "absolute", width: "100vw", zIndex: "-1000", opacity: "0.5"}} />
-    
-    
-    <div style={{margin: "2% 8%"}}>
-    
+      {/* <img className="hide-img" src={bg1} alt="" style={{position: "absolute", width: "100vw", zIndex: "-1000", opacity: "0.5"}} /> */}
 
-    <h1 className="mb-10 p-4 color-blue main-h text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-  Nurturing Young Minds at <span className="text-blue-600 dark:text-blue-500">the #1 Preschool</span>
-</h1>
+      <div className="max-w-6xl p-4 mx-auto">
+        <h1 className="mb-10 p-4 color-blue main-h text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+          Nurturing Young Minds at{" "}
+          <span className="text-blue-600 dark:text-blue-500">
+            the #1 Preschool
+          </span>
+        </h1>
 
-
-<video className="w-full max-w-full border border-gray-200 rounded-lg dark:border-gray-700 video-control" controls>
-  <source src="/docs/videos/flowbite.mp4" type="video/mp4"/>
-  Your browser does not support the video tag.
-</video>
-
-
-    </div>
+        {/* <video
+          className="w-full max-w-full border border-gray-200 rounded-lg video-control"
+          controls
+        >
+          <source src="/docs/videos/flowbite.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video> */}
+      </div>
     </>
   );
 }
-
 
 // <div className="container-fluid pioneers-section">
 //       <div className="row align-items-center">

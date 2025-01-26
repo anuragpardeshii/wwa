@@ -1,25 +1,27 @@
-export const doctorReviews = [
+import prateek from "/src/assets/images/prateek.jpg";
+
+export const teacherReviews = [
   {
     id: 0,
-    img: "/src/assets/images/prateek.jpg",
+    img: prateek, // ✅ Corrected image assignment
     name: "Prateek Batham",
-    position: "Pricipal",
+    position: "Principal", // ✅ Fixed typo in "Principal"
     quote: "https://www.uptodd.com/images/newWebsite/quote.svg",
     description:
-      "UpTodd’s parenting program for baby maximizes baby potential  from the womb to 5 years, offering an impressive solution for early baby brain development",
+      "UpTodd’s parenting program for baby maximizes baby potential from the womb to 5 years, offering an impressive solution for early baby brain development",
   },
   {
     id: 2,
-    img: "/src/assets/images/prateek.jpg",
+    img: prateek,
     name: "Prateek Batham",
-    position: "Vice Pricipal",
+    position: "Vice Principal", // ✅ Fixed typo in "Vice Principal"
     quote: "https://www.uptodd.com/images/newWebsite/quote.svg",
     description:
-      " This parenting program for baby addresses the global need for early intervention, maximizing babies; learning potential from prenatal to age 5",
+      "This parenting program for baby addresses the global need for early intervention, maximizing babies' learning potential from prenatal to age 5",
   },
   {
     id: 3,
-    img: "/src/assets/images/prateek.jpg",
+    img: prateek,
     name: "Prateek Batham",
     position: "Teacher",
     quote: "https://www.uptodd.com/images/newWebsite/quote.svg",
@@ -28,7 +30,7 @@ export const doctorReviews = [
   },
   {
     id: 4,
-    img: "/src/assets/images/prateek.jpg",
+    img: prateek,
     name: "Prateek Batham",
     position: "Teacher",
     quote: "https://www.uptodd.com/images/newWebsite/quote.svg",
@@ -37,7 +39,7 @@ export const doctorReviews = [
   },
   {
     id: 5,
-    img: "/src/assets/images/prateek.jpg",
+    img: prateek,
     name: "Prateek Batham",
     position: "Teacher",
     quote: "https://www.uptodd.com/images/newWebsite/quote.svg",
@@ -46,7 +48,7 @@ export const doctorReviews = [
   },
   {
     id: 6,
-    img: "/src/assets/images/prateek.jpg",
+    img: prateek,
     name: "Prateek Batham",
     position: "Teacher",
     quote: "https://www.uptodd.com/images/newWebsite/quote.svg",
@@ -55,7 +57,7 @@ export const doctorReviews = [
   },
   {
     id: 7,
-    img: "/src/assets/images/prateek.jpg",
+    img: prateek,
     name: "Prateek Batham",
     position: "Teacher",
     quote: "https://www.uptodd.com/images/newWebsite/quote.svg",
@@ -64,7 +66,7 @@ export const doctorReviews = [
   },
   {
     id: 8,
-    img: "/src/assets/images/prateek.jpg",
+    img: prateek,
     name: "Prateek Batham",
     position: "Teacher",
     quote: "https://www.uptodd.com/images/newWebsite/quote.svg",
@@ -73,7 +75,7 @@ export const doctorReviews = [
   },
   {
     id: 9,
-    img: "/src/assets/images/prateek.jpg",
+    img: prateek,
     name: "Prateek Batham",
     position: "Teacher",
     quote: "https://www.uptodd.com/images/newWebsite/quote.svg",
@@ -82,7 +84,7 @@ export const doctorReviews = [
   },
   {
     id: 10,
-    img: "/src/assets/images/prateek.jpg",
+    img: prateek,
     name: "Prateek Batham",
     position: "Teacher",
     quote: "https://www.uptodd.com/images/newWebsite/quote.svg",

@@ -6,7 +6,7 @@ export default function Slogan() {
     <>
     <div className="slogan">
       
-<blockquote className="small-text text-3xl text-center italic font-semibold text-gray-900 text-white">
+<blockquote className="small-text text-3xl text-center max-w-6xl mx-auto  font-semibold text-gray-900 text-white">
     <p>"Empowering Young Minds, Building Bright Futures – At Wisdom World
         Academy, we nurture curiosity, inspire growth, and instill values,
         creating compassionate leaders ready to shape tomorrow. Where learning

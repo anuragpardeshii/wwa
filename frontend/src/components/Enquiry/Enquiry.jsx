@@ -30,7 +30,7 @@ export default function Enquiry() {
 
   return (
     <>
-      <img
+      {/* <img
       className="hide-img"
         src={bg}
         alt=""
@@ -40,15 +40,14 @@ export default function Enquiry() {
           zIndex: "-1000",
           opacity: "0.5",
         }}
-      />
-      <div style={{ padding: "3rem 5%" }}>
+      /> */}
+      <div className="p-4">
         <div
           className="marginn flex gh flex-wrap gap-6 items-center"
-          style={{ justifyContent: "space-between"  }}
+          style={{ justifyContent: "space-around"  }}
         >
           <div
-            className="hide-div"
-            style={{ maxWidth: "55%", padding: "2% 3%", top: "50%" }}
+            className="hide-div p-4 max-w-3xl mx-auto"
           >
             <p className="mb-2 text-lg font-normal  lg:text-lg dark:text-gray-400">
               Welcome to Wisdom World Academy, where we are committed to shaping
@@ -87,14 +86,14 @@ export default function Enquiry() {
             </p>
           </div>
           <div
-            className="border rounded-xl form-width"
+            className="border rounded-xl p-8"
             style={{
               margin: "auto",
               background: "rgba(255, 255, 255, 0.7)",
               boxShadow: "rgba(0, 0, 0, 0.15) 0px 5px 15px 0px",
             }}
           >
-            <h1 className="mb-4 text-2xl font-normal lg:text-3xl">
+            <h1 className="mb-4 text-2xl font-bold lg:text-3xl">
               {" "}
               Enquiry Form
             </h1>
