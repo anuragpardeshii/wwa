@@ -54,24 +54,24 @@ export default function Difference() {
             /> */}
       <div className="difference-section">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-5xl my-8 p-4">
-            What Sets Wisdom World Academy Apart from Other Preschools?
+          <h1 className="text-5xl mt-8 ">
+          What makes Wisdom World Academy unique?
           </h1>
           <div className="p-4 max-w-6xl mx-auto">
-            <img
+            {/* <img
               className="text-center m-2 shadow-lg hover:shadow-xl mx-auto rounded-2xl"
-              style={{ width: "70rem" }}
+              style={{ width: "60rem" }}
               src={differenceImage}
               alt="Difference"
-            />
+            /> */}
 
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {features.map((feature, index) => (
             <div
               key={index}
               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 mb-6">
+              <div className="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center text-[#0f335a] mb-6">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">

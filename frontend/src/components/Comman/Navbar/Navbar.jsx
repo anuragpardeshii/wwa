@@ -29,7 +29,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={handleButtonClick}
-            style={{backgroundColor: "#ffc701", fontWeight: "900", borderRadius: "5rem"}}
+            style={{backgroundColor: "#ffc300", fontWeight: "900", borderRadius: "5rem"}}
             className="admission-btn text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
           >
             Admission Enquiry
@@ -67,7 +67,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 to="/"
-                className="block py-2 px-3 rounded hover:text-black text-white md:p-0"
+                className="block py-2 px-3 rounded text-[#0f335a] text-white md:p-0"
                 aria-current="page"
               >
                 Home
@@ -76,7 +76,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 to="/about-us"
-                className="block py-2 px-3 rounded hover:text-black text-white md:p-0"
+                className="block py-2 px-3 rounded text-[#0f335a] text-white md:p-0"
               >
                 About
               </NavLink>
@@ -84,7 +84,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 to="/difference"
-                className="block py-2 px-3 rounded hover:text-black text-white md:p-0"
+                className="block py-2 px-3 rounded text-[#0f335a] text-white md:p-0"
               >
                 Difference
               </NavLink>
@@ -92,7 +92,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 to="/enquiry"
-                className="block py-2 px-3 rounded hover:text-black text-white md:p-0"
+                className="block py-2 px-3 rounded text-[#0f335a] text-white md:p-0"
               >
                 Contact
               </NavLink>

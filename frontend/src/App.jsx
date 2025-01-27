@@ -11,6 +11,7 @@ import BaglessSchool from "./components/More/BaglessSchool/BaglessSchool";
 import ParentsSpeak from "./components/More/ParentsSpeak/ParentsSpeak";
 import Enquiry from "./components/Enquiry/Enquiry.jsx";
 import SeeMore from "./components/Home/SeeMore.jsx";
+import Story from "./components/Story/Story.jsx";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/parents-speak" element={<ParentsSpeak />} />
         <Route path="/see-more" element={<SeeMore />} />
         <Route path="/enquiry" element={<Enquiry />} />
+        <Route path="/story" element={<Story/>} />
       </Routes>
       <Footer />
     </>

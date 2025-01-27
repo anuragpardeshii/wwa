@@ -14,7 +14,7 @@ export default function Home() {
         <>
             <ImageSlider />
             <Pioneers />
-            <WhyUs />
+            {/* <WhyUs /> */}
             <OurProgrammes />
             <Purpose />
             <Gallery />

@@ -1,77 +1,101 @@
-import "./Pioneers.css";
-import bg1 from "/src/assets/images/bg1.jpg";
+import React from 'react';
+import { GraduationCap, Star, Brain, Shield } from 'lucide-react';
 
-export default function Pioneers() {
+export default function Home() {
   return (
-    <>
-      {/* <img className="hide-img" src={bg1} alt="" style={{position: "absolute", width: "100vw", zIndex: "-1000", opacity: "0.5"}} /> */}
+    <div className="relative bg-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          {/* <img
+            src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=2000"
+            alt="School library background"
+            className="w-full h-full object-cover opacity-20"
+          /> */}
+          <div className="absolute inset-0 bg-gradient-to-r" />
+        </div>
 
-      <div className="max-w-6xl p-4 mx-auto">
-        <h1 className="mb-10 p-4 color-blue main-h text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-          Nurturing Young Minds at{" "}
-          <span className="text-blue-600 dark:text-blue-500">
-            the #1 Preschool
-          </span>
-        </h1>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+          <div className="text-center mb-12">
+            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+              Nurturing Young Minds at the{' '}
+              <span className="text-[#0f335a]">#1 Preschool</span>
+            </h1>
+            <p className="text-2xl text-[#0f335a] font-semibold mb-8">
+              Wisdom World Academy - Best School for Holistic Education
+            </p>
+            {/* <div className="flex justify-center gap-4 mb-12">
+              <div className="bg-white px-6 py-3 rounded-full shadow-lg flex items-center gap-2">
+                <Star className="w-5 h-5 text-yellow-500" />
+                <span className="text-gray-700">Award Winning</span>
+              </div>
+              <div className="bg-white px-6 py-3 rounded-full shadow-lg flex items-center gap-2">
+                <Shield className="w-5 h-5 text-[#0f335a]" />
+                <span className="text-gray-700">NAEYC Accredited</span>
+              </div>
+            </div> */}
+          </div>
 
-        {/* <video
-          className="w-full max-w-full border border-gray-200 rounded-lg video-control"
-          controls
-        >
-          <source src="/docs/videos/flowbite.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video> */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <img
+                src="\src\assets\images\army\DSC_0484.jpg"
+                alt="Children learning"
+                className="rounded-3xl shadow-2xl"
+              />
+              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
+                <div className="flex items-center gap-2">
+                  <GraduationCap className="w-8 h-8 text-[#0f335a]" />
+                  <div>
+                    <p className="text-2xl font-bold text-[#0f335a]">25+</p>
+                    <p className="text-sm text-gray-600">Years of Excellence</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <p className="text-lg text-gray-600 leading-relaxed">
+                At Wisdom World Academy, we bring years of excellence in providing world-class education. 
+                Our schools have earned accolades, awards, and appreciation from both parents and students. 
+                With highly trained educators, we ensure a strong foundation for academic and personal growth, 
+                fostering an environment that is safe, nurturing, and intellectually stimulating for young minds.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-white p-6 rounded-xl shadow-lg">
+                  <Brain className="w-8 h-8 text-[#0f335a] mb-4" />
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Leading Institution
+                  </h3>
+                  <p className="text-gray-600">
+                    Built on trust and unwavering commitment to quality education and innovative learning methodologies.
+                  </p>
+                </div>
+                <div className="bg-white p-6 rounded-xl shadow-lg">
+                  <GraduationCap className="w-8 h-8 text-[#0f335a] mb-4" />
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Comprehensive Curriculum
+                  </h3>
+                  <p className="text-gray-600">
+                    Designed to ignite a lifelong love for learning with modern teaching methodologies.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-xl">
+                <h3 className="text-xl font-semibold text-[#0f335a] mb-4">
+                  Progressive Learning Approach
+                </h3>
+                <p className="text-gray-600">
+                  Our unique curriculum empowers students to become independent thinkers, problem solvers, 
+                  and future leaders through a blend of modern teaching methodologies and brain-based research.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
-
-// <div className="container-fluid pioneers-section">
-//       <div className="row align-items-center">
-//         <div className="col-lg-6 content-section">
-//           <h1>Pioneers in Preschool Education</h1>
-//           <p className="text-muted">
-//             Wisdom World Academy has a remarkable journey, beginning with its establishment in 2014 in Silicon City and later relocating to Shiv City in 2019, where it proudly became the first private school in the area.
-//           </p>
-//           <p className="text-muted">
-//             At Wisdom World Academy, we believe in the transformative power of education, innovation, and character development. These pillars come together to mold the leaders of tomorrow, instilling in them not only knowledge but also the values and skills they need to navigate the challenges of the future.
-//           </p>
-//           <p className="section-title">Mission:</p>
-//           <p className="text-muted">
-//             Our mission is to empower all students to embrace learning, build their analytical abilities, self-confidence, willpower, goal-setting competencies, and achieve their personal best.
-//           </p>
-//           <p className="section-title">Vision:</p>
-//           <p className="text-muted">
-//             Our vision is to prepare and motivate our students to pursue their aspirations and contribute to the world. Our goal is to develop students' ability to think and act by utilizing their knowledge, experience, understanding, common sense, and insight.
-//           </p>
-//         </div>
-
-//         <div className="col-lg-6 cards-section">
-//           <div className="row">
-//             {cards.map((card, index) => (
-//               <div className="col-6 d-flex justify-content-center mb-3" key={index}>
-//                 <div className="card text-center" style={{ width: "15rem", height: "15rem" }}>
-//                   <div className="card-body">
-//                     <img src={card.img} alt={card.title} className="card-image" />
-//                     <h5 className="card-title">{card.title}</h5>
-//                     <p className="card-text">{card.text}</p>
-//                   </div>
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-
-//       <div className="iframe-section mt-4">
-//         <iframe
-//           width="100%"
-//           src="https://www.youtube.com/embed/-X7okpS9Ufc"
-//           title="poorna classroom demonstration English"
-//           frameBorder="0"
-//           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-//           referrerPolicy="strict-origin-when-cross-origin"
-//           allowFullScreen
-//         ></iframe>
-//       </div>
-//     </div>

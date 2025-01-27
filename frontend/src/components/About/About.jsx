@@ -13,7 +13,7 @@ export default function About() {
     <>
       <div>
         {/* <Slogan /> */}
-        <div className="bg-white py-24">
+        <div className="bg-white py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-16">
               {/* Logo Section */}
@@ -31,11 +31,11 @@ export default function About() {
                   <div className="mt-4 flex flex-col gap-3">
                     <div className="flex items-center justify-center gap-2 text-gray-600">
                       <BookOpen className="w-5 h-5" />
-                      <span>Est. 1995</span>
+                      <span>Est. 2014</span>
                     </div>
                     <div className="flex items-center justify-center gap-2 text-gray-600">
                       <Clock className="w-5 h-5" />
-                      <span>28 Years of Excellence</span>
+                      <span>11 Years of Excellence</span>
                     </div>
                     <div className="flex items-center justify-center gap-2 text-gray-600">
                       <Award className="w-5 h-5" />
@@ -198,8 +198,8 @@ export default function About() {
           </div> */}
         {/* </div> */}
         {/* <InfoSection /> */}
-        <OurPhilosophy />
-        <OurStory />
+        {/* <OurPhilosophy /> */}
+        {/* <OurStory /> */}
       </div>
     </>
   );
