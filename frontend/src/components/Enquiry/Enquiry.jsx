@@ -1,6 +1,15 @@
 import "./Enquiry.css";
 import { useState } from "react";
-import bg from "/src/assets/svgs/stationary-bg2.png"
+import bg from "/src/assets/svgs/stationary-bg2.png";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  School,
+  Users,
+  Palette,
+} from "lucide-react";
 export default function Enquiry() {
   const [result, setResult] = useState("");
 
@@ -41,8 +50,65 @@ export default function Enquiry() {
           opacity: "0.5",
         }}
       /> */}
-      <div className="p-4">
+      <div className="max-w-7xl mx-auto">
         <div
+          className="max-w-7xl my-8 mx-4 mx-auto bg-white rounded-3xl newshadow overflow-hidden"
+          style={{ margin: "1rem", marginBottom: "2rem", marginTop: "2rem" }}
+        >
+          <div className="md:grid md:grid-cols-2">
+            {/* Left Column - Contact Info */}
+            <div className="newbg p-12 text-white" style={{}}>
+              <div className="space-y-8">
+                <h2 className="text-3xl font-bold flex items-center gap-3">
+                  <School className="h-8 w-8" />
+                  Visit Our School
+                </h2>
+
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4 bg-white/10 p-4 rounded-xl">
+                    <Users className="h-6 w-6 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold">Ages</h3>
+                      <p>2-16 years old</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center space-x-4 bg-white/10 p-4 rounded-xl">
+                    <Clock className="h-6 w-6 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold">School Hours</h3>
+                      <p>Monday - Saturday: 8:30 AM - 2:00 PM</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center space-x-4 bg-white/10 p-4 rounded-xl">
+                    <Phone className="h-6 w-6 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold">Call Us</h3>
+                      <p>+91-9589304050</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center space-x-4 bg-white/10 p-4 rounded-xl">
+                    <Mail className="h-6 w-6 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold">Email Us</h3>
+                      <p>wisdomworldacademy1@gmail.com</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center space-x-4 bg-white/10 p-4 rounded-xl">
+                    <MapPin className="h-6 w-6 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold">Find Us</h3>
+                      <p>695, Sector-A, Shiv City, Rau, Silicon City, Indore, Madhya Pradesh 452017</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            {/* <div
           className="marginn flex gh flex-wrap gap-6 items-center"
           style={{ justifyContent: "space-around"  }}
         >
@@ -84,137 +150,174 @@ export default function Enquiry() {
             <p className="mb-2 text-lg font-normal  lg:text-lg dark:text-gray-400">
               Let’s embark on this journey together!
             </p>
-          </div>
-          <div
-            className="border rounded-xl p-8"
-            style={{
-              margin: "auto",
-              background: "rgba(255, 255, 255, 0.7)",
-              boxShadow: "rgba(0, 0, 0, 0.15) 0px 5px 15px 0px",
-            }}
-          >
-            <h1 className="mb-4 text-2xl font-bold lg:text-3xl">
-              {" "}
-              Enquiry Form
-            </h1>
-            <form onSubmit={onSubmit}>
-              {/* Full Name */}
-              <div className="mb-5">
-                <label
-                  htmlFor="fullName"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Full Name
-                </label>
+          </div> */}
+            <div
+              className="rounded-xl p-8"
+              style={{ margin: "auto", background: "rgba(255, 255, 255, 0.7)" }}
+            >
+              <h1 className="mb-4 text-2xl font-bold lg:text-3xl">
+                Send us a message
+              </h1>
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                className="space-y-6"
+              >
                 <input
-                  type="text"
-                  id="name"
-                  aria-describedby="helper-text-explanation"
-                  className="bg-white-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                  placeholder="Prateek Batham"
+                  type="hidden"
+                  name="access_key"
+                  value="422abc9b-bde7-443b-ac1c-79e2b489d827"
                 />
-              </div>
-
-              {/* Email */}
-              <div className="mb-5">
-                <label
-                  htmlFor="email"
-                  className="block mb-2 text-sm font-medium text-gray-900"
-                >
-                  Your Email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  aria-describedby="helper-text-explanation"
-                  className="bg-white-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                  placeholder="example@domain.com"
-                  required
-                />
-              </div>
-
-              {/* Phone */}
-              <div className="mb-5">
-                <label
-                  htmlFor="phone"
-                  className="block mb-2 text-sm font-medium text-gray-900"
-                >
-                  Phone Number
-                </label>
-                <input
-                  type="text" id="phone" inputMode="numeric"
-                  className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Enter your phone number"
-                  required
-                />
-              </div>
-
-              {/* Select Class */}
-              <div className="mb-5">
-                <label
-                  htmlFor="class"
-                  className="block mb-2 text-sm font-medium text-gray-900"
-                >
-                  Select Class
-                </label>
-                <select
-                  name="class"
-                  id="class"
-                  className="bg-white-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                  required
-                >
-                  <option value="">Choose a class</option>
-                  <option value="Nursery">Nursery</option>
-                  <option value="LKG">LKG</option>
-                  <option value="UKG">UKG</option>
-                  <option value="Class I">Class I</option>
-                  <option value="Class II">Class II</option>
-                  <option value="Class III">Class III</option>
-                  <option value="Class IV">Class IV</option>
-                  <option value="Class V">Class V</option>
-                  <option value="Class VI">Class VI</option>
-                  <option value="Class VII">Class VII</option>
-                  <option value="Class VIII">Class VIII</option>
-                </select>
-              </div>
-
-              {/* Terms and Conditions */}
-              <div className="flex items-center mb-5">
-                <input
-                  type="checkbox"
-                  id="terms"
-                  name="terms"
-                  className="w-4 h-4 border-gray-300 rounded focus:ring-blue-500"
-                  required
-                />
-                <label
-                  htmlFor="terms"
-                  className="ml-2 text-sm font-medium text-gray-900"
-                >
-                  By clicking Submit, I allow all communication from Wisdom
-                  World Academy.
-                </label>
-              </div>
-
-              {/* Submit Button */}
-              <div className="w-full text-center">
-                <button
-                  type="submit"
-                  className="text-center bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg p-2.5"
-                  style={{ width: "10rem" }}
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
-
-            {/* Result */}
-            {result && (
-              <p className="mt-4 text-center text-sm font-medium text-gray-700">
-                {result}
-              </p>
-            )}
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Parent's Name
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      required
+                      className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                      placeholder="Prateek Batham"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="childName"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Child's Name
+                    </label>
+                    <input
+                      type="text"
+                      name="childName"
+                      id="childName"
+                      className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    />
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Your Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      required
+                      className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                      placeholder="example@domain.com"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      id="phone"
+                      className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                      placeholder="Enter your phone number"
+                      required
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    htmlFor="childAge"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Child's Age
+                  </label>
+                  <input
+                    type="text"
+                    name="childAge"
+                    id="childAge"
+                    className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="class"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Select Class
+                  </label>
+                  <select
+                    name="class"
+                    id="class"
+                    className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    required
+                  >
+                    <option value="">Choose a class</option>
+                    <option value="Nursery">Nursery</option>
+                    <option value="LKG">LKG</option>
+                    <option value="UKG">UKG</option>
+                    <option value="Class I">Class I</option>
+                    <option value="Class II">Class II</option>
+                    <option value="Class III">Class III</option>
+                    <option value="Class IV">Class IV</option>
+                    <option value="Class V">Class V</option>
+                    <option value="Class VI">Class VI</option>
+                    <option value="Class VII">Class VII</option>
+                    <option value="Class VIII">Class VIII</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Your Message
+                  </label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows={2}
+                    required
+                    className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="Tell us how we can help you..."
+                  ></textarea>
+                </div>
+                <div className="flex items-center mb-5">
+                  <input
+                    type="checkbox"
+                    id="terms"
+                    name="terms"
+                    className="w-4 h-4 border-gray-300 rounded focus:ring-blue-500"
+                    required
+                  />
+                  <label
+                    htmlFor="terms"
+                    className="ml-2 text-sm font-medium text-gray-900"
+                  >
+                    By clicking Submit, I allow all communication from Wisdom
+                    World Academy.
+                  </label>
+                </div>
+                <div className="w-full text-center">
+                  <button
+                    type="submit"
+                    className="text-center bg-[#FFC701] text-extrabold hover:bg-blue-700 text-white font-medium rounded-lg p-2.5"
+                    style={{ width: "10rem" }}
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>

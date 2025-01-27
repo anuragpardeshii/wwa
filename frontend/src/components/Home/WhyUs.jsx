@@ -2,7 +2,7 @@ import "./WhyUs.css";
 export default function WhyUs() {
     const content = [
         {
-            "heading": "Wisdom World Academy - Best International School for Holistic Education",
+            "heading": "Wisdom World Academy - Best School for Holistic Education",
             "content": "At Wisdom World Academy, we bring years of excellence in providing world-class education. Our schools have earned accolades, awards, and appreciation from both parents and students. With highly trained educators, we ensure a strong foundation for academic and personal growth, fostering an environment that is safe, nurturing, and intellectually stimulating for young minds."
         },
         {

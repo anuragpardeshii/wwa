@@ -5,7 +5,15 @@
 .form-width{
     max-width: 40%;
     padding: 1.5rem 3rem;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.newshadow{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.newbg {
+    background: linear-gradient(90deg, #0b2441 0%, #0f335a 50%, #14224e 100%);
 }
 
 @media (max-width: 756px) {
