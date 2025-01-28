@@ -12,6 +12,7 @@ import ParentsSpeak from "./components/More/ParentsSpeak/ParentsSpeak";
 import Enquiry from "./components/Enquiry/Enquiry.jsx";
 import SeeMore from "./components/Home/SeeMore.jsx";
 import Story from "./components/Story/Story.jsx";
+import Franchise from "./components/Franchise/Franchise.jsx";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/see-more" element={<SeeMore />} />
         <Route path="/enquiry" element={<Enquiry />} />
         <Route path="/story" element={<Story/>} />
+        <Route path="/frachise" element={<Franchise/>} />
       </Routes>
       <Footer />
     </>

@@ -3,7 +3,7 @@ import { GraduationCap, Star, Brain, Shield } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="relative bg-white">
+    <div className="relative bg-gradient-to-br from-blue-45 to-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0">

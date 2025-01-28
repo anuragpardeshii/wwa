@@ -1,161 +1,119 @@
-import React, { useState } from "react";
-import formbg1 from "/src/assets/images/formbg.png";
+import React, { useState, useEffect } from 'react';
+import { Quote } from 'lucide-react';
+
+// Testimonial data
+const testimonials = [
+  {
+    id: 1,
+    name: "Sarah Johnson",
+    role: "Parent of Alex, Grade 5",
+    content: "Wisdom World Academy has transformed my child's learning experience. The personalized attention and innovative teaching methods have helped Alex develop a genuine love for learning.",
+    image: "https://static.vecteezy.com/system/resources/thumbnails/004/607/791/small_2x/man-face-emotive-icon-smiling-male-character-in-blue-shirt-flat-illustration-isolated-on-white-happy-human-psychological-portrait-positive-emotions-user-avatar-for-app-web-design-vector.jpg"
+  },
+  {
+    id: 2,
+    name: "Michael Chen",
+    role: "Parent of Emma, Grade 3",
+    content: "The dedication of teachers at Wisdom World Academy is exceptional. They go above and beyond to ensure each child reaches their full potential.",
+    image: "https://static.vecteezy.com/system/resources/thumbnails/004/607/791/small_2x/man-face-emotive-icon-smiling-male-character-in-blue-shirt-flat-illustration-isolated-on-white-happy-human-psychological-portrait-positive-emotions-user-avatar-for-app-web-design-vector.jpg"
+  },
+  {
+    id: 3,
+    name: "Lisa Rodriguez",
+    role: "Parent of twins, Grade 4",
+    content: "Having twins with different learning styles was challenging, but the academy's approach has helped both my children excel in their unique ways.",
+    image: "https://static.vecteezy.com/system/resources/thumbnails/004/607/791/small_2x/man-face-emotive-icon-smiling-male-character-in-blue-shirt-flat-illustration-isolated-on-white-happy-human-psychological-portrait-positive-emotions-user-avatar-for-app-web-design-vector.jpg"
+  },
+  {
+    id: 4,
+    name: "David Thompson",
+    role: "Parent of Sophie, Grade 6",
+    content: "The holistic development approach at Wisdom World Academy has helped Sophie become more confident and creative in her pursuits.",
+    image: "https://static.vecteezy.com/system/resources/thumbnails/004/607/791/small_2x/man-face-emotive-icon-smiling-male-character-in-blue-shirt-flat-illustration-isolated-on-white-happy-human-psychological-portrait-positive-emotions-user-avatar-for-app-web-design-vector.jpg"
+  },
+  {
+    id: 5,
+    name: "Amanda Foster",
+    role: "Parent of Jack, Grade 2",
+    content: "The support system here is incredible. From academic guidance to emotional well-being, they take care of every aspect of child development.",
+    image: "https://static.vecteezy.com/system/resources/thumbnails/004/607/791/small_2x/man-face-emotive-icon-smiling-male-character-in-blue-shirt-flat-illustration-isolated-on-white-happy-human-psychological-portrait-positive-emotions-user-avatar-for-app-web-design-vector.jpg"
+  },
+  {
+    id: 6,
+    name: "Robert Kim",
+    role: "Parent of Hannah, Grade 5",
+    content: "We've seen remarkable improvement in Hannah's academic performance and social skills since joining Wisdom World Academy.",
+    image: "https://static.vecteezy.com/system/resources/thumbnails/004/607/791/small_2x/man-face-emotive-icon-smiling-male-character-in-blue-shirt-flat-illustration-isolated-on-white-happy-human-psychological-portrait-positive-emotions-user-avatar-for-app-web-design-vector.jpg"
+  }
+];
 
 export default function Testimonial() {
-  const testimonials = [
-    {
-      quote:
-        "Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application.",
-      name: "Michael Gough",
-      role: "CEO at Google",
-      image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png",
-    },
-    {
-      quote:
-        "This is another great testimonial example. The components are easy to use, and the interface is intuitive and modern.",
-      name: "John Doe",
-      role: "CTO at Facebook",
-      image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png",
-    },
-    {
-      quote:
-        "We love using this tool! It's incredibly useful and saves us so much time building SaaS applications.",
-      name: "Jane Smith",
-      role: "Product Manager at Amazon",
-      image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png",
-    },
-    {
-      quote:
-        "Fantastic! The best decision we made for our application was integrating Flowbite's components.",
-      name: "Sarah Johnson",
-      role: "CEO at Microsoft",
-      image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png",
-    },
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handlePrev = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1)
-    );
-  };
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => 
+        (prevIndex + 3 >= testimonials.length) ? 0 : prevIndex + 3
+      );
+    }, 5000);
 
-  const handleNext = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1)
-    );
-  };
+    return () => clearInterval(timer);
+  }, []);
+
+  const visibleTestimonials = testimonials.slice(currentIndex, currentIndex + 3);
 
   return (
-    <>
-      {/* <img
-        className="hide-img"
-        src={formbg1}
-        alt=""
-        style={{
-          position: "absolute",
-          width: "100vw",
-          opacity: "0.5",
-          zIndex: "-100",
-        }}
-      /> */}
-      <div className="relative w-full max-w-6xl mx-auto">
-        <div className="relative overflow-hidden rounded-lg h-56 md:h-96">
-          {testimonials.map((testimonial, index) => (
+    <div className="min-h-screen bg-gradient-to-br from-blue-45 to-white py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-6xl font-bold text-[#0f335a] mb-4">
+            What Parents Say
+          </h2>
+          <p className="text-lg text-gray-600">
+            Discover why families choose Wisdom World Academy for their children's education
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {visibleTestimonials.map((testimonial) => (
             <div
-              key={index}
-              className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-700 ease-in-out ${
-                index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-              }`}
+              key={testimonial.id}
+              className="bg-white rounded-xl shadow-xl p-8 transform transition-all duration-500 hover:scale-105"
             >
-              <figure className="max-w-screen-md mx-auto text-center">
-                <blockquote>
-                  <p className="min-text italic font-medium text-gray-900 dark:text-white">
-                    "{testimonial.quote}"
-                  </p>
-                </blockquote>
-                <figcaption className="flex items-center justify-center mt-6 space-x-3">
-                  <img
-                    className="w-6 h-6 rounded-full"
-                    src={testimonial.image}
-                    alt="profile"
-                  />
-                  <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                    <cite className="pe-3 font-medium text-gray-900 dark:text-white">
-                      {testimonial.name}
-                    </cite>
-                    <cite className="ps-3 text-sm text-gray-500 dark:text-gray-400">
-                      {testimonial.role}
-                    </cite>
-                  </div>
-                </figcaption>
-              </figure>
+              <Quote className="w-10 h-10 text-[#ffc300] mb-6" />
+              <p className="text-gray-600 mb-6 italic">
+                "{testimonial.content}"
+              </p>
+              <div className="flex items-center">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="w-12 h-12 rounded-full object-cover mr-4"
+                />
+                <div>
+                  <h4 className="font-semibold text-[#0f335a]">{testimonial.name}</h4>
+                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
-        <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-          {testimonials.map((_, index) => (
+
+        <div className="flex justify-center mt-8">
+          {Array.from({ length: Math.ceil(testimonials.length / 3) }).map((_, idx) => (
             <button
-              key={index}
-              className={`w-3 h-3 rounded-full ${
-                index === currentIndex ? "bg-blue-600" : "bg-gray-300"
+              key={idx}
+              onClick={() => setCurrentIndex(idx * 3)}
+              className={`w-3 h-3 rounded-full mx-1 transition-all duration-300 ${
+                Math.floor(currentIndex / 3) === idx
+                  ? 'bg-indigo-500'
+                  : 'bg-gray-300'
               }`}
-              onClick={() => setCurrentIndex(index)}
-              aria-label={`Slide ${index + 1}`}
-            ></button>
+              aria-label={`Go to slide ${idx + 1}`}
+            />
           ))}
         </div>
-        <button
-          type="button"
-          onClick={handlePrev}
-          className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        >
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full" style={{backgroundColor: "blue-600", zIndex: "1"}}>
-            <svg
-              className="w-4 h-4 text-white"
-              style={{zIndex: "1"}}
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M5 1 1 5l4 4"
-              />
-            </svg>
-          </span>
-        </button>
-        <button
-          type="button"
-          onClick={handleNext}
-          className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        >
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full" style={{backgroundColor: "blue-600"}}>
-            <svg
-              className="w-4 h-4 text-white"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="m1 9 4-4-4-4"
-              />
-            </svg>
-          </span>
-        </button>
       </div>
-    </>
+    </div>
   );
 }
