@@ -14,28 +14,28 @@ export default function OurProgrammes() {
       ageGroup: "Age: 2.5-3.5 years",
       description:
         "Our Nursery Class nurtures curiosity and creativity in 2.5-3.5-year-olds through play, stories, songs, and sensory activities in a vibrant setting.",
-      imageUrl:prog1,
+      imageUrl: prog1,
     },
     {
       title: "LKG",
       ageGroup: "Age: 3.5-4.5 years",
       description:
         "Our LKG Class nurtures 3.5-4.5-year-olds with literacy, numeracy, problem-solving, confidence, and self-expression.",
-      imageUrl:prog1,
+      imageUrl: prog1,
     },
     {
       title: "UKG",
       ageGroup: "Age: 4.5-5.5 years",
       description:
         "Our UKG Class prepares 4.5-5.5-year-olds for primary school with interactive learning, creative projects, technology, and a strong academic foundation.",
-      imageUrl:prog1,
+      imageUrl: prog1,
     },
     {
       title: "Primary",
       ageGroup: "Age: 5.5+ years",
       description:
         "The Primary Section at Wisdom World fosters academic excellence, creativity, and character building for lifelong learning.",
-      imageUrl:prog1 ,
+      imageUrl: prog1,
     },
   ];
 
@@ -60,14 +60,11 @@ export default function OurProgrammes() {
       />
       <div className="mx-auto px-4 ourProgrammes">
         <div className="text-center my-8">
-          <h1
-            className="text-white text-center text-6xl font-extrabold leading-none tracking-tight md:text-6xl"
-            style={{ color: "white" }}
-          >
+          <h1 className="text-white text-center text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
             Empowering Minds, Shaping Futures
           </h1>
         </div>
-        <div className="grid my-14 grid-cols-1 md:grid-cols-2 xl:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-8">
+        <div className="grid max-w-7xl mx-auto my-14 grid-cols-1 md:grid-cols-2 xl:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-8">
           {classes.map((classInfo, index) => (
             <ClassCard key={index} {...classInfo} />
           ))}

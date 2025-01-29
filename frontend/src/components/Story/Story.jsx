@@ -1,9 +1,10 @@
 import React from 'react';
 import { BookOpen, Heart, Lightbulb, Users, Target, Sparkles } from 'lucide-react';
+import children from "/src/assets/images/army/70373068_2499242406811563_218327983818014720_n.png"
 
 export default function OurStory() {
   return (
-    <div className="bg-gradient-to-b from-white via-indigo-50 to-white py-12">
+    <div className="bg-gradient-to-b from-[#edf1f9] via-[#edf1f9] to-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold  text-gray-900">Our Story</h2>
@@ -16,7 +17,7 @@ export default function OurStory() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=1200"
+              src={children}
               alt="Children learning together"
               className="rounded-2xl shadow-xl w-full h-[500px] object-cover"
             />
@@ -46,7 +47,7 @@ export default function OurStory() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-indigo-50 rounded-xl p-6">
+              <div className="bg-gray-50 rounded-xl p-6">
                 <div className="flex items-center gap-2 text-[#0f335a] mb-2">
                   <Target className="w-5 h-5" />
                   <span className="font-medium">Our Focus</span>
@@ -55,7 +56,7 @@ export default function OurStory() {
                   Creating a safe, nurturing, and bias-free environment where children can explore, learn, and thrive.
                 </p>
               </div>
-              <div className="bg-indigo-50 rounded-xl p-6">
+              <div className="bg-gray-50 rounded-xl p-6">
                 <div className="flex items-center gap-2 text-[#0f335a] mb-2">
                   <Sparkles className="w-5 h-5" />
                   <span className="font-medium">Our Promise</span>
@@ -97,10 +98,10 @@ export default function OurStory() {
           <p className="text-lg text-gray-600 mb-8">
             Wisdom World Academy is not just a school—it's a community of dedicated educators, parents, and students, all working together toward a common goal. Our story is one of commitment to excellence, where every child is valued, and every success is celebrated.
           </p>
-          <div className="inline-flex items-center justify-center gap-2 bg-[#ffc300] text-white px-8 py-4 rounded-xl hover:bg-indigo-700 transition-colors duration-200 cursor-pointer">
+          <a href='/enquiry' className="inline-flex items-center justify-center gap-2 bg-[#ffc300] text-white px-8 py-4 rounded-xl cursor-pointer">
             <span className="font-medium">Be Part of Our Journey</span>
             <BookOpen className="w-5 h-5" />
-          </div>
+          </a>
         </div>
       </div>
     </div>

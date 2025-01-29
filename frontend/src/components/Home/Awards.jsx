@@ -71,13 +71,12 @@ export default function Awards() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h1
-                className="text-white text-center text-6xl font-extrabold leading-none tracking-tight md:text-6xl"
-                style={{ color: "white" }}
+                className="text-white text-center text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight"
               >
                 Rewards & Recognition
               </h1>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid max-w-7xl mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {achievements.map((achievement, index) => (
                 <AchievementCard key={index} {...achievement} />
               ))}

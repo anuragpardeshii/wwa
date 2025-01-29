@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./PreschoolProgram.css";
 import Faq from "../../Comman/Faq/Faq.jsx";
+import OurProgrammes from "../../Comman/OurPrograms/OurProgrammes.jsx";
 import "/src/components/Difference/Difference.css"; // Make sure to create this CSS file to style your components
-import Offer from "./Offer.jsx";
+// import Offer from "./Offer.jsx";
 
 const PreschoolProgram = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -78,7 +79,8 @@ const PreschoolProgram = () => {
           <img src="/src/assets/images/difference2.jpg" alt="" />
         </div>
       </div>
-      <Offer/>
+      {/* <Offer/> */}
+      <OurProgrammes/>
       <Faq />
     </>
   );

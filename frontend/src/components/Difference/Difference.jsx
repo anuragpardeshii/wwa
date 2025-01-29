@@ -1,6 +1,7 @@
+import Awards from "../Home/Awards";
 import "./Difference.css";
 import Mentors from "./Mentors";
-import Preschool from "./Preschool";
+// import Preschool from "./Preschool";
 // import bg4 from "/src/assets/images/bg6.jpg";
 import differenceImage from "/src/assets/images/army/DSC_0484.JPG";
 import { Sparkles, Brain, Heart, Globe, Users, Star } from 'lucide-react';
@@ -54,7 +55,7 @@ export default function Difference() {
             /> */}
       <div className="difference-section">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-5xl mt-8 ">
+          <h1 className="text-5xl my-12 pt-4 ">
           What makes Wisdom World Academy unique?
           </h1>
           <div className="p-4 max-w-6xl mx-auto">
@@ -98,7 +99,8 @@ export default function Difference() {
             </div>
           </div>
         </div>
-        <Preschool />
+        <Awards/>
+        {/* <Preschool /> */}
         <Mentors />
       </div>
     </div>

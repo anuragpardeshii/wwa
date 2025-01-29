@@ -1,9 +1,10 @@
 import React from 'react';
 import { GraduationCap, Star, Brain, Shield } from 'lucide-react';
+import children from "/src/assets/images/army/DSC_0484.jpg";
 
 export default function Home() {
   return (
-    <div className="relative bg-gradient-to-br from-blue-45 to-white">
+    <div className="relative">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0">
@@ -39,7 +40,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img
-                src="\src\assets\images\army\DSC_0484.jpg"
+                src={children}
                 alt="Children learning"
                 className="rounded-3xl shadow-2xl"
               />

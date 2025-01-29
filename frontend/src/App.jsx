@@ -28,7 +28,7 @@ function App() {
         <Route path="/see-more" element={<SeeMore />} />
         <Route path="/enquiry" element={<Enquiry />} />
         <Route path="/story" element={<Story/>} />
-        <Route path="/frachise" element={<Franchise/>} />
+        <Route path="/franchise" element={<Franchise/>} />
       </Routes>
       <Footer />
     </>
