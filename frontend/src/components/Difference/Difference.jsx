@@ -1,10 +1,11 @@
+import React from 'react';
+import { Sparkles, Brain, Heart, Globe, Users, Star } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Awards from "../Home/Awards";
-import "./Difference.css";
 import Mentors from "./Mentors";
 // import Preschool from "./Preschool";
 // import bg4 from "/src/assets/images/bg6.jpg";
 import differenceImage from "/src/assets/images/army/DSC_0484.JPG";
-import { Sparkles, Brain, Heart, Globe, Users, Star } from 'lucide-react';
 
 const features = [
   {
@@ -42,22 +43,17 @@ const features = [
 export default function Difference() {
   return (
     <div>
-      {/* <img
-              className="hide-img"
-              src={bg4}
-              alt=""
-              style={{
-                position: "absolute",
-                width: "100vw",
-                opacity: "0.5",
-                zIndex: "-100",
-              }}
-            /> */}
       <div className="difference-section">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-5xl my-12 pt-4 ">
-          What makes Wisdom World Academy unique?
-          </h1>
+          <motion.h1 
+            className="text-5xl my-12 pt-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            What makes Wisdom World Academy unique?
+          </motion.h1>
+
           <div className="p-4 max-w-6xl mx-auto">
             {/* <img
               className="text-center m-2 shadow-lg hover:shadow-xl mx-auto rounded-2xl"
@@ -66,27 +62,40 @@ export default function Difference() {
               alt="Difference"
             /> */}
 
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.3 }}
             >
-              <div className="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center text-[#0f335a] mb-6">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600">
-                {feature.description}
-              </p>
-            </div>
-          ))}
-        </div>
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                >
+                  <div className="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center text-[#0f335a] mb-6">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {feature.description}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
 
-            <div className="mx-auto m-4 p-2">
-              <h4 className="text-lg text-center lg:text-xl ">
+            <motion.div
+              className="mx-auto m-4 p-2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.6 }}
+            >
+              <h4 className="text-lg text-center lg:text-xl">
                 At Wisdom World Academy, we prioritize the holistic development
                 of each child. Our approach goes beyond academics, fostering
                 intellectual, emotional, social, and creative growth in a
@@ -96,10 +105,11 @@ export default function Difference() {
                 every child reach their full potential in a safe, supportive
                 atmosphere.
               </h4>
-            </div>
+            </motion.div>
           </div>
         </div>
-        <Awards/>
+
+        <Awards />
         {/* <Preschool /> */}
         <Mentors />
       </div>

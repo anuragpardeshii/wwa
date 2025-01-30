@@ -1,6 +1,7 @@
 import React from "react";
 import "./Gallery.css";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 // Importing images
 import img1 from "/src/assets/images/army/DSC_0492.JPG";
@@ -15,46 +16,54 @@ import img8 from "/src/assets/images/army/DSC_0589.JPG";
 export default function Gallery() {
   const navigate = useNavigate();
   return (
-    <div className=" mx-auto p-4 max-w-6xl"> 
-      <div className="grid grid-cols-2 mb-8 md:grid-cols-4 gap-4">
+    <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+        >
+    <div className=" mx-auto p-4 max-w-6xl">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className="grid gap-4">
-          <div>
+          <motion.div whileHover={{ scale: 1.05 }}>
             <img className="h-auto max-w-full rounded-lg" src={img1} alt="Image 1" />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.05 }}>
             <img className="h-auto max-w-full rounded-lg" src={img2} alt="Planting" />
-          </div>
+          </motion.div>
         </div>
         <div className="grid gap-4">
-          <div>
+          <motion.div whileHover={{ scale: 1.05 }}>
             <img className="h-auto max-w-full rounded-lg" src={img3} alt="Our Purpose" />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.05 }}>
             <img className="h-auto max-w-full rounded-lg" src={img4} alt="Image 4" />
-          </div>
+          </motion.div>
         </div>
         <div className="grid gap-4">
-          <div>
+          <motion.div whileHover={{ scale: 1.05 }}>
             <img className="min-hide h-auto max-w-full rounded-lg" src={img5} alt="Image 5" />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.05 }}>
             <img className="min-hide h-auto max-w-full rounded-lg" src={img6} alt="Image 6" />
-          </div>
+          </motion.div>
         </div>
         <div className="grid gap-4">
-          <div>
+          <motion.div whileHover={{ scale: 1.05 }}>
             <img className="min-hide h-auto max-w-full rounded-lg" src={img7} alt="Image 7" />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.05 }}>
             <img className="min-hide h-auto max-w-full rounded-lg" src={img8} alt="Image 8" />
-          </div>
+          </motion.div>
         </div>
       </div>
-      {/* <div className="flex justify-center items-center pt-10">
-        <button
+      <div className="flex justify-center items-center pt-10">
+        <motion.a
           type="button"
-          onClick={() => navigate("/see-more")}
-          className="bg-blue1 text-white flex gap-2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          href="/media"
+          className="bg-blue1 mb-8 text-white flex gap-2 bg-blue-700 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
           See More
           <svg
@@ -72,8 +81,9 @@ export default function Gallery() {
               d="M1 5h12m0 0L9 1m4 4L9 9"
             />
           </svg>
-        </button> 
-      </div>*/}
+        </motion.a>
+      </div>
     </div>
+    </motion.div>
   );
 }

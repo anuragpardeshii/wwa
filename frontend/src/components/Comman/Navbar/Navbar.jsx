@@ -12,8 +12,8 @@ export default function Navbar() {
     <>
     <nav className="relative w-full z-20 top-0 start-0" style={{zIndex: "1000000"}}>
       <div className="flex items-center flex-wrap mx-auto p-2 py-4" style={{ justifyContent: "space-around"}}>
-        <a
-          href="/"
+        <NavLink
+          to="/"
           className="flex items-center justify-center space-x-3 rtl:space-x-reverse"
         >
           <img
@@ -24,7 +24,7 @@ export default function Navbar() {
           <span className="brand self-center text-xl text-white font-semibold whitespace-nowrap dark:text-white">
             Wisdom World Academy
           </span>
-        </a>
+        </NavLink>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button
             type="button"
@@ -79,6 +79,14 @@ export default function Navbar() {
                 className="block py-2 px-3 rounded text-[#0f335a] text-white md:p-0"
               >
                 About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/story"
+                className="block py-2 px-3 rounded text-[#0f335a] text-white md:p-0"
+              >
+                Our Story
               </NavLink>
             </li>
             <li>

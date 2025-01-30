@@ -5,7 +5,7 @@ export default function Purpose() {
   return (
     <>
     <img className="hide-img" src={formbg1} alt="" style={{position: "absolute", width: "100vw", zIndex: "-1000", opacity: "0.5", marginTop: "-10vh"}} />
-    <div className="" style={{ margin: "2rem 8vw" }}>
+    <div className="">
       <h1 className="mb-10 color-blue text-blue-600 text-center text-6xl font-extrabold leading-none tracking-tight  md:text-5xl lg:text-6xl dark:text-white">
   Our Purpose
 </h1>

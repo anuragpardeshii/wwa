@@ -29,16 +29,14 @@ const Footer = () => {
         <div className="footer-column col">
           <h3>Connect</h3>
           <ul>
-            <li><a href="/see-more">Media</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="/media">Media</a></li>
             <li><a href="/enquiry">Contact Us</a></li>
           </ul>
         </div>
         <div className="footer-column col">
           <h3>Franchise</h3>
           <ul>
-            <li><a href="#">Start Your Own Preschool</a></li>
-            <li><a href="#">Franchise Locations</a></li>
+            <li><a href="/franchise">Start Your Own Preschool</a></li>
           </ul>
         </div>
       </div>

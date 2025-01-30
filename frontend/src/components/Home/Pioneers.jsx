@@ -1,44 +1,51 @@
 import React from 'react';
 import { GraduationCap, Star, Brain, Shield } from 'lucide-react';
 import children from "/src/assets/images/army/DSC_0484.jpg";
+import { motion } from 'framer-motion';
 
-export default function Home() {
+export default function Pioneers() {
   return (
+    <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+            >
     <div className="relative">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0">
-          {/* <img
-            src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=2000"
-            alt="School library background"
-            className="w-full h-full object-cover opacity-20"
-          /> */}
           <div className="absolute inset-0 bg-gradient-to-r" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="text-center mb-12">
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+            <motion.h1
+              className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
               Nurturing Young Minds at the{' '}
               <span className="text-[#0f335a]">#1 Preschool</span>
-            </h1>
-            <p className="text-2xl text-[#0f335a] font-semibold mb-8">
+            </motion.h1>
+            <motion.p
+              className="text-2xl text-[#0f335a] font-semibold mb-8"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 1 }}
+            >
               Wisdom World Academy - Best School for Holistic Education
-            </p>
-            {/* <div className="flex justify-center gap-4 mb-12">
-              <div className="bg-white px-6 py-3 rounded-full shadow-lg flex items-center gap-2">
-                <Star className="w-5 h-5 text-yellow-500" />
-                <span className="text-gray-700">Award Winning</span>
-              </div>
-              <div className="bg-white px-6 py-3 rounded-full shadow-lg flex items-center gap-2">
-                <Shield className="w-5 h-5 text-[#0f335a]" />
-                <span className="text-gray-700">NAEYC Accredited</span>
-              </div>
-            </div> */}
+            </motion.p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+            >
               <img
                 src={children}
                 alt="Children learning"
@@ -53,9 +60,14 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="space-y-6">
+            <motion.div
+              className="space-y-6"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+            >
               <p className="text-lg text-gray-600 leading-relaxed">
                 At Wisdom World Academy, we bring years of excellence in providing world-class education. 
                 Our schools have earned accolades, awards, and appreciation from both parents and students. 
@@ -64,7 +76,10 @@ export default function Home() {
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white p-6 rounded-xl shadow-lg">
+                <motion.div
+                  className="bg-white p-6 rounded-xl shadow-lg"
+                  whileHover={{ scale: 1.05 }}
+                >
                   <Brain className="w-8 h-8 text-[#0f335a] mb-4" />
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     Leading Institution
@@ -72,8 +87,11 @@ export default function Home() {
                   <p className="text-gray-600">
                     Built on trust and unwavering commitment to quality education and innovative learning methodologies.
                   </p>
-                </div>
-                <div className="bg-white p-6 rounded-xl shadow-lg">
+                </motion.div>
+                <motion.div
+                  className="bg-white p-6 rounded-xl shadow-lg"
+                  whileHover={{ scale: 1.05 }}
+                >
                   <GraduationCap className="w-8 h-8 text-[#0f335a] mb-4" />
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     Comprehensive Curriculum
@@ -81,7 +99,7 @@ export default function Home() {
                   <p className="text-gray-600">
                     Designed to ignite a lifelong love for learning with modern teaching methodologies.
                   </p>
-                </div>
+                </motion.div>
               </div>
 
               <div className="bg-gray-50 p-6 rounded-xl">
@@ -93,10 +111,11 @@ export default function Home() {
                   and future leaders through a blend of modern teaching methodologies and brain-based research.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
     </div>
+    </motion.div>
   );
 }

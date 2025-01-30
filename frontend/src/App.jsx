@@ -10,9 +10,11 @@ import KidsClub from "./components/More/KidsClub/KidsClub";
 import BaglessSchool from "./components/More/BaglessSchool/BaglessSchool";
 import ParentsSpeak from "./components/More/ParentsSpeak/ParentsSpeak";
 import Enquiry from "./components/Enquiry/Enquiry.jsx";
-import SeeMore from "./components/Home/SeeMore.jsx";
+import Event from "./components/Home/Events.jsx"
+import SeeMore from "./components/Home/Events.jsx";
 import Story from "./components/Story/Story.jsx";
 import Franchise from "./components/Franchise/Franchise.jsx";
+import Gallery from "./components/Home/Gallery.jsx";
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
         <Route path="/enquiry" element={<Enquiry />} />
         <Route path="/story" element={<Story/>} />
         <Route path="/franchise" element={<Franchise/>} />
+        <Route path="/media" element={<Event/>} />
       </Routes>
       <Footer />
     </>
