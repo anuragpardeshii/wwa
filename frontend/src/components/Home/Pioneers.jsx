@@ -1,6 +1,6 @@
 import React from 'react';
 import { GraduationCap, Star, Brain, Shield } from 'lucide-react';
-import children from "/src/assets/images/army/DSC_0484.jpg";
+// import children from "/public/DSC_0484.jpg";
 import { motion } from 'framer-motion';
 
 export default function Pioneers() {
@@ -47,7 +47,7 @@ export default function Pioneers() {
               transition={{ duration: 1 }}
             >
               <img
-                src={children}
+                src="/DSC_0484.jpg"
                 alt="Children learning"
                 className="rounded-3xl shadow-2xl"
               />
