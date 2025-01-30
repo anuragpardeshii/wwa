@@ -1,246 +1,326 @@
-import React, { useState } from 'react';
-import { Send, BadgeCheck } from 'lucide-react';
+import "./Enquiry.css";
+import { useState } from "react";
+import bg from "/src/assets/svgs/stationary-bg2.png";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  School,
+  Users,
+  Palette,
+} from "lucide-react";
+export default function Enquiry() {
+  const [result, setResult] = useState("");
 
-export default function FranchiseForm () {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    city: '',
-    state: '',
-    investmentRange: '',
-    experience: '',
-    timeframe: '',
-    message: '',
-  });
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
 
-  const [submitted, setSubmitted] = useState(false);
+    // Add the API access key
+    formData.append("access_key", "422abc9b-bde7-443b-ac1c-79e2b489d827");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const formDataToSend = new FormData();
-    // Add form data to the FormData object to send it in the POST request
-    Object.keys(formData).forEach((key) => {
-      formDataToSend.append(key, formData[key]);
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
     });
-    // Append the access key to the form data
-    formDataToSend.append('access_key', '422abc9b-bde7-443b-ac1c-79e2b489d827');
 
-    try {
-      const response = await fetch('https://web3forms.com/api/v1/contact', {
-        method: 'POST',
-        body: formDataToSend,
-      });
+    const data = await response.json();
 
-      const result = await response.json();
-      if (result.success) {
-        setSubmitted(true);  // Set the submitted state if successful
-      } else {
-        alert('Submission failed. Please try again.');
-      }
-    } catch (error) {
-      alert('There was an error submitting the form.');
+    if (data.success) {
+      setResult("Form Submitted Successfully!");
+      event.target.reset();
+    } else {
+      console.error("Error:", data);
+      setResult(data.message || "An error occurred. Please try again.");
     }
   };
 
-  if (submitted) {
-    return (
-      <div className="text-center py-16 px-4">
-        <div className="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-green-100">
-          <BadgeCheck className="w-8 h-8 text-green-600" />
-        </div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Thank You for Your Interest!</h2>
-        <p className="text-gray-600 max-w-md mx-auto">
-          We've received your franchise inquiry and will contact you within 2 business days to discuss the opportunity further.
-        </p>
-      </div>
-    );
-  }
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-45 to-white py-16 px-4">
+    <>
+      {/* <img
+      className="hide-img"
+        src={bg}
+        alt=""
+        style={{
+          position: "absolute",
+          width: "100vw",
+          zIndex: "-1000",
+          opacity: "0.5",
+        }}
+      /> */}
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Start Your Own Wisdom World Academy Franchise
-          </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Join our growing network of educational excellence and make a difference in children's lives.
-            Start your journey to becoming a Wisdom World Academy franchise owner today.
-          </p>
-        </div>
+        <div
+          className="max-w-7xl my-4 mx-4 mx-auto bg-white rounded-3xl newshadow overflow-hidden"
+          style={{ margin: "1rem", marginBottom: "3rem", marginTop: "1.5rem" }}
+        >
+          <div className="md:grid md:grid-cols-2">
+            {/* Left Column - Contact Info */}
+            <div className="newbg p-12 text-white" style={{}}>
+              <div className="space-y-8">
+                <h2 className="text-3xl font-bold flex items-center gap-3">
+                  <School className="h-8 w-8" />
+                  Visit Our School
+                </h2>
 
-        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
-                First Name *
-              </label>
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                required
-                value={formData.firstName}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              />
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4 bg-white/10 p-4 rounded-xl">
+                    <Users className="h-6 w-6 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold">Ages</h3>
+                      <p>2-16 years old</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center space-x-4 bg-white/10 p-4 rounded-xl">
+                    <Clock className="h-6 w-6 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold">School Hours</h3>
+                      <p>Monday - Saturday: 8:30 AM - 2:00 PM</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center space-x-4 bg-white/10 p-4 rounded-xl">
+                    <Phone className="h-6 w-6 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold">Call Us</h3>
+                      <p>+91-9589304050</p>
+                    </div>
+                  </div>
+
+                  {/* <div className="flex items-center space-x-4 bg-white/10 p-4 rounded-xl">
+                    <Mail className="h-6 w-6 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold">Email Us</h3>
+                      <p>wisdomworldacademy1@gmail.com</p>
+                    </div>
+                  </div> */}
+
+                  <div className="flex items-center space-x-4 bg-white/10 p-4 rounded-xl">
+                    <MapPin className="h-6 w-6 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold">Find Us</h3>
+                      <p>695, Sector-A, Shiv City, Rau, Silicon City, Indore, Madhya Pradesh 452017</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
-            <div>
-              <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
-                Last Name *
-              </label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                required
-                value={formData.lastName}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                Email Address *
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              />
-            </div>
-            <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                Phone Number *
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                required
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              />
-            </div>
-            <div>
-              <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-1">
-                City *
-              </label>
-              <input
-                type="text"
-                id="city"
-                name="city"
-                required
-                value={formData.city}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              />
-            </div>
-            <div>
-              <label htmlFor="state" className="block text-sm font-medium text-gray-700 mb-1">
-                State *
-              </label>
-              <input
-                type="text"
-                id="state"
-                name="state"
-                required
-                value={formData.state}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              />
-            </div>
-            <div>
-              <label htmlFor="investmentRange" className="block text-sm font-medium text-gray-700 mb-1">
-                Investment Range *
-              </label>
-              <select
-                id="investmentRange"
-                name="investmentRange"
-                required
-                value={formData.investmentRange}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              >
-                <option value="">Select Range</option>
-                <option value="100k-200k">$100,000 - $200,000</option>
-                <option value="200k-300k">$200,000 - $300,000</option>
-                <option value="300k-400k">$300,000 - $400,000</option>
-                <option value="400k+">$400,000+</option>
-              </select>
-            </div>
-            <div>
-              <label htmlFor="timeframe" className="block text-sm font-medium text-gray-700 mb-1">
-                Expected Timeframe *
-              </label>
-              <select
-                id="timeframe"
-                name="timeframe"
-                required
-                value={formData.timeframe}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              >
-                <option value="">Select Timeframe</option>
-                <option value="0-3">0-3 months</option>
-                <option value="3-6">3-6 months</option>
-                <option value="6-12">6-12 months</option>
-                <option value="12+">12+ months</option>
-              </select>
-            </div>
-          </div>
-          <div className="mt-6">
-            <label htmlFor="experience" className="block text-sm font-medium text-gray-700 mb-1">
-              Education/Business Experience *
-            </label>
-            <input
-              type="text"
-              id="experience"
-              name="experience"
-              required
-              value={formData.experience}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
-          </div>
-          <div className="mt-6">
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-              Additional Comments
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              value={formData.message}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
-          </div>
-          <button
-            type="submit"
-            className="mt-8 w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center gap-2"
+            {/* <div
+          className="marginn flex gh flex-wrap gap-6 items-center"
+          style={{ justifyContent: "space-around"  }}
+        >
+          <div
+            className="hide-div p-4 max-w-3xl mx-auto"
           >
-            <Send className="w-5 h-5" />
-            Submit Franchise Inquiry
-          </button>
-        </form>
+            <p className="mb-2 text-lg font-normal  lg:text-lg dark:text-gray-400">
+              Welcome to Wisdom World Academy, where we are committed to shaping
+              young minds with excellence and care. If you're considering
+              admission for your child or need more details about our programs,
+              our dedicated admissions team is here to assist you every step of
+              the way.
+            </p>
+            <p className="mb-2 text-lg font-normal  lg:text-lg dark:text-gray-400">
+              You can contact us through the following options:
+            </p>
+            <ul className="mb-2 text-lg font-normal  lg:text-lg dark:text-gray-400">
+              <li style={{ marginLeft: "2rem" }}>
+                <b>Phone Number:</b> +91-9589304050
+              </li>
+              <li style={{ marginLeft: "2rem" }}>
+                <b>Email:</b> wisdomworldacademy@gmail.com
+              </li>
+              <li style={{ marginLeft: "2rem" }}>
+                <b>Office Hours:</b>Monday to Friday, 9:00 AM to 5:00 PM
+              </li>
+            </ul>
+            <p className="mb-2 text-lg font-normal  lg:text-lg dark:text-gray-400">
+              Alternatively, you can fill out the enquiry form below, providing
+              your contact information and specific questions. Our admissions
+              team will respond promptly to guide you.
+            </p>
+            <p className="mb-2 text-lg font-normal  lg:text-lg dark:text-gray-400">
+              At Wisdom World Academy, we believe in nurturing a lifelong love
+              for learning and empowering students to achieve their potential.
+              Join our vibrant community and give your child the gift of
+              exceptional education.
+            </p>
+            <p className="mb-2 text-lg font-normal  lg:text-lg dark:text-gray-400">
+              Let’s embark on this journey together!
+            </p>
+          </div> */}
+            <div
+              className="rounded-xl p-8"
+              style={{ margin: "auto", background: "rgba(255, 255, 255, 0.7)" }}
+            >
+              <h1 className="mb-4 text-2xl font-bold lg:text-3xl">
+                Send us a message
+              </h1>
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                className="space-y-6"
+              >
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="422abc9b-bde7-443b-ac1c-79e2b489d827"
+                />
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Parent's Name
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      required
+                      className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                      placeholder="Prateek Batham"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="childName"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Child's Name
+                    </label>
+                    <input
+                      type="text"
+                      name="childName"
+                      id="childName"
+                      className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    />
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Your Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      required
+                      className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                      placeholder="example@domain.com"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      id="phone"
+                      className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                      placeholder="Enter your phone number"
+                      required
+                    />
+                  </div>
+                </div>
+                {/* <div>
+                  <label
+                    htmlFor="childAge"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Child's Age
+                  </label>
+                  <input
+                    type="text"
+                    name="childAge"
+                    id="childAge"
+                    className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  />
+                </div> */}
+                <div>
+                  <label
+                    htmlFor="class"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Select Class
+                  </label>
+                  <select
+                    name="class"
+                    id="class"
+                    className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    required
+                  >
+                    <option value="">Choose a class</option>
+                    <option value="Nursery">Nursery</option>
+                    <option value="LKG">LKG</option>
+                    <option value="UKG">UKG</option>
+                    <option value="Class I">Class I</option>
+                    <option value="Class II">Class II</option>
+                    <option value="Class III">Class III</option>
+                    <option value="Class IV">Class IV</option>
+                    <option value="Class V">Class V</option>
+                    <option value="Class VI">Class VI</option>
+                    <option value="Class VII">Class VII</option>
+                    <option value="Class VIII">Class VIII</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Your Message
+                  </label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows={2}
+                    required
+                    className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="Tell us how we can help you..."
+                  ></textarea>
+                </div>
+                <div className="flex items-center mb-5">
+                  <input
+                    type="checkbox"
+                    id="terms"
+                    name="terms"
+                    className="w-4 h-4 border-gray-300 rounded focus:ring-blue-500"
+                    required
+                  />
+                  <label
+                    htmlFor="terms"
+                    className="ml-2 text-sm font-medium text-gray-900"
+                  >
+                    By clicking Submit, I allow all communication from Wisdom
+                    World Academy.
+                  </label>
+                </div>
+                <div className="w-full text-center">
+                  <button
+                    type="submit"
+                    className="text-center bg-[#FFC701] text-extrabold text-white font-medium rounded-lg p-2.5"
+                    style={{ width: "10rem" }}
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

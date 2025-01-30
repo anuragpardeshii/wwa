@@ -46,7 +46,7 @@ export default function Difference() {
       <div className="difference-section">
         <div className="max-w-6xl mx-auto">
           <motion.h1 
-            className="text-5xl my-12 pt-4"
+            className="my-6 pt-4 text-center text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}

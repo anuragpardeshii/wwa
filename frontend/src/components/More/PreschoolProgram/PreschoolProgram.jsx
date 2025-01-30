@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./PreschoolProgram.css";
+import children from "/src/assets/images/difference2.jpg";
 import Faq from "../../Comman/Faq/Faq.jsx";
 import OurProgrammes from "../../Comman/OurPrograms/OurProgrammes.jsx";
 import "/src/components/Difference/Difference.css"; // Make sure to create this CSS file to style your components
@@ -62,10 +63,10 @@ const PreschoolProgram = () => {
 
   return (
     <>
-      <div className="preschool-section" style={{ marginTop: "10vh" }}>
-        <div className="col best-preschool">
-          <h1>Best PreSchool For Your Child</h1>
-          <p>
+      <div className="mx-4" >
+        <div className="col">
+          <h1 className="py-6 text-center text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">Best PreSchool For Your Child</h1>
+          <p className="mb-6 text-lg text-center max-w-6xl mx-auto text-gray-600">
             Our Preschool Program is designed to foster curiosity, creativity,
             and a love for learning in young children. We create a warm, safe,
             and engaging environment where each child can explore, grow, and
@@ -75,8 +76,8 @@ const PreschoolProgram = () => {
             skills for future learning.
           </p>
         </div>
-        <div className="col preschool-img">
-          <img src="/src/assets/images/difference2.jpg" alt="" />
+        <div className="col preschool-img py-8">
+          <img src={children} className="rounded-lg" alt="" />
         </div>
       </div>
       {/* <Offer/> */}
