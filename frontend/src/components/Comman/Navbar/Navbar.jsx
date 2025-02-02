@@ -30,7 +30,7 @@ export default function Navbar() {
             type="button"
             onClick={handleButtonClick}
             style={{backgroundColor: "#ffc300", fontWeight: "900", borderRadius: "5rem"}}
-            className="admission-btn text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
+            className="admission-btn text-white font-medium rounded-lg text-sm px-4 py-2 text-center"
           >
             Admission Enquiry
           </button>
