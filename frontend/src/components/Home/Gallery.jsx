@@ -96,8 +96,6 @@ export default function Gallery() {
             type="button"
             href="/media"
             className="bg-blue1 mb-8 text-white flex gap-2 bg-blue-700 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800"
-            
-            whileTap={{ scale: 0.95 }}
           >
             See More
             <svg
