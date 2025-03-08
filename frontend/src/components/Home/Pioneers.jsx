@@ -34,6 +34,7 @@ export default function Pioneers() {
               className="relative">
               <img
                 src="/DSC_0484.jpg"
+                loading="lazy"
                 alt="Children learning"
                 className="rounded-3xl shadow-2xl"
               />

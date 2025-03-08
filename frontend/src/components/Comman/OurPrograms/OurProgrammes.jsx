@@ -42,7 +42,7 @@ export default function OurProgrammes() {
   function ClassCard({ title, description, imageUrl, ageGroup }) {
     return (
       <div className="bg-white rounded-xl shadow-xl overflow-hidden transition-transform hover:scale-105">
-        <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
+        <img src={imageUrl} alt={title} loading="lazy" className="w-full h-48 object-cover" />
         <div className="p-6">
           <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
           <p className="text-sm text-gray-600 mb-3">{ageGroup}</p>
@@ -62,6 +62,7 @@ export default function OurProgrammes() {
       <img
         src={patternUp}
         style={{ width: "100%", marginBottom: "-1%" }}
+        loading="lazy"
         alt="Pattern Up"
       />
       <div className="mx-auto px-4 ourProgrammes">
@@ -79,6 +80,7 @@ export default function OurProgrammes() {
       <img
         src={patternDown}
         style={{ width: "100%", marginTop: "-1%" }}
+        loading="lazy"
         alt="Pattern Down"
       />
     </section>

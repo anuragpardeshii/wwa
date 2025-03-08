@@ -45,7 +45,7 @@ export default function OurPhilosophy() {
 
   return (
     <div>
-      <img src={patternUp} style={{ width: "100%" }} alt="Pattern Up" />
+      <img src={patternUp} style={{ width: "100%" }} alt="Pattern Up" loading="lazy" />
       <div className="ourProgrammes" style={{ padding: "2% 5%" }}>
         <h1 className="mb-10 text-white text-center text-4xl font-extrabold leading-none tracking-tight md:text-5xl  ">
           Empowering Minds, Shaping Futures
@@ -60,6 +60,7 @@ export default function OurPhilosophy() {
               <img
                 className="rounded-t-lg"
                 src="/src/assets/images/prog1.jpeg"
+                loading="lazy"
                 alt=""
               />
             </a>
@@ -106,6 +107,7 @@ export default function OurPhilosophy() {
               <img
                 className="rounded-t-lg"
                 src="/src/assets/images/prog1.jpeg"
+                loading="lazy"
                 alt=""
               />
             </a>
@@ -150,6 +152,7 @@ export default function OurPhilosophy() {
               <img
                 className="rounded-t-lg"
                 src="/src/assets/images/prog1.jpeg"
+                loading="lazy"
                 alt=""
               />
             </a>
@@ -195,6 +198,7 @@ export default function OurPhilosophy() {
               <img
                 className="rounded-t-lg"
                 src="/src/assets/images/prog1.jpeg"
+                loading="lazy"
                 alt=""
               />
             </a>
@@ -233,7 +237,7 @@ export default function OurPhilosophy() {
           </div>
         </div>
       </div>
-      <img src={patternDown} style={{ width: "100%" }} alt="Pattern Down" />
+      <img src={patternDown} style={{ width: "100%" }} alt="Pattern Down" loading="lazy" />
     </div>
   );
 }

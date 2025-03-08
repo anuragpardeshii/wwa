@@ -20,7 +20,7 @@ export default function Preschool() {
 
   return (
     <div>
-      <img src={patternUp} style={{ width: "100%", marginBottom: "-1%" }} alt="Pattern Up" />
+      <img src={patternUp} style={{ width: "100%", marginBottom: "-1%" }} loading="lazy" alt="Pattern Up" />
       <div className="ourProgrammes" style={{ padding: "5% 3%" }}>
         <h1 className="mb-10 text-white text-center text-4xl font-extrabold leading-none tracking-tight md:text-5xl" style={{color: "white"}}>
           Empowering Minds, Shaping Futures
@@ -35,6 +35,7 @@ export default function Preschool() {
               <img
                 className="rounded-t-lg"
                 src="/src/assets/images/prog1.jpeg"
+                loading="lazy"
                 alt=""
               />
             </a>
@@ -82,6 +83,7 @@ export default function Preschool() {
                 className="rounded-t-lg"
                 src="/src/assets/images/prog1.jpeg"
                 alt=""
+                loading="lazy"
               />
             </a>
             <div className="p-5">
@@ -125,6 +127,7 @@ export default function Preschool() {
               <img
                 className="rounded-t-lg"
                 src="/src/assets/images/prog1.jpeg"
+                loading="lazy"
                 alt=""
               />
             </a>
@@ -169,6 +172,7 @@ export default function Preschool() {
             <a href="#">
               <img
                 className="rounded-t-lg"
+                loading="lazy"
                 src="/src/assets/images/prog1.jpeg"
                 alt=""
               />
@@ -208,7 +212,7 @@ export default function Preschool() {
           </div>
         </div>
       </div>
-      <img src={patternDown} style={{ width: "100%", marginTop: "-1%" }} alt="Pattern Down" />
+      <img src={patternDown} style={{ width: "100%", marginTop: "-1%" }} loading="lazy" alt="Pattern Down" />
     </div>
   );
 }

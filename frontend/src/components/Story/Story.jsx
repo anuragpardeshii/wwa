@@ -22,6 +22,7 @@ export default function OurStory() {
           <div className="relative">
             <img
               src={children}
+              loading="lazy"
               alt="Children learning together"
               className="rounded-2xl shadow-xl w-full h-[500px] object-cover"
             />

@@ -13,7 +13,7 @@ export default function Slogan() {
         meets heart, and every child’s journey begins with purpose."</p>
 </blockquote>
       </div>
-      <img src={patternDown} style={{ width: "100%" }} alt="Pattern Down" />
+      <img src={patternDown} style={{ width: "100%" }} loading="lazy" alt="Pattern Down" />
     </>
   );
 }

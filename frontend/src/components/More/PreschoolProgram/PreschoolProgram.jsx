@@ -77,7 +77,7 @@ const PreschoolProgram = () => {
           </p>
         </div>
         <div className="col preschool-img py-8">
-          <img src={children} className="rounded-lg mx-auto" alt="" style={{width:"30rem"}} />
+          <img src={children} className="rounded-lg mx-auto" alt="" loading="lazy" style={{width:"30rem"}} />
         </div>
       </div>
       {/* <Offer/> */}

@@ -29,8 +29,8 @@ export default function About() {
               src={logoImage}
               alt="Wisdom World Academy Logo"
               className="p-8 px-16"
+              loading="lazy"
               style={{ width: "25rem" }}
-              whileHover={{ scale: 1.05 }}
             />
             <div className="mt-6 text-center">
               <h3 className="text-3xl font-bold text-[#0f335a]">Wisdom World Academy</h3>

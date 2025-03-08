@@ -10,6 +10,7 @@ export default function ImageSlider() {
         <img
           src={backgroundImage}
           alt="Students in school uniform"
+          loading="lazy"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50"></div>
@@ -31,8 +32,6 @@ export default function ImageSlider() {
             className="inline-flex items-center px-6 py-3 text-lg font-semibold text-white 
               bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-300 
               shadow-lg hover:shadow-xl"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
           >
             Admission Query
           </button>

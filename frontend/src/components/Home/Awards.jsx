@@ -65,6 +65,7 @@ export default function Awards() {
         src={patternUp}
         style={{ width: "100%", marginBottom: "-1%" }}
         alt="Pattern Up"
+        loading="lazy"
       />
       <div className="ourProgrammes">
         <section className="py-12">
@@ -113,6 +114,7 @@ export default function Awards() {
         src={patternDown}
         style={{ width: "100%", marginTop: "-1%" }}
         alt="Pattern Down"
+        loading="lazy"
       />
     </div>
   );

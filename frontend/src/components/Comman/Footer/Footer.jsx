@@ -7,7 +7,7 @@ import patternUp from "/src/assets/images/footer-wave.png";
 const Footer = () => {
   return (
     <div className='bg-clr'>
-        <img src={patternUp} alt="Pattern Up" style={{width: "100%", marginBottom: "-1rem", zIndex: "2"}} />
+        <img src={patternUp} alt="Pattern Up" loading="lazy" style={{width: "100%", marginBottom: "-1rem", zIndex: "2"}} />
     <footer className="footer">
       <div className="footer-container bottom-border text-center">
         <div className="footer-column col">

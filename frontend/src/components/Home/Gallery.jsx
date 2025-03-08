@@ -19,65 +19,73 @@ export default function Gallery() {
       <div className=" mx-auto p-4 max-w-6xl">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="grid gap-4">
-            <div whileHover={{ scale: 1.05 }}>
+            <div >
               <img
                 className="h-auto max-w-full rounded-lg"
                 src={img1}
+                loading="lazy"
                 alt="Image 1"
               />
             </div>
-            <div whileHover={{ scale: 1.05 }}>
+            <div >
               <img
                 className="h-auto max-w-full rounded-lg"
                 src={img2}
+                loading="lazy"
                 alt="Planting"
               />
             </div>
           </div>
           <div className="grid gap-4">
-            <div whileHover={{ scale: 1.05 }}>
+            <div >
               <img
                 className="h-auto max-w-full rounded-lg"
                 src={img3}
                 alt="Our Purpose"
+                loading="lazy"
               />
             </div>
-            <div whileHover={{ scale: 1.05 }}>
+            <div >
               <img
                 className="h-auto max-w-full rounded-lg"
                 src={img4}
                 alt="Image 4"
+                loading="lazy"
               />
             </div>
           </div>
           <div className="grid gap-4">
-            <div whileHover={{ scale: 1.05 }}>
+            <div >
               <img
                 className="min-hide h-auto max-w-full rounded-lg"
                 src={img5}
                 alt="Image 5"
+                loading="lazy"
               />
             </div>
-            <div whileHover={{ scale: 1.05 }}>
+            <div >
               <img
                 className="min-hide h-auto max-w-full rounded-lg"
                 src={img6}
+                loading="lazy"
                 alt="Image 6"
               />
             </div>
           </div>
           <div className="grid gap-4">
-            <div whileHover={{ scale: 1.05 }}>
+            <div >
               <img
                 className="min-hide h-auto max-w-full rounded-lg"
                 src={img7}
+                loading="lazy"
                 alt="Image 7"
               />
             </div>
-            <div whileHover={{ scale: 1.05 }}>
+            <div >
               <img
                 className="min-hide h-auto max-w-full rounded-lg"
                 src={img8}
+                loading="lazy"
                 alt="Image 8"
               />
             </div>
@@ -88,7 +96,7 @@ export default function Gallery() {
             type="button"
             href="/media"
             className="bg-blue1 mb-8 text-white flex gap-2 bg-blue-700 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800"
-            whileHover={{ scale: 1.05 }}
+            
             whileTap={{ scale: 0.95 }}
           >
             See More

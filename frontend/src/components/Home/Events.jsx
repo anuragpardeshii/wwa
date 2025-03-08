@@ -70,6 +70,7 @@ const Gallery = () => {
                   <img
                     src={photo}
                     alt={`${event.title} photo ${photoIndex + 1}`}
+                    loading="lazy"
                     className="w-full h-64 object-cover rounded-lg shadow-md"
                   />
                 </div>
@@ -96,6 +97,7 @@ const Gallery = () => {
                 <img
                   src={selectedImage}
                   alt="Enlarged view"
+                  loading="lazy"
                   className="w-full h-auto rounded-lg"
                 />
               </div>
