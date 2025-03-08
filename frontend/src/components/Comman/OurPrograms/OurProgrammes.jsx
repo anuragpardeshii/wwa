@@ -6,7 +6,6 @@ import "./OurProgrammes.css";
 import patternUp from "/src/assets/images/wave-up.svg";
 import patternDown from "/src/assets/images/wave-down.svg";
 import "./OurProgrammes.css";
-import { motion } from "framer-motion";
 
 export default function OurProgrammes() {
   const classes = [
@@ -53,7 +52,7 @@ export default function OurProgrammes() {
     );
   }
   return (
-    <motion.div
+    <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -83,6 +82,6 @@ export default function OurProgrammes() {
         alt="Pattern Down"
       />
     </section>
-    </motion.div>
+    </div>
   );
 }

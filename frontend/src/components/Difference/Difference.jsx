@@ -1,6 +1,5 @@
 import React from 'react';
 import { Sparkles, Brain, Heart, Globe, Users, Star } from 'lucide-react';
-import { motion } from 'framer-motion';
 import Awards from "../Home/Awards";
 import Mentors from "./Mentors";
 // import Preschool from "./Preschool";
@@ -45,14 +44,14 @@ export default function Difference() {
     <div>
       <div className="difference-section">
         <div className="max-w-6xl mx-auto">
-          <motion.h1 
+          <h1 
             className="my-6 pt-4 text-center text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
             What makes Wisdom World Academy unique?
-          </motion.h1>
+          </h1>
 
           <div className="p-4 max-w-6xl mx-auto">
             {/* <img
@@ -62,14 +61,14 @@ export default function Difference() {
               alt="Difference"
             /> */}
 
-            <motion.div 
+            <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
               {features.map((feature, index) => (
-                <motion.div
+                <div
                   key={index}
                   className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
                   initial={{ opacity: 0 }}
@@ -85,11 +84,11 @@ export default function Difference() {
                   <p className="text-gray-600">
                     {feature.description}
                   </p>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               className="mx-auto m-4 p-2"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -105,7 +104,7 @@ export default function Difference() {
                 every child reach their full potential in a safe, supportive
                 atmosphere.
               </h4>
-            </motion.div>
+            </div>
           </div>
         </div>
 

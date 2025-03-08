@@ -1,31 +1,24 @@
 import React from 'react';
 import { BookOpen, Heart, Lightbulb, Users, Target, Sparkles } from 'lucide-react';
 import children from "/src/assets/images/army/70373068_2499242406811563_218327983818014720_n.png";
-import { motion } from "framer-motion";
 
 export default function OurStory() {
   return (
     <div className="bg-gradient-to-b from-[#edf1f9] via-[#edf1f9] to-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <div 
           className="text-center mb-16"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
         >
           <h2 className="text-4xl font-bold text-gray-900">Our Story</h2>
           <p className="mt-4 text-xl text-[#0f335a] font-medium">Hello, Dear Parent!</p>
           <p className="mt-2 text-lg text-gray-600">
             Welcome to the World of Growth and Possibility at Wisdom World Academy!
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div 
+        <div 
           className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.3 }}
-        >
+          >
           <div className="relative">
             <img
               src={children}
@@ -41,23 +34,17 @@ export default function OurStory() {
           </div>
 
           <div className="space-y-8">
-            <motion.div
+            <div
               className="prose prose-lg"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
             >
               <p className="text-gray-600 leading-relaxed">
                 At Wisdom World Academy, we recognize the importance of the role you play in your child's education. Our partnership with parents is integral to the success of our students. We take the time to understand your aspirations for your child and actively involve you in their educational journey.
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               className="bg-white rounded-xl shadow-lg p-6"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.7 }}
-            >
+             >
               <h3 className="text-xl font-semibold text-[#0f335a] mb-4 flex items-center gap-2">
                 <Heart className="w-6 h-6" />
                 Understanding Parents' Hopes and Concerns
@@ -65,14 +52,11 @@ export default function OurStory() {
               <p className="text-gray-600">
                 As a parent, you want the best for your child—an environment that challenges, nurtures, and inspires them. We acknowledge the concerns that come with entrusting your child's education to others.
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               className="grid grid-cols-2 gap-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 1 }}
-            >
+             >
               <div className="bg-gray-50 rounded-xl p-6">
                 <div className="flex items-center gap-2 text-[#0f335a] mb-2">
                   <Target className="w-5 h-5" />
@@ -91,61 +75,46 @@ export default function OurStory() {
                   Delivering excellence in education while nurturing each child's unique talents and abilities.
                 </p>
               </div>
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
+        <div
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
         >
-          <motion.div
+          <div
             className="bg-white rounded-xl shadow-lg p-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.4 }}
           >
             <BookOpen className="w-10 h-10 text-[#0f335a] mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Why We Were Founded</h3>
             <p className="text-gray-600">
               Born from a passion for transformative education that blends tradition with innovation. Our founders envisioned a school where children would actively engage with their learning.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             className="bg-white rounded-xl shadow-lg p-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.6 }}
           >
             <Lightbulb className="w-10 h-10 text-[#0f335a] mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Driven by Innovation</h3>
             <p className="text-gray-600">
               We continuously evolve, integrating innovative teaching methods and advanced learning technologies to keep education engaging and relevant.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             className="bg-white rounded-xl shadow-lg p-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.8 }}
           >
             <Users className="w-10 h-10 text-[#0f335a] mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Student Development</h3>
             <p className="text-gray-600">
               Our unique approach ensures every child receives the support they need to flourish, fostering confidence and capability.
             </p>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
-        <motion.div
+        <div
           className="text-center max-w-3xl mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 2 }}
         >
           <h3 className="text-2xl font-bold text-[#0f335a] mb-6">Join Our Story</h3>
           <p className="text-lg text-gray-600 mb-8">
@@ -158,7 +127,7 @@ export default function OurStory() {
             <span className="font-medium">Be Part of Our Journey</span>
             <BookOpen className="w-5 h-5" />
           </a>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

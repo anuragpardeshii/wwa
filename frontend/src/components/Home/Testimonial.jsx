@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Quote } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 // Testimonial data
 const testimonials = [
@@ -67,33 +66,23 @@ export default function Testimonial() {
     <div className="min-h-screen bg-gradient-to-br from-blue-45 to-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <motion.h2
+          <h2
             className="text-6xl font-bold text-[#0f335a] mb-4"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
           >
             What Parents Say
-          </motion.h2>
-          <motion.p
+          </h2>
+          <p
             className="text-lg text-gray-600"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
           >
             Discover why families choose Wisdom World Academy for their children's education
-          </motion.p>
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {visibleTestimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-white rounded-xl shadow-xl p-8 transform transition-all duration-500 hover:scale-105"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-            >
+              className="bg-white rounded-xl shadow-xl p-8 transform transition-all duration-500 hover:scale-105">
               <Quote className="w-10 h-10 text-[#ffc300] mb-6" />
               <p className="text-gray-600 mb-6 italic">
                 "{testimonial.content}"
@@ -115,7 +104,7 @@ export default function Testimonial() {
 
         <div className="flex justify-center mt-8">
           {Array.from({ length: Math.ceil(testimonials.length / 3) }).map((_, idx) => (
-            <motion.button
+            <button
               key={idx}
               onClick={() => setCurrentIndex(idx * 3)}
               className={`w-3 h-3 rounded-full mx-1 transition-all duration-300 ${

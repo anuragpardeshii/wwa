@@ -1,5 +1,4 @@
 import parentsbg from "/src/assets/images/bg6.jpg";
-import { motion } from "framer-motion";
 
 export default function OurStory() {
   const content = [
@@ -38,40 +37,40 @@ export default function OurStory() {
       {/* <img className="hide-img" src={parentsbg} alt="" style={{position: "absolute", width: "100vw", zIndex: "-1000", opacity: "0.5", marginTop: "-10vh"}} /> */}
 
       <div className="mentor-review max-w-6xl px-4">
-        <motion.h1 
+        <h1 
           className="text-6xl mb-6 text-[#0f335a] text-center lg:text-5xl my-12 medium-text font-extrabold dark:text-white"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
           Our Story
-        </motion.h1>
-        <motion.h2 
+        </h1>
+        <h2 
           className="text-xl mb-4 lg:text-3xl font-extrabold dark:text-white"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
           Hello, Dear Parent!
-        </motion.h2>
-        <motion.p 
+        </h2>
+        <p 
           className="mb-4 mt-4 text-sm font-normal lg:text-xl dark:text-gray-400"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
         >
           Welcome to the World of Growth and Possibility at Wisdom World Academy!
-        </motion.p>
-        <motion.p 
+        </p>
+        <p 
           className="mb-4 mt-4 text-sm font-normal lg:text-xl dark:text-gray-400"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
         >
           At Wisdom World Academy, we recognize the importance of the role you play in your child’s education. Our partnership with parents is integral to the success of our students. We take the time to understand your aspirations for your child and actively involve you in their educational journey. Our doors are always open to listen, support, and share in the celebration of your child's achievements.
-        </motion.p>
+        </p>
         {content.map((data, index) => (
-          <motion.div 
+          <div 
             key={index}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -79,7 +78,7 @@ export default function OurStory() {
           >
             <h3 className="text-xl mb-4 lg:text-3xl font-extrabold dark:text-white">{data.heading}</h3>
             <p className="mb-4 mt-4 text-sm font-normal lg:text-xl dark:text-gray-400">{data.content}</p>
-          </motion.div>
+          </div>
         ))}
       </div>
     </>
