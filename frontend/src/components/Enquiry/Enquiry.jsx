@@ -1,5 +1,5 @@
 import "./Enquiry.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import bg from "/src/assets/svgs/stationary-bg2.png";
 import {
   Mail,
@@ -9,31 +9,70 @@ import {
   School,
   Users,
   Palette,
+  CheckCircle,
+  AlertCircle,
 } from "lucide-react";
 export default function Enquiry() {
-  const [result, setResult] = useState("");
+  const [formState, setFormState] = useState({
+    result: "",
+    isSuccess: false,
+    isLoading: false,
+  });
+
+  // Reset form status after 5 seconds of success/error message
+  useEffect(() => {
+    let timer;
+    if (formState.result && !formState.isLoading) {
+      timer = setTimeout(() => {
+        setFormState(prev => ({ ...prev, result: "" }));
+      }, 5000);
+    }
+    return () => clearTimeout(timer);
+  }, [formState.result, formState.isLoading]);
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
+    
+    setFormState({
+      result: "Sending...",
+      isSuccess: false,
+      isLoading: true,
+    });
+    
     const formData = new FormData(event.target);
 
     // Add the API access key
     formData.append("access_key", "422abc9b-bde7-443b-ac1c-79e2b489d827");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
+      if (!response.ok) {
+        throw new Error(`Server responded with ${response.status}`);
+      }
 
-    if (data.success) {
-      setResult("Form Submitted Successfully!");
-      event.target.reset();
-    } else {
-      console.error("Error:", data);
-      setResult(data.message || "An error occurred. Please try again.");
+      const data = await response.json();
+
+      if (data.success) {
+        setFormState({
+          result: "Form Submitted Successfully!",
+          isSuccess: true,
+          isLoading: false,
+        });
+        event.target.reset();
+      } else {
+        throw new Error(data.message || "Form submission failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setFormState({
+        result: error.message || "An error occurred. Please try again.",
+        isSuccess: false,
+        isLoading: false,
+      });
     }
   };
 
@@ -158,16 +197,30 @@ export default function Enquiry() {
               <h1 className="mb-4 text-2xl font-bold lg:text-3xl">
                 Send us a message
               </h1>
+              
+              {/* Form status message */}
+              {formState.result && (
+                <div 
+                  className={`mb-6 p-4 rounded-lg flex items-center gap-2 ${
+                    formState.isSuccess 
+                      ? "bg-green-100 text-green-700" 
+                      : "bg-red-100 text-red-700"
+                  }`}
+                >
+                  {formState.isSuccess ? (
+                    <CheckCircle className="h-5 w-5" />
+                  ) : (
+                    <AlertCircle className="h-5 w-5" />
+                  )}
+                  <span>{formState.result}</span>
+                </div>
+              )}
+              
               <form
-                action="https://api.web3forms.com/submit"
-                method="POST"
+                onSubmit={onSubmit}
                 className="space-y-6"
               >
-                <input
-                  type="hidden"
-                  name="access_key"
-                  value="422abc9b-bde7-443b-ac1c-79e2b489d827"
-                />
+                {/* No need for action and method attributes since we're handling submission with JavaScript */}
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                   <div>
                     <label
@@ -310,10 +363,15 @@ export default function Enquiry() {
                 <div className="w-full text-center">
                   <button
                     type="submit"
-                    className="text-center bg-[#FFC701] text-extrabold text-white font-medium rounded-lg p-2.5"
+                    disabled={formState.isLoading}
+                    className={`text-center ${
+                      formState.isLoading 
+                        ? "bg-gray-400 cursor-not-allowed" 
+                        : "bg-[#FFC701] hover:bg-[#e6b400] transition-colors"
+                    } text-extrabold text-white font-medium rounded-lg p-2.5`}
                     style={{ width: "10rem" }}
                   >
-                    Submit
+                    {formState.isLoading ? "Submitting..." : "Submit"}
                   </button>
                 </div>
               </form>
