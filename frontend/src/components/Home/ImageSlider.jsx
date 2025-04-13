@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./ImageSlider.css";
+import img from "/src/assets/images/army/DSC_0400.JPG";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Import multiple images for the carousel
 const images = [
   {
-    src: "/src/assets/images/army/DSC_0400.JPG",
+    src: img,
     alt: "Students in school uniform",
     title: "Empowering Minds, Shaping Futures",
     description: "At Wisdom World Academy, we nurture curiosity, inspire innovation, and foster lifelong learning to create future-ready leaders and global citizens."
