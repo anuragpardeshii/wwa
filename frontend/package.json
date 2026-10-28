@@ -25,14 +25,15 @@
   },
   "name": "frontend",
   "version": "1.0.0",
-  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "description": "Wisdom World Academy — a playful, accessible preschool and primary school website in Indore.",
   "main": "eslint.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run build && node scripts/verify-site.mjs",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:browser": "node scripts/verify-site.mjs"
   },
   "keywords": [],
   "author": "",
@@ -43,11 +44,13 @@
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
+    "axe-core": "^4.14.0",
     "eslint": "^9.15.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.12.0",
+    "playwright": "^1.64.1",
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.17",
     "vite": "^6.2.6"

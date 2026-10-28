@@ -1,47 +1,70 @@
+import { lazy, Suspense } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Header, Footer } from "./site/Layout";
+import Home from "./site/Home";
+import { RevealObserver, RouteEffects } from "./site/UI";
 import "./App.css";
-import Navbar from "./components/Comman/Navbar/Navbar";
-import Home from "./components/Home/Home";
-import Footer from "./components/Comman/Footer/Footer";
-import About from "./components/About/About";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Difference from "./components/Difference/Difference";
-import PreschoolProgram from "./components/More/PreschoolProgram/PreschoolProgram";
-import KidsClub from "./components/More/KidsClub/KidsClub";
-import BaglessSchool from "./components/More/BaglessSchool/BaglessSchool";
-import ParentsSpeak from "./components/More/ParentsSpeak/ParentsSpeak";
-import Enquiry from "./components/Enquiry/Enquiry.jsx";
-import Event from "./components/Home/Events.jsx"
-import SeeMore from "./components/Home/Events.jsx";
-import Story from "./components/Story/Story.jsx";
-import Franchise from "./components/Franchise/Franchise.jsx";
-import Gallery from "./components/Home/Gallery.jsx";
 
-function App() {
+const Gallery = lazy(() => import("./site/Gallery"));
+const Enquiry = lazy(() => import("./site/Enquiry"));
+const Franchise = lazy(() =>
+  import("./site/Enquiry").then((module) => ({ default: module.Franchise })),
+);
+const page = (name) =>
+  lazy(() =>
+    import("./site/Pages").then((module) => ({ default: module[name] })),
+  );
+const About = page("About");
+const Story = page("Story");
+const Difference = page("Difference");
+const Programmes = page("Programmes");
+const Bagless = page("Bagless");
+const Parents = page("Parents");
+const NotFound = page("NotFound");
+
+function Site() {
   return (
     <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<About />} />
-        <Route path="/difference" element={<Difference />} />
-        <Route path="/preschool-programme" element={<PreschoolProgram />} />
-        <Route path="/bagless-school" element={<BaglessSchool />} />
-        <Route path="/parents-speak" element={<ParentsSpeak />} />
-        <Route path="/see-more" element={<SeeMore />} />
-        <Route path="/enquiry" element={<Enquiry />} />
-        <Route path="/story" element={<Story/>} />
-        <Route path="/franchise" element={<Franchise/>} />
-        <Route path="/media" element={<Event/>} />
-      </Routes>
+      <RouteEffects />
+      <Header />
+      <main id="main-content" tabIndex={-1}>
+        <RevealObserver>
+          <Suspense
+            fallback={
+              <div className="page-loading" role="status">
+                <span aria-hidden="true">✳</span>Opening a little world of
+                wonder…
+              </div>
+            }
+          >
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about-us" element={<About />} />
+              <Route path="/story" element={<Story />} />
+              <Route path="/difference" element={<Difference />} />
+              <Route path="/preschool-programme" element={<Programmes />} />
+              <Route path="/bagless-school" element={<Bagless />} />
+              <Route path="/parents-speak" element={<Parents />} />
+              <Route path="/media" element={<Gallery />} />
+              <Route path="/see-more" element={<Gallery />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/enquiry" element={<Enquiry />} />
+              <Route path="/contact" element={<Enquiry />} />
+              <Route path="/franchise" element={<Franchise />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </RevealObserver>
+      </main>
       <Footer />
     </>
   );
 }
 
-export default function AppWrapper() {
+export default function App() {
   return (
-    <Router>
-      <App />
-    </Router>
+    <BrowserRouter>
+      <Site />
+    </BrowserRouter>
   );
 }

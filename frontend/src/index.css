@@ -1,46 +1,151 @@
-body {
-  font-family: "Barlow", sans-serif;
+@font-face {
+  font-family: Fredoka;
+  src: url("/fonts/fredoka-latin.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
 }
-
-.row {
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("/fonts/nunito-sans-latin.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  font-family: "Nunito Sans", sans-serif;
+  color: #243e43;
+  background: #fffdf8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  --navy: #193d46;
+  --ink: #243e43;
+  --muted: #5c6c6d;
+  --paper: #fffdf8;
+  --cream: #fff8e9;
+  --yellow: #ffce4c;
+  --coral: #b94e3e;
+  --teal: #286b5b;
+  --purple: #76548d;
+  --mint: #edf5ed;
+  --lilac: #f1eaf7;
+  --pink: #faece5;
+  --border: #dce1d9;
+  --shadow: 0 12px 35px #183c4310;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+button,
+a {
+  touch-action: manipulation;
+}
+button {
+  cursor: pointer;
+  color: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img,
+svg {
+  display: block;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+button,
+fieldset {
+  border: 0;
+}
+fieldset {
   margin: 0;
   padding: 0;
+  min-width: 0;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.next-prev {
-  background-color: #14224e;
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+  margin: 0;
 }
-
-.circle-radius {
-  border-radius: 25rem;
-}
-
-h1 {
-  font-size: 2.75rem;
-  text-align: center;
-  color: #0b2441;
-  font-weight: bold;
-}
-
+h1,
+h2,
+h3,
 h4 {
-  font-size: 1.5rem;
-  text-align: center;
-  color: #0b2441;
-  font-style: normal;
-  font-weight: 300;
-  margin: 2rem 0;
+  font-family: Fredoka, sans-serif;
+  font-weight: 500;
+  line-height: 1.15;
 }
-
-.cards-width {
-  max-width: 20rem;
+p {
+  line-height: 1.75;
 }
-
-@media (max-width: 1220px) {
-.hide-img {
-  display: none;
+ul {
+  padding-left: 1.2em;
 }
+button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+:focus-visible {
+  outline: 3px solid #286b5b;
+  outline-offset: 5px;
+}
+::selection {
+  background: #ffce4c;
+  color: #193d46;
+}
+[hidden] {
+  display: none !important;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
